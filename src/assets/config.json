@@ -1,0 +1,18 @@
+{
+  "layers": [
+    {
+      "id": "hinanbasho-tokyo",
+      "type": "geojson",
+      "source": "./data/13.geojson",
+      "getPointRadius": 50
+    },
+    {
+      "id": "gyosei-tokyo",
+      "type": "geojson",
+      "source": "./data/N03-21_13_210101.geojson",
+      "getFillColor": [100, 200, 255, 150],
+      "getLineColor": [0, 0, 0, 255],
+      "getLineWidth": 10
+    }
+  ]
+}

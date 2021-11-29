@@ -1,0 +1,36 @@
+/*TSXのタグのstyleに直書きは出来なさそう*/
+.content {
+  height: calc(100vh - theme('spacing.12'));
+}
+
+#tooltip {
+  position: relative;
+  height: calc(50%);
+  height: -webkit-calc(50%);
+  margin-top: 10px;
+  border: 1px;
+  width: 100%;
+}
+
+#tooltip_content {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.tooltip_table {
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  font-size: 12px;
+}
+
+.tooltip_th {
+  white-space: nowrap;
+}
+
+.tooltip_td {
+  white-space: nowrap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

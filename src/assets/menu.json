@@ -1,0 +1,34 @@
+[
+  {
+    "category": "指定緊急避難場所データ",
+    "url": "https://www.geospatial.jp/ckan/dataset/hinanbasho-13/resource/54b500b8-ef85-47fc-83d7-895b5488810e",
+    "data": [
+      {
+        "title": "東京都の避難場所",
+        "type": "point",
+        "lng": 139.77132890862,
+        "lat": 35.676572613649,
+        "zoom": 12,
+        "id": ["hinanbasho-tokyo"],
+        "checked": false,
+        "color": "#333333"
+      }
+    ]
+  },
+  {
+    "category": "行政区域データ",
+    "url": "https://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-N03.html#prefecture13",
+    "data": [
+      {
+        "title": "東京都の行政界",
+        "type": "polygon",
+        "lng": 139.77132890862,
+        "lat": 35.676572613649,
+        "zoom": 12,
+        "id": ["gyosei-tokyo"],
+        "checked": true,
+        "color": "#333333"
+      }
+    ]
+  }
+]
