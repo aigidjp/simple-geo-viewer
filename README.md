@@ -49,7 +49,9 @@ yarn install
 - 指定緊急避難場所データ
   - https://www.geospatial.jp/ckan/dataset/hinanbasho-13/resource/54b500b8-ef85-47fc-83d7-895b5488810e
 - 行政区域データ
-  - https://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-N03.html#prefecture13
+  - https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v3_0.html#prefecture13
+- 行政区域データは東京都の「令和3年」のものをダウンロードし、zipファイルの中にgeojsonが入っているので、そちらを格納してください。
+  - `N03-20210101_13_GML\N03-21_13_210101.geojson`というgeojsonが入っているので、`N03-21_13_210101.geojson`にリネームしてください。
   
 ### データの格納
 
