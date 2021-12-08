@@ -10,6 +10,7 @@ import { Dispatch, SetStateAction } from 'react';
 import { MapboxLayer } from '@deck.gl/mapbox';
 import { Deck } from 'deck.gl';
 import { getDataList } from '@/components/LayerFilter/menu';
+import { makeTile3DLayers } from '@/components/Map/Layer/tile3DLayerMaker';
 
 export const makeDeckGlLayers = (
   map: maplibregl.Map,
@@ -32,6 +33,7 @@ export const makeDeckGlLayers = (
     makeGltfLayers,
     makeTileLayers,
     makeIconLayers,
+    makeTile3DLayers,
   ];
   // ここでフィルタリングのidを求める
   const layerConfig = getFilteredLayerConfig().filter((layer) => {
