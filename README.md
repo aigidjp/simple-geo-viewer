@@ -10,6 +10,7 @@
   - GeoJSON
   - ラスタータイル
   - ベクタータイル
+  - （3dtiles）
   - （icon）
   - （GLTF）
 
@@ -149,10 +150,110 @@ yarn build
 ###### 設定可能なタイプ
 
 - geojson: [https://deck.gl/docs/api-reference/layers/geojson-layer](https://deck.gl/docs/api-reference/layers/geojson-layer)
+- raster: [https://deck.gl/docs/api-reference/geo-layers/tile-layer](https://deck.gl/docs/api-reference/geo-layers/tile-layer)
+- mvt: [https://deck.gl/docs/api-reference/geo-layers/mvt-layer](https://deck.gl/docs/api-reference/geo-layers/mvt-layer)
+- （3dtiles）: [https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer](https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer)
 - （gltf）: [https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer](https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer)
 - （icon）: [https://deck.gl/docs/api-reference/layers/icon-layer](https://deck.gl/docs/api-reference/layers/icon-layer)
-- mvt: [https://deck.gl/docs/api-reference/geo-layers/mvt-layer](https://deck.gl/docs/api-reference/geo-layers/mvt-layer)
-- raster: [https://deck.gl/docs/api-reference/geo-layers/tile-layer](https://deck.gl/docs/api-reference/geo-layers/tile-layer)
+
+#### 各種表示レイヤー設定のサンプル
+
+##### geojson
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-point-geojson",
+      "type": "geojson",
+      "source": "./data/sample.geojson",
+      "getPointRadius": 50
+    }
+  ]
+}
+```
+
+##### raster
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-raster",
+      "type": "raster",
+      "source": "./data/sample/{z}/{x}/{y}.png",
+      "minZoom": 10,
+      "maxZoom": 18
+    }
+  ]
+}
+```
+
+##### vector
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-vector",
+      "type": "mvt",
+      "source": "./data/sample/{z}/{x}/{y}.pbf",
+      "getFillColor": [255, 255, 0, 100],
+      "getLineColor": [0, 0, 0, 255],
+      "getLineWidth": 10,
+      "minZoom": 10,
+      "maxZoom": 18
+    }
+  ]
+}
+```
+
+##### 3dtiles
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-3dtiles",
+      "type": "3dtiles",
+      "source": "./data/sample/tileset.json"
+    }
+  ]
+}
+```
+
+##### gltf
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-gltf",
+      "type": "gltf",
+      "source": "./data/sample/sample.glb",
+      "coords": [139.77, 35.67, 0],
+      "color": [200, 150, 80, 180],
+      "orientation": [0, 0, 0]
+    }
+  ]
+}
+```
+
+##### icon
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-icon",
+      "type": "icon",
+      "source": "./data/sample/icon.svg",
+      "coords": [139.77, 35.67, 0],
+      "color": [5, 5, 190, 255]
+    }
+  ]
+}
+```
 
 ### 高度なレイヤー設定
 
