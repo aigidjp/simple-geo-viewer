@@ -32,23 +32,6 @@
     ]
   },
   {
-    "category": "変位量",
-    "open": false,
-    "url": "https://www.digitalsmartcity.jp/persontrip-demo/",
-    "data": [
-      {
-        "title": "変位量",
-        "type": "polygon",
-        "lng": 130.803748,
-        "lat": 32.786103,
-        "zoom": 13.5,
-        "id": ["displacement"],
-        "checked": true,
-        "color": "#333333"
-      }
-    ]
-  },
-  {
     "category": "バステスト",
     "open": false,
     "url": "https://www.digitalsmartcity.jp/persontrip-demo/",
