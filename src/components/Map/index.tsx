@@ -14,6 +14,9 @@ import { toggleVisibly } from '@/components/Map/Layer/visibly';
 import Legend, { useGetClickedLayerId } from '@/components/Map/Legend';
 import { initialViewState } from '@/components/Map/initialViewState';
 
+import { TimeSlider } from '@/components/Map/Controller/TimeSlider';
+import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
+
 let map: maplibregl.Map;
 let deck: Deck;
 
@@ -87,6 +90,11 @@ type Props = {
 const Map: React.VFC<Props> = ({ setTooltipData }) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
 
+  const visibleLayerTypes = getFilteredLayerConfig().map((item) => {
+    return item.type;
+  });
+  const hasTimeSeries = !!visibleLayerTypes.find((item) => ['bus_trip'].includes(item));
+
   //map・deckインスタンスを初期化
   useInitializeMap(mapContainer);
 
@@ -108,6 +116,11 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
       <div className="m-8 h-5/6" ref={mapContainer}>
         <div className="z-10 relative top-0 left-0 w-40">
           <Legend id={useGetClickedLayerId()} />
+        </div>
+        <div className="z-10 absolute bottom-0 left-0 w-2/5 bg-white">
+          {hasTimeSeries ? (
+            <TimeSlider deck={deck} map={map} setTooltipData={setTooltipData} />
+          ) : null}
         </div>
       </div>
     </>
