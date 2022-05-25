@@ -9,7 +9,6 @@ import {
     VFC,
 } from 'react';
 import Slider from 'react-rangeslider';
-import styles from './TimeSlider.module.scss';
 import { Deck } from 'deck.gl';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
 import { getDataList } from '@/components/LayerFilter/menu';
@@ -40,16 +39,16 @@ const renderCallback = useCallback(
     (layerConfig, timestamp) => {
         addRenderOption(makeGtfsTimeLineLayers(map, layerConfig, true, timestamp)).forEach(
             (layer) => {
-              deck.setProps({
-                layers: [
-                  ...deck.props.layers.filter((l) => {
-                    return l.id !== layer.id;
-                  }),
-                  layer,
-                ],
-              });
+                deck.setProps({
+                    layers: [
+                        ...deck.props.layers.filter((l) => {
+                            return l.id !== layer.id;
+                        }),
+                        layer,
+                    ],
+                });
             }
-          );
+        );
     },
     [deck, map]
 );
@@ -96,15 +95,20 @@ const animate = useCallback(() => {
 
 // animate関数に変更があった場合は一度破棄して再度呼び出す
 useEffect(() => {
+    if (deck) {
+        // 初回レンダリング
+        const layerConfig = getLayerConfig();
+        renderCallback(layerConfig, timestamp);
+    }
     if (play) {
-    requestRef.current = requestAnimationFrame(animate);
+        requestRef.current = requestAnimationFrame(animate);
     } else if (requestRef.current) {
-    cancelAnimationFrame(requestRef.current);
+        cancelAnimationFrame(requestRef.current);
     }
     return () => {
-    if (requestRef.current) {
-        return cancelAnimationFrame(requestRef.current);
-    }
+        if (requestRef.current) {
+            return cancelAnimationFrame(requestRef.current);
+        }
     };
 }, [animate, play]);
 const getDisplayTime = (ts) => {
@@ -113,21 +117,21 @@ const getDisplayTime = (ts) => {
 
 return (
     <div className={'mx-4 my-4'}>
-    <div className={styles.sliderHorizontal}>
+    <div className={''}>
         <Slider
-        value={timestamp}
-        format={(value) => {
-            return getDisplayTime(value);
-        }}
-        onChange={(value) => {
-            const layerConfig = getLayerConfig();
-            renderCallback(layerConfig, value);
-            setTimestamp(value);
-        }}
-        orientation="horizontal"
-        min={0}
-        labels={labels}
-        max={maxVal}
+            value={timestamp}
+            format={(value) => {
+                return getDisplayTime(value);
+            }}
+            onChange={(value) => {
+                const layerConfig = getLayerConfig();
+                renderCallback(layerConfig, value);
+                setTimestamp(value);
+            }}
+            orientation="horizontal"
+            min={0}
+            labels={labels}
+            max={maxVal}
         />
     </div>
     <div className={'flex p-1 items-center'}>
