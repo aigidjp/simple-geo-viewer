@@ -95,10 +95,9 @@ const animate = useCallback(() => {
 
 // animate関数に変更があった場合は一度破棄して再度呼び出す
 useEffect(() => {
-    if (deck) {
+    if (deck !== undefined) {
         // 初回レンダリング
-        const layerConfig = getLayerConfig();
-        renderCallback(layerConfig, timestamp);
+        renderCallback(getLayerConfig(), timestamp);
     }
     if (play) {
         requestRef.current = requestAnimationFrame(animate);
