@@ -155,6 +155,7 @@ yarn build
 - （3dtiles）: [https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer](https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer)
 - （gltf）: [https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer](https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer)
 - （icon）: [https://deck.gl/docs/api-reference/layers/icon-layer](https://deck.gl/docs/api-reference/layers/icon-layer)
+- （bus_trip）: GTFSのトラッキングデータを読み込んで時系列コントロールでの表示ができます。
 
 #### 各種表示レイヤー設定のサンプル
 
@@ -250,6 +251,33 @@ yarn build
       "source": "./data/sample/icon.svg",
       "coords": [139.77, 35.67, 0],
       "color": [5, 5, 190, 255]
+    }
+  ]
+}
+```
+
+##### bus_trip
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-bus-trip",
+      "source": "GTFSのトラッキングデータURL",
+      "labels": {
+        "0": "0",
+        "180": "3",
+        "360": "6",
+        "540": "9",
+        "720": "12",
+        "900": "15",
+        "1080": "18",
+        "1260": "21",
+        "1440": "24"
+      },
+      "maxVal": 1440,
+      "speed": 0,
+      "iconUrl": "images/bus_yellow.png"
     }
   ]
 }
