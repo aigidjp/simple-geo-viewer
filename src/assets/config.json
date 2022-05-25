@@ -13,6 +13,25 @@
       "getFillColor": [100, 200, 255, 150],
       "getLineColor": [0, 0, 0, 255],
       "getLineWidth": 10
+    },
+    {
+      "id": "fujikyu_trip_wd",
+      "type": "bus_trip",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json",
+      "labels": {
+        "0": "0",
+        "180": "3",
+        "360": "6",
+        "540": "9",
+        "720": "12",
+        "900": "15",
+        "1080": "18",
+        "1260": "21",
+        "1440": "24"
+      },
+      "maxVal": 1440,
+      "speed": 0,
+      "iconUrl": "images/bus_yellow.png"
     }
   ]
 }

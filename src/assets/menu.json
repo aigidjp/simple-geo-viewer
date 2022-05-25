@@ -30,5 +30,22 @@
         "color": "#333333"
       }
     ]
+  },
+  {
+    "category": "バステスト",
+    "open": false,
+    "url": "https://www.digitalsmartcity.jp/persontrip-demo/",
+    "data": [
+      {
+        "title": "バスの動き(平日)",
+        "type": "icon",
+        "lng": 138.92,
+        "lat": 35.18,
+        "zoom": 12.5,
+        "id": ["fujikyu_trip_wd"],
+        "checked": true,
+        "color": "#fa5032"
+      }
+    ]
   }
 ]
