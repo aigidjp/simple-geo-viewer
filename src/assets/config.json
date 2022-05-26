@@ -10,6 +10,7 @@
       "id": "gyosei-tokyo",
       "type": "geojson",
       "source": "./data/N03-21_13_210101.geojson",
+      "download_url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v2_3.html",
       "getFillColor": [100, 200, 255, 150],
       "getLineColor": [0, 0, 0, 255],
       "getLineWidth": 10
@@ -18,6 +19,7 @@
       "id": "fujikyu_trip_wd",
       "type": "bus_trip",
       "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json",
+      "download_url": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json",
       "labels": {
         "0": "0",
         "180": "3",

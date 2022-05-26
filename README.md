@@ -145,6 +145,7 @@ yarn build
 - id: 任意のidを指定します
 - type: 表示するレイヤーのタイプを記述します。記述したタイプと、実データのフォーマットが一致している必要があります。（対応typeは別途記載）
 - source: 実データを`public`ディレクトリ以下に格納したローカルファイルか、ホスティング先のURLを指定します。
+- download_url(optional): ダウンロードリンクとしてURLを指定できます。指定されている場合、クリックすると指定したURLへジャンプすることができるボタンがレイヤー一覧に追加されます。
 - others: その他、各タイプ毎にDeck.glのレンダーオプションに準拠したオプションを設定可能です。
 
 ###### 設定可能なタイプ
@@ -168,6 +169,7 @@ yarn build
       "id": "sample-point-geojson",
       "type": "geojson",
       "source": "./data/sample.geojson",
+      "download_url": "https://www.google.co.jp/",
       "getPointRadius": 50
     }
   ]
@@ -199,6 +201,7 @@ yarn build
       "id": "sample-vector",
       "type": "mvt",
       "source": "./data/sample/{z}/{x}/{y}.pbf",
+      "download_url": "https://nlftp.mlit.go.jp/ksj/",
       "getFillColor": [255, 255, 0, 100],
       "getLineColor": [0, 0, 0, 255],
       "getLineWidth": 10,
