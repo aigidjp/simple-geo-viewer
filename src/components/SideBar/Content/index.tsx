@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { getMenu } from '@/components/LayerFilter/menu';
-import { Download } from '@/components/SideBar/Icon/download';
+import { DownloadIcon } from '../Icon';
 
 type LayerListProps = {
   title: string;
   layers: React.ReactNode;
-};
-
-const FolderIcon = () => {
-  return (
-    <svg viewBox="0 0 576 512" width="0.75rem" height="0.75rem">
-      <path d="M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z" />
-    </svg>
-  );
 };
 
 type TitleProps = {
@@ -54,6 +46,29 @@ const getLayerLength = (title: string) => {
   return targetDataset[0].data.length;
 };
 
+const FolderIcon = (
+  <svg viewBox="0 0 576 512" width="0.75rem" height="0.75rem">
+    <path d="M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z" />
+  </svg>
+);
+
+/**
+ * menuをカテゴリー名で探してダウンロードリンクを取得する
+ * menuに存在しないカテゴリー名、もしくはダウンロードリンクが未定義の場合はnullを返す
+ * @param categoryName
+ * @returns {string | null} - ダウンロードリンク文字列。存在しなければnull
+ */
+const getDownloadLink = (categoryName: string): string | null => {
+  const menus = getMenu();
+
+  // menuをカテゴリー名で探して配列のインデックスを取得
+  const categoryIdx = menus.map((menu) => menu.category).indexOf(categoryName);
+  if (categoryIdx === -1) return null;
+
+  const categoryData = menus[categoryIdx];
+  return categoryData.url || null;
+};
+
 export const Content: React.FC<LayerListProps> = ({ title, layers }) => {
   const [active, setActive] = useState<boolean>(true);
   const [height, setHeight] = useState<number>(44);
@@ -75,6 +90,8 @@ export const Content: React.FC<LayerListProps> = ({ title, layers }) => {
     fontSize: '0.75rem',
   };
 
+  const downloadLink = getDownloadLink(title);
+
   return (
     <div className="pb-px">
       <div
@@ -83,11 +100,11 @@ export const Content: React.FC<LayerListProps> = ({ title, layers }) => {
         onClick={toggleAccordion}
       >
         <div className="text-left flex w-11/12">
-          <FolderIcon />
+          {FolderIcon}
           <Title datasetName={title} />
         </div>
         <div className="w-1/12">
-          <Download datasetName={title} />
+          {downloadLink === null ? undefined : DownloadIcon(downloadLink)}
         </div>
       </div>
       <LayerList height={height} elementLength={elementLength} content={layers} />

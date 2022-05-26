@@ -28,6 +28,17 @@
         "id": ["gyosei-tokyo"],
         "checked": true,
         "color": "#333333"
+      },
+      {
+        "title": "東京都の行政界(DL有)",
+        "type": "polygon",
+        "lng": 139.77132890862,
+        "lat": 35.676572613649,
+        "zoom": 12,
+        "id": ["gyosei-tokyo"],
+        "checked": true,
+        "color": "#333333",
+        "download_url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v2_3.html"
       }
     ]
   },
@@ -44,7 +55,8 @@
         "zoom": 12.5,
         "id": ["fujikyu_trip_wd"],
         "checked": true,
-        "color": "#fa5032"
+        "color": "#fa5032",
+        "download_url": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json"
       }
     ]
   }
