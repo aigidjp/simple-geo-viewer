@@ -9,6 +9,7 @@ export type resource = {
   color?: string;
   icon?: string;
   url?: string;
+  download_url?: string;
 };
 
 export type clickedLayerViewState = {

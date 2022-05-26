@@ -4,6 +4,7 @@ import { resource } from '@/components/Map/types';
 import { getResourceIcon } from '@/components/SideBar/Icon';
 import { getDataById } from '@/components/LayerFilter/menu';
 import { filterCheckedData } from '@/components/LayerFilter/sideBar';
+import { DownloadIcon } from '@/components/SideBar/Icon';
 
 const isSelected = (resourceName: string, selectedResourceNameList: string[]): boolean => {
   return selectedResourceNameList.includes(resourceName);
@@ -70,16 +71,23 @@ export const Layers = (props: LayersProps) => {
             style={resourceStyle}
             key={index}
           >
-            <input
-              type="checkbox"
-              className="rounded-full mx-1 text-cyan-600 focus:outline-none"
-              checked={isSelected(resource.title, checkedLayerTitleList)}
-              onChange={() => {
-                toggleSelectedResourceList(resource.title, resource.id);
-              }}
-            />
-            {getResourceIcon(resource)}
-            {resource.title}
+            <div className="w-11/12 flex">
+              <input
+                type="checkbox"
+                className="rounded-full mx-1 text-cyan-600 focus:outline-none"
+                checked={isSelected(resource.title, checkedLayerTitleList)}
+                onChange={() => {
+                  toggleSelectedResourceList(resource.title, resource.id);
+                }}
+              />
+              {getResourceIcon(resource)}
+              {resource.title}
+            </div>
+            <div className="w-1/12">
+              {resource.download_url === undefined
+                ? undefined
+                : DownloadIcon(resource.download_url)}
+            </div>
           </div>
         </label>
       ))}
