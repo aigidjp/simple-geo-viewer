@@ -5,8 +5,6 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 
 import { Deck } from 'deck.gl';
 
-import initialStyle from '@/assets/initial_style.json';
-
 import { context } from '@/pages';
 import { useFlyTo } from '@/components/Map/Animation/flyTo';
 import { makeDeckGlLayers } from '@/components/Map/Layer/deckGlLayerFactory';
@@ -14,6 +12,7 @@ import { toggleVisibly } from '@/components/Map/Layer/visibly';
 import Legend, { useGetClickedLayerId } from '@/components/Map/Legend';
 import { initialViewState } from '@/components/Map/initialViewState';
 
+import BackgroundSelector, { BACKGROUNDS } from './Controller/BackgroundSelector';
 import { TimeSlider } from '@/components/Map/Controller/TimeSlider';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
 
@@ -31,6 +30,30 @@ const getViewStateFromMaplibre = (map) => {
   };
 };
 
+/**
+ * MapLibre GL JSの初期スタイルを取得する
+ * 初期スタイル=./src/assets/backgrounds.jsonで定義された背景が表示されている状態
+ */
+const getInitialStyle = (): maplibregl.Style => {
+  const defaultBackgroundData = BACKGROUNDS[Object.keys(BACKGROUNDS)[0]];
+  const style: maplibregl.Style = {
+    version: 8,
+    sources: {
+      background: defaultBackgroundData.source,
+    },
+    layers: [
+      {
+        id: 'background',
+        type: 'raster',
+        source: 'background',
+        minzoom: 0,
+        maxzoom: 22,
+      },
+    ],
+  };
+  return style;
+};
+
 const useInitializeMap = (mapContainer: React.MutableRefObject<HTMLDivElement | null>) => {
   useEffect(() => {
     if (!map) {
@@ -38,7 +61,7 @@ const useInitializeMap = (mapContainer: React.MutableRefObject<HTMLDivElement | 
 
       map = new maplibregl.Map({
         container: mapContainer.current,
-        style: JSON.parse(JSON.stringify(initialStyle)),
+        style: getInitialStyle(),
         center: [initialViewState.longitude, initialViewState.latitude],
         zoom: initialViewState.zoom,
         bearing: initialViewState.bearing,
@@ -116,6 +139,9 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
       <div className="m-8 h-5/6" ref={mapContainer}>
         <div className="z-10 relative top-0 left-0 w-40">
           <Legend id={useGetClickedLayerId()} />
+        </div>
+        <div className="z-10 absolute top-0 right-12 w-40 bg-white">
+          <BackgroundSelector map={map} />
         </div>
         <div className="z-10 absolute bottom-0 left-0 w-2/5 bg-white">
           {hasTimeSeries ? (

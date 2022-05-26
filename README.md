@@ -102,7 +102,7 @@ yarn build
 
 ### 背景地図
 
-- `src/assets/initial_style.json`を修正することで背景地図を変更することができます。
+- `src/assets/backgrounds.json`を修正することで背景地図を変更・追加することができます。ここで最も先に定義された背景地図が初期状態で表示される背景となります。
 
 #### 設定項目
 
