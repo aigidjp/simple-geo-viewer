@@ -140,7 +140,8 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
         <div className="z-10 relative top-0 left-0 w-40">
           <Legend id={useGetClickedLayerId()} />
         </div>
-        <div className="z-10 absolute top-0 right-12 w-40 bg-white">
+        <div className="z-10 absolute top-2 right-12 bg-white p-1">
+          <div className="text-center font-bold">背景</div>
           <BackgroundSelector map={map} />
         </div>
         <div className="z-10 absolute bottom-0 left-0 w-2/5 bg-white">
