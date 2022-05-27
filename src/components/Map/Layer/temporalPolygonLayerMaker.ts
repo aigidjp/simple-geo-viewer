@@ -39,6 +39,7 @@ class TemporalPolygonLayerCreator {
         id: layerConfig.id,
         data: layerConfig.source,
         visible: init,
+        getLineColor: () => [0, 0, 0, 0],
         getFillColor: (d: any) => {
           const normalizedTimestamp = timestamp - (timestamp % d.properties.step);
           const temporalValue: number =
