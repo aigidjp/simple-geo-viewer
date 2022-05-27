@@ -34,14 +34,25 @@
       "iconUrl": "images/bus_yellow.png"
     },
     {
-      "id": "GeoJSON_TimeSeriesPolygon",
+      "id": "jinryu_2d",
       "type": "temporal_polygon",
       "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
-      "range": [0, 2000],
+      "values": [0, 2000],
       "colors": [
         [255, 255, 255, 0],
         [255, 0, 0, 200]
       ]
+    },
+    {
+      "id": "jinryu_3d",
+      "type": "temporal_polygon",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "values": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ],
+      "heights": [0, 2000]
     }
   ]
 }

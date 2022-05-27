@@ -39,6 +39,7 @@ class TemporalPolygonLayerCreator {
         id: layerConfig.id,
         data: layerConfig.source,
         visible: init,
+        extruded: true,
         getLineColor: () => [0, 0, 0, 0],
         getFillColor: (d: any) => {
           const normalizedTimestamp = timestamp - (timestamp % d.properties.step);
@@ -48,7 +49,8 @@ class TemporalPolygonLayerCreator {
             0,
             Math.min(
               1,
-              (temporalValue - layerConfig.range[0]) / (layerConfig.range[1] - layerConfig.range[0])
+              (temporalValue - layerConfig.values[0]) /
+                (layerConfig.values[1] - layerConfig.values[0])
             )
           );
           const [r1, g1, b1, a1] = layerConfig.colors[0];
@@ -61,8 +63,25 @@ class TemporalPolygonLayerCreator {
           ];
           return color;
         },
+        getElevation: (d: any) => {
+          const normalizedTimestamp = timestamp - (timestamp % d.properties.step);
+          const temporalValue: number =
+            d.properties[String(normalizedTimestamp).padStart(2, '0')] || 0;
+          const normalizedValue = Math.max(
+            0,
+            Math.min(
+              1,
+              (temporalValue - layerConfig.values[0]) /
+                (layerConfig.values[1] - layerConfig.values[0])
+            )
+          );
+          const heights = layerConfig.heights || [0, 0];
+          const height = heights[0] * (1 - normalizedValue) + heights[1] * normalizedValue;
+          return height;
+        },
         updateTriggers: {
           getFillColor: [timestamp],
+          getElevation: [timestamp],
         },
       });
       return gLayer;
@@ -70,11 +89,6 @@ class TemporalPolygonLayerCreator {
 
     return result;
   }
-
-  private extractLayerConfig = (layerConfig) => {
-    const { type, source, ...otherConfig } = layerConfig;
-    return otherConfig;
-  };
 
   private extractTargetConfig() {
     return this.layerConfig.filter((layer: geoJsonLayerConfig) => {

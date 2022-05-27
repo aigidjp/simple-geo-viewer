@@ -70,7 +70,17 @@
         "lng": 138.76875,
         "lat": 34.954167,
         "zoom": 12,
-        "id": ["GeoJSON_TimeSeriesPolygon"],
+        "id": ["jinryu_2d"],
+        "checked": true,
+        "color": "#333333"
+      },
+      {
+        "title": "3Dメッシュベース疑似人流データ",
+        "type": "polygon",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["jinryu_3d"],
         "checked": true,
         "color": "#333333"
       }
