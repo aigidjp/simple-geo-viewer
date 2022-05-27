@@ -105,8 +105,8 @@ const useToggleVisibly = () => {
 
   if (!deck) return;
   const deckGlLayers = deck.props.layers;
-  const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList);
 
+  const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList);
   deck.setProps({ layers: toggleVisibleLayers });
 };
 
@@ -122,7 +122,7 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
     return item.type;
   });
   const hasTimeSeries = !!visibleLayerTypes.find((item) =>
-    ['bus_trip', 'temporal_polygon'].includes(item)
+    ['bus_trip', 'temporal_polygon', 'temporal_line'].includes(item)
   );
 
   //map・deckインスタンスを初期化

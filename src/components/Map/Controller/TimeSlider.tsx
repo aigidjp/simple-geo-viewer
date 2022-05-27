@@ -16,6 +16,7 @@ import { addRenderOption } from '@/components/Map/Layer/renderOption';
 import { makeGtfsTimeLineLayers } from '@/components/Map/Layer/gtfsTimelineLayerMaker';
 import { makeTemporalPolygonLayers } from '../Layer/temporalPolygonLayerMaker';
 import maplibregl from 'maplibre-gl';
+import { makeTemporalLineLayers } from '../Layer/temporalLineLayerMaker';
 
 type Props = {
   map: maplibregl.Map;
@@ -41,6 +42,7 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
       addRenderOption([
         ...makeGtfsTimeLineLayers(map, layerConfig, true, timestamp),
         ...makeTemporalPolygonLayers(map, layerConfig, true, timestamp),
+        ...makeTemporalLineLayers(map, layerConfig, true, timestamp),
       ]).forEach((layer) => {
         deck.setProps({
           layers: [
@@ -56,7 +58,7 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
   );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const timeLayers = ['bus_trip', 'temporal_polygon'];
+  const timeLayers = ['bus_trip', 'temporal_polygon', 'temporal_line'];
 
   const getLayerConfig = () => {
     return getFilteredLayerConfig().filter((layer) => {

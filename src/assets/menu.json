@@ -71,7 +71,7 @@
         "lat": 34.954167,
         "zoom": 12,
         "id": ["jinryu_2d"],
-        "checked": true,
+        "checked": false,
         "color": "#333333"
       },
       {
@@ -81,6 +81,16 @@
         "lat": 34.954167,
         "zoom": 12,
         "id": ["jinryu_3d"],
+        "checked": false,
+        "color": "#333333"
+      },
+      {
+        "title": "リンクベース疑似人流データ(東大)",
+        "type": "line",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["jinryu_line"],
         "checked": true,
         "color": "#333333"
       }

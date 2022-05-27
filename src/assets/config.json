@@ -53,6 +53,17 @@
         [255, 0, 0, 200]
       ],
       "heights": [0, 2000]
+    },
+    {
+      "id": "jinryu_line",
+      "type": "temporal_line",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson",
+      "values": [0, 100],
+      "colors": [
+        [255, 255, 255, 100],
+        [255, 0, 0, 200]
+      ],
+      "widths": [5, 20]
     }
   ]
 }
