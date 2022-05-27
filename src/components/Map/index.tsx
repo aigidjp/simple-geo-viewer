@@ -105,7 +105,6 @@ const useToggleVisibly = () => {
 
   if (!deck) return;
   const deckGlLayers = deck.props.layers;
-
   const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList);
   deck.setProps({ layers: toggleVisibleLayers });
 };

@@ -1,6 +1,7 @@
 import maplibregl from 'maplibre-gl';
 import { GeoJsonLayer } from '@deck.gl/layers';
 import { PickInfo, RGBAColor } from 'deck.gl';
+import { getDataList } from '@/components/LayerFilter/menu';
 
 type geoJsonLayerConfig = {
   id: string;
@@ -16,9 +17,10 @@ export function makeTemporalLineLayers(
   map: maplibregl.Map,
   layerConfig,
   init: boolean,
-  timestamp: number
+  timestamp: number,
+  checkedLayerTitleList: string[] = []
 ) {
-  const layer = new TemporalLineLayerCreator(layerConfig, map);
+  const layer = new TemporalLineLayerCreator(layerConfig, map, checkedLayerTitleList);
   return layer.makeDeckGlLayers(init, timestamp);
 }
 
@@ -26,10 +28,23 @@ class TemporalLineLayerCreator {
   private readonly map: maplibregl.Map;
   private readonly layerConfig: any[];
   private readonly layersType: string = 'temporal_line';
+  private readonly checkedLayerTitleList: string[];
 
-  constructor(layerConfig: any[], map: maplibregl.Map) {
+  constructor(layerConfig: any[], map: maplibregl.Map, checkedLayerTitleList: string[] = []) {
     this.layerConfig = layerConfig;
     this.map = map;
+    this.checkedLayerTitleList = checkedLayerTitleList;
+  }
+  isChecked(layerConfig) {
+    // レイヤーがチェックされているか判定
+    const dataList = getDataList();
+    let flag = false;
+    for (const data of dataList) {
+      if (data.id.includes(layerConfig.id)) {
+        if (this.checkedLayerTitleList.includes(data.title)) flag = true;
+      }
+    }
+    return flag;
   }
 
   makeDeckGlLayers(init, timestamp: number) {
@@ -38,7 +53,7 @@ class TemporalLineLayerCreator {
       const gLayer = new GeoJsonLayer({
         id: layerConfig.id,
         data: layerConfig.source,
-        visible: init,
+        visible: init && this.isChecked(layerConfig),
         extruded: true,
         getLineColor: (d: any) => {
           const normalizedTimestamp = timestamp - (timestamp % d.properties.step);

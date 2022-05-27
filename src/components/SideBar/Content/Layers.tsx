@@ -43,7 +43,7 @@ export const Layers = (props: LayersProps) => {
   const toggleSelectedResourceList = (resourceName: string, resourceId: string[]) => {
     // 既存のリストに対象リソースが入っていなければ格納
     if (!isSelected(resourceName, checkedLayerTitleList)) {
-      setCheckedLayerTitleList([...checkedLayerTitleList, resourceName]);
+      setCheckedLayerTitleList((prevList) => [...prevList, resourceName]);
       // クリックされたリソースの位置情報を保存する
       setResourceViewState(resourceId, setClickedLayerViewState);
       return;

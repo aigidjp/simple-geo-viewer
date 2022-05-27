@@ -6,8 +6,10 @@ import {
   useEffect,
   useRef,
   useState,
+  useContext,
   VFC,
 } from 'react';
+import { context } from '@/pages';
 import Slider from 'react-rangeslider';
 import { Deck } from 'deck.gl';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
@@ -36,34 +38,33 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
   const [play, setPlay] = useState<boolean>(false);
 
   const requestRef = useRef<ReturnType<typeof requestAnimationFrame>>();
-  // Layerレンダリング用のCallback
-  const renderCallback = useCallback(
-    (layerConfig, timestamp) => {
-      addRenderOption([
-        ...makeGtfsTimeLineLayers(map, layerConfig, true, timestamp),
-        ...makeTemporalPolygonLayers(map, layerConfig, true, timestamp),
-        ...makeTemporalLineLayers(map, layerConfig, true, timestamp),
-      ]).forEach((layer) => {
-        deck.setProps({
-          layers: [
-            ...deck.props.layers.filter((l) => {
-              return l.id !== layer.id;
-            }),
-            layer,
-          ],
-        });
-      });
-    },
-    [deck, map]
-  );
 
+  const { checkedLayerTitleList } = useContext(context);
+
+  // Layerレンダリング用のCallback
+  const renderCallback = (layerConfig, timestamp) => {
+    addRenderOption([
+      ...makeGtfsTimeLineLayers(map, layerConfig, true, timestamp, checkedLayerTitleList),
+      ...makeTemporalPolygonLayers(map, layerConfig, true, timestamp, checkedLayerTitleList),
+      ...makeTemporalLineLayers(map, layerConfig, true, timestamp, checkedLayerTitleList),
+    ]).forEach((layer) => {
+      deck.setProps({
+        layers: [
+          ...deck.props.layers.filter((l) => {
+            return l.id !== layer.id;
+          }),
+          layer,
+        ],
+      });
+    });
+  };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const timeLayers = ['bus_trip', 'temporal_polygon', 'temporal_line'];
 
   const getLayerConfig = () => {
     return getFilteredLayerConfig().filter((layer) => {
       return getDataList().some(
-        (value) => value.checked && value.id.includes(layer.id) && timeLayers.includes(layer.type)
+        (value) => value.id.includes(layer.id) && timeLayers.includes(layer.type)
       );
     });
   };
@@ -99,10 +100,6 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
 
   // animate関数に変更があった場合は一度破棄して再度呼び出す
   useEffect(() => {
-    if (deck !== undefined) {
-      // 初回レンダリング
-      renderCallback(getLayerConfig(), timestamp);
-    }
     if (play) {
       requestRef.current = requestAnimationFrame(animate);
     } else if (requestRef.current) {
@@ -117,6 +114,13 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
   const getDisplayTime = (ts) => {
     return `${('0' + Math.floor(ts / 60)).slice(-2)}:${('0' + Math.floor(ts % 60)).slice(-2)}`;
   };
+
+  useEffect(() => {
+    if (deck !== undefined) {
+      // 初回レンダリング
+      renderCallback(getLayerConfig(), timestamp);
+    }
+  }, [deck]);
 
   return (
     <div className={'mx-4 my-4'}>
