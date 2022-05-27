@@ -7,6 +7,7 @@ import { clickedLayerViewState } from '@/components/Map/types';
 import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
+import { RefinementKeywordContext } from '@/components/SideBar/Content/RefinementKeywordProvider'
 
 type TContext = {
   checkedLayerTitleList: string[];
@@ -52,7 +53,9 @@ const App: NextPage = () => {
         <div className="flex content">
           <div className="w-1/3 flex flex-col h-5/6 m-8">
             <div id="sideBar" className="overflow-auto relative flex-1">
-              <Sidebar />
+              <RefinementKeywordContext.Provider value=''>
+                <Sidebar />
+              </RefinementKeywordContext.Provider>
             </div>
             {tooltipData.tooltip ? (
               <div className="relative h-1/3">

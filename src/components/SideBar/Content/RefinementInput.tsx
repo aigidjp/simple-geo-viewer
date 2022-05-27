@@ -1,21 +1,22 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { filterLayerNameInputText } from "@/components/LayerFilter/menu"
+import { RefinementKeywordContext } from "@/components/SideBar/Content/RefinementKeywordProvider"
 
 export const RefinementInput = () => {
 
-    const [refinementKeyword, setRefinementKeyword] = useState('');
+    const [InputRefinementKeyword, setInputRefinementKeyword] = useState('');
+    const {refinementKeyword, setRefinementKeyword} = useContext(RefinementKeywordContext);
 
     // 入力された値をstate保持させる関数
     const handleRefinementKeywordChange = e => {
-        setRefinementKeyword(e.target.value);
+        setInputRefinementKeyword(e.target.value);
     };
 
     // 絞り込みボタン押下
     const handlerOnSubmitSearch = (e) => {
         e.preventDefault();
-        console.log(filterLayerNameInputText(refinementKeyword));
-
-        // メニュー内容の変更
+        // プロバイダーの値変更
+        setRefinementKeyword(InputRefinementKeyword);
     }
 
     return (
