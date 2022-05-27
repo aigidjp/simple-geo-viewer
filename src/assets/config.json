@@ -32,6 +32,16 @@
       "maxVal": 1440,
       "speed": 0,
       "iconUrl": "images/bus_yellow.png"
+    },
+    {
+      "id": "GeoJSON_TimeSeriesPolygon",
+      "type": "temporal_polygon",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "range": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ]
     }
   ]
 }
