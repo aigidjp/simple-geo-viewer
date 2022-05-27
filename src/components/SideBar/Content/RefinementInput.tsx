@@ -1,42 +1,21 @@
-import {
-    Dispatch,
-    memo,
-    SetStateAction,
-    useCallback,
-    useEffect,
-    useRef,
-    useState,
-    VFC,
-} from 'react';
+import { useState } from 'react';
+import { filterLayerNameInputText } from "@/components/LayerFilter/menu"
 
 export const RefinementInput = () => {
 
-    // キーワードを格納
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [keyword, setKeyword] = useState('');
+    const [refinementKeyword, setRefinementKeyword] = useState('');
 
-    // キーワードの変更を監視
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {
-        if (keyword === '') return
+    // 入力された値をstate保持させる関数
+    const handleRefinementKeywordChange = e => {
+        setRefinementKeyword(e.target.value);
+    };
 
-        const params = { keyword: keyword }
-        const query = new URLSearchParams(params)
-
-    }, [keyword]);
-
-
+    // 絞り込みボタン押下
     const handlerOnSubmitSearch = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        console.log(filterLayerNameInputText(refinementKeyword));
 
-        const { currentTarget = {} } = e
-        const fields = Array.from(currentTarget?.elements);
-
-        console.log("aaaaaaaaaaaaaaaaaaa");
-        const fieldQuery = fields.find((field) => field.name === 'query')
-        // keywordをセット
-        const value = fieldQuery.value || ''
-        setKeyword(value);
+        // メニュー内容の変更
     }
 
     return (
@@ -47,10 +26,11 @@ export const RefinementInput = () => {
                     type="search"
                     name="query"
                     className="rounded py-2 px-4 text-left border-2 border-black w-5/6 flex"
-                    placeholder="検索ワードを入力して下さい"
+                    placeholder="絞込するキーワードを入力して下さい"
+                    onChange={handleRefinementKeywordChange}
                 />
-                <button className="ml-2 text-white bg-blue-500 rounded py-2 px-6 hover:opacity-75 w-1/6 flex">
-                    検索
+                <button className="ml-2 text-white bg-blue-500 rounded hover:opacity-75 w-1/6">
+                    絞込
                 </button>
             </form>
         </div>

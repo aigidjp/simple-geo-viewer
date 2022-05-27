@@ -54,3 +54,13 @@ export const getDataById = (targetResourceIds: string[]) => {
   //findだと型アサーションが必要
   return getDataList().filter((data) => data.id[0] === targetResourceIds[0])[0];
 };
+
+/**
+ * 絞り込み入力で絞り込まれたレイヤだけ収集する
+ * @param inputRefinementWord
+ */
+ export const filterLayerNameInputText = (inputRefinementWord: string) =>
+ getDataList().filter((data) => {
+   const regExp = new RegExp(`.*(${inputRefinementWord}).*`);
+   return data.title.match(regExp);
+ });
