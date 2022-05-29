@@ -59,8 +59,9 @@ export const getDataById = (targetResourceIds: string[]) => {
  * 絞り込み入力で絞り込まれたレイヤだけ収集する
  * @param inputRefinementWord
  */
- export const filterLayerNameInputText = (inputRefinementWord: string) =>
- getDataList().filter((data) => {
+ export const filterLayerNameInputText = (inputRefinementWord: String) =>
+ getMenu().filter((data) => {
    const regExp = new RegExp(`.*(${inputRefinementWord}).*`);
-   return data.title.match(regExp);
+   //console.log(data.category.match(regExp));
+   return data.category.match(regExp);
  });

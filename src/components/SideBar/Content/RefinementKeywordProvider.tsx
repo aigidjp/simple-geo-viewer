@@ -1,14 +1,25 @@
-import { createContext, useState } from "react";
+import { createContext, useCallback, useState } from "react";
 
-export const RefinementKeywordContext = createContext('');
+// set context type
+type RefinementKeywordContext = {
+  refinementKeyword: String;
+  setKeyword: (keyword: String) => void;
+};
 
-/*
-export const RefinementKeywordProvider = (props) => {
-  const [refinementKeyword, setInputRefinementKeyword] = useState('');
-  return(
-    <RefinementKeywordContext.Provider value={refinementKeyword}>
-      {props.children}
-    </RefinementKeywordContext.Provider>
-  )
+const defaultContext: RefinementKeywordContext = {
+  refinementKeyword: '',
+  setKeyword: () => {},
 }
-*/
+
+export const refinementKeywordContext = createContext<RefinementKeywordContext>(defaultContext);
+
+export const useRefinementKeyword = (): RefinementKeywordContext => {
+  const [refinementKeyword, setInputRefinementKeyword] = useState('');
+  const setKeyword = useCallback((current): void => {
+    setInputRefinementKeyword(current);
+  },[]);
+  return {
+    refinementKeyword,
+    setKeyword
+  };
+}
