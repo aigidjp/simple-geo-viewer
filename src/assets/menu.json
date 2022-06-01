@@ -93,6 +93,26 @@
         "id": ["jinryu_line"],
         "checked": true,
         "color": "#333333"
+      },
+      {
+        "title": "平日の人の流れ",
+        "type": "line",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["trips_json_weekday"],
+        "checked": true,
+        "color": "#333333"
+      },
+      {
+        "title": "休日の人の流れ",
+        "type": "line",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["trips_json_holiday"],
+        "checked": true,
+        "color": "#333333"
       }
     ]
   }

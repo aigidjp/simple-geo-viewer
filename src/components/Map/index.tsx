@@ -16,6 +16,7 @@ import { initialViewState } from '@/components/Map/initialViewState';
 import BackgroundSelector, { BACKGROUNDS } from './Controller/BackgroundSelector';
 import { TimeSlider } from '@/components/Map/Controller/TimeSlider';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
+import { TEMPORAL_LAYER_TYPES } from '@/components/Map/Layer/temporalLayerMaker';
 
 let map: maplibregl.Map;
 let deck: Deck;
@@ -120,9 +121,7 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
   const visibleLayerTypes = getFilteredLayerConfig().map((item) => {
     return item.type;
   });
-  const hasTimeSeries = !!visibleLayerTypes.find((item) =>
-    ['bus_trip', 'temporal_polygon', 'temporal_line'].includes(item)
-  );
+  const hasTimeSeries = !!visibleLayerTypes.find((item) => TEMPORAL_LAYER_TYPES.includes(item));
 
   //map・deckインスタンスを初期化
   useInitializeMap(maplibreContainer, deckglContainer);

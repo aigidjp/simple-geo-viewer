@@ -1,12 +1,13 @@
-type TemporalLayerType = 'bus_trip' | 'temporal_polygon' | 'temporal_line';
+type TemporalLayerType = 'bus_trip' | 'temporal_polygon' | 'temporal_line' | 'trips_json';
 export const TEMPORAL_LAYER_TYPES: Array<TemporalLayerType | string> = [
   'bus_trip',
   'temporal_polygon',
   'temporal_line',
+  'trips_json',
 ];
 
 import { IconLayer, GeoJsonLayer } from '@deck.gl/layers';
-import { RGBAColor } from 'deck.gl';
+import { RGBAColor, TripsLayer } from 'deck.gl';
 import { getDataList } from '@/components/LayerFilter/menu';
 
 /**
@@ -29,10 +30,12 @@ export function makeTemporalLayers(
     checkedLayerTitleList
   );
   const temporalLineCreator = new TemporalLineLayerCreator(layerConfig, checkedLayerTitleList);
+  const tripsJsonCreator = new TripsJsonLayerCreator(layerConfig, checkedLayerTitleList);
   const layers = [
     ...bustripCreator.makeDeckGlLayers(init, timestamp),
     ...temporalPolygonCreator.makeDeckGlLayers(init, timestamp),
     ...temporalLineCreator.makeDeckGlLayers(init, timestamp),
+    ...tripsJsonCreator.makeDeckGlLayers(init, timestamp),
   ];
   return layers;
 }
@@ -238,6 +241,31 @@ class TemporalLineLayerCreator extends TemporalLayerCreator {
       return gLayer;
     });
 
+    return result;
+  }
+}
+
+class TripsJsonLayerCreator extends TemporalLayerCreator {
+  layerType: TemporalLayerType = 'trips_json';
+
+  makeDeckGlLayers(init, timestamp: number) {
+    const targetLayerConfigs = this.extractTargetConfig();
+    const result: TripsLayer<any>[] = targetLayerConfigs.map((layerConfig) => {
+      const gLayer = new TripsLayer({
+        id: layerConfig.id,
+        data: layerConfig.source,
+        visible: init && this.isChecked(layerConfig),
+        getTimestamps: (d) => d.timestamps,
+        getColor: layerConfig.color || [255, 0, 0],
+        currentTime: timestamp,
+        trailLength: layerConfig.trailLength || 15,
+        widthMinPixels: layerConfig.width || 3,
+        updateTriggers: {
+          currentTime: [timestamp],
+        },
+      });
+      return gLayer;
+    });
     return result;
   }
 }
