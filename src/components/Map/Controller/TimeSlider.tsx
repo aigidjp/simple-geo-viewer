@@ -15,10 +15,8 @@ import { Deck } from 'deck.gl';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
 import { getDataList } from '@/components/LayerFilter/menu';
 import { addRenderOption } from '@/components/Map/Layer/renderOption';
-import { makeGtfsTimeLineLayers } from '@/components/Map/Layer/gtfsTimelineLayerMaker';
-import { makeTemporalPolygonLayers } from '../Layer/temporalPolygonLayerMaker';
+import { makeTemporalLayers, TEMPORAL_LAYER_TYPES } from '../Layer/temporalLayerMaker';
 import maplibregl from 'maplibre-gl';
-import { makeTemporalLineLayers } from '../Layer/temporalLineLayerMaker';
 
 type Props = {
   map: maplibregl.Map;
@@ -43,11 +41,9 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
 
   // Layerレンダリング用のCallback
   const renderCallback = (layerConfig, timestamp) => {
-    addRenderOption([
-      ...makeGtfsTimeLineLayers(map, layerConfig, true, timestamp, checkedLayerTitleList),
-      ...makeTemporalPolygonLayers(map, layerConfig, true, timestamp, checkedLayerTitleList),
-      ...makeTemporalLineLayers(map, layerConfig, true, timestamp, checkedLayerTitleList),
-    ]).forEach((layer) => {
+    addRenderOption(
+      makeTemporalLayers(layerConfig, true, timestamp, checkedLayerTitleList)
+    ).forEach((layer) => {
       deck.setProps({
         layers: [
           ...deck.props.layers.filter((l) => {
@@ -58,13 +54,11 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
       });
     });
   };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const timeLayers = ['bus_trip', 'temporal_polygon', 'temporal_line'];
 
   const getLayerConfig = () => {
     return getFilteredLayerConfig().filter((layer) => {
       return getDataList().some(
-        (value) => value.id.includes(layer.id) && timeLayers.includes(layer.type)
+        (value) => value.id.includes(layer.id) && TEMPORAL_LAYER_TYPES.includes(layer.type)
       );
     });
   };
