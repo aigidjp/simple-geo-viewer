@@ -18,20 +18,52 @@
       "id": "fujikyu_trip_wd",
       "type": "bus_trip",
       "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json",
-      "labels": {
-        "0": "0",
-        "180": "3",
-        "360": "6",
-        "540": "9",
-        "720": "12",
-        "900": "15",
-        "1080": "18",
-        "1260": "21",
-        "1440": "24"
-      },
-      "maxVal": 1440,
-      "speed": 0,
       "iconUrl": "images/bus_yellow.png"
+    },
+    {
+      "id": "jinryu_2d",
+      "type": "temporal_polygon",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "values": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ]
+    },
+    {
+      "id": "jinryu_3d",
+      "type": "temporal_polygon",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "values": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ],
+      "heights": [0, 2000]
+    },
+    {
+      "id": "jinryu_line",
+      "type": "temporal_line",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson",
+      "values": [0, 100],
+      "colors": [
+        [255, 255, 255, 100],
+        [255, 0, 0, 200]
+      ],
+      "widths": [5, 20]
+    },
+    {
+      "id": "trips_json_weekday",
+      "type": "trips_json",
+      "source": "https://data.digitalsmartcity.jp/person_flow/trips_weekday_susono_v8.json",
+      "width": 5,
+      "color": [0, 0, 255],
+      "trailLength": 30
+    },
+    {
+      "id": "trips_json_holiday",
+      "type": "trips_json",
+      "source": "https://data.digitalsmartcity.jp/person_flow/trips_holiday_susono_v8.json"
     }
   ]
 }

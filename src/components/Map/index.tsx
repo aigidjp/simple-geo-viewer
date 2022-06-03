@@ -4,6 +4,7 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 import { Deck } from 'deck.gl';
+import GL from '@luma.gl/constants';
 
 import { context } from '@/pages';
 import { useFlyTo } from '@/components/Map/Animation/flyTo';
@@ -15,6 +16,7 @@ import { initialViewState } from '@/components/Map/initialViewState';
 import BackgroundSelector, { BACKGROUNDS } from './Controller/BackgroundSelector';
 import { TimeSlider } from '@/components/Map/Controller/TimeSlider';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
+import { TEMPORAL_LAYER_TYPES } from '@/components/Map/Layer/temporalLayerMaker';
 
 let map: maplibregl.Map;
 let deck: Deck;
@@ -54,13 +56,16 @@ const getInitialStyle = (): maplibregl.Style => {
   return style;
 };
 
-const useInitializeMap = (mapContainer: React.MutableRefObject<HTMLDivElement | null>) => {
+const useInitializeMap = (
+  maplibreContainer: React.MutableRefObject<HTMLDivElement | null>,
+  deckglContainer: React.MutableRefObject<HTMLCanvasElement | null>
+) => {
   useEffect(() => {
     if (!map) {
-      if (!mapContainer.current) return;
+      if (!maplibreContainer.current) return;
 
       map = new maplibregl.Map({
-        container: mapContainer.current,
+        container: maplibreContainer.current,
         style: getInitialStyle(),
         center: [initialViewState.longitude, initialViewState.latitude],
         zoom: initialViewState.zoom,
@@ -75,7 +80,7 @@ const useInitializeMap = (mapContainer: React.MutableRefObject<HTMLDivElement | 
     const gl = map.painter.context.gl;
     deck = new Deck({
       initialViewState: initialViewState,
-      gl: gl,
+      canvas: deckglContainer.current!,
       controller: true,
       onViewStateChange: ({ viewState }) => {
         map.jumpTo({
@@ -102,7 +107,6 @@ const useToggleVisibly = () => {
   if (!deck) return;
   const deckGlLayers = deck.props.layers;
   const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList);
-
   deck.setProps({ layers: toggleVisibleLayers });
 };
 
@@ -111,15 +115,16 @@ type Props = {
 };
 
 const Map: React.VFC<Props> = ({ setTooltipData }) => {
-  const mapContainer = useRef<HTMLDivElement | null>(null);
+  const maplibreContainer = useRef<HTMLDivElement | null>(null);
+  const deckglContainer = useRef<HTMLCanvasElement | null>(null);
 
   const visibleLayerTypes = getFilteredLayerConfig().map((item) => {
     return item.type;
   });
-  const hasTimeSeries = !!visibleLayerTypes.find((item) => ['bus_trip'].includes(item));
+  const hasTimeSeries = !!visibleLayerTypes.find((item) => TEMPORAL_LAYER_TYPES.includes(item));
 
   //map・deckインスタンスを初期化
-  useInitializeMap(mapContainer);
+  useInitializeMap(maplibreContainer, deckglContainer);
 
   //対象のレイヤを全て作成してdeckに登録
   useEffect(() => {
@@ -136,7 +141,8 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
 
   return (
     <>
-      <div className="m-8 h-5/6" ref={mapContainer}>
+      <div className="m-8 h-5/6" ref={maplibreContainer}>
+        <canvas className="z-10 absolute h-full" ref={deckglContainer}></canvas>
         <div className="z-10 relative top-0 left-0 w-40">
           <Legend id={useGetClickedLayerId()} />
         </div>

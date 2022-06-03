@@ -153,10 +153,13 @@ yarn build
 - geojson: [https://deck.gl/docs/api-reference/layers/geojson-layer](https://deck.gl/docs/api-reference/layers/geojson-layer)
 - raster: [https://deck.gl/docs/api-reference/geo-layers/tile-layer](https://deck.gl/docs/api-reference/geo-layers/tile-layer)
 - mvt: [https://deck.gl/docs/api-reference/geo-layers/mvt-layer](https://deck.gl/docs/api-reference/geo-layers/mvt-layer)
-- （3dtiles）: [https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer](https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer)
-- （gltf）: [https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer](https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer)
-- （icon）: [https://deck.gl/docs/api-reference/layers/icon-layer](https://deck.gl/docs/api-reference/layers/icon-layer)
-- （bus_trip）: GTFSのトラッキングデータを読み込んで時系列コントロールでの表示ができます。
+- 3dtiles: [https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer](https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer)
+- gltf: [https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer](https://deck.gl/docs/api-reference/mesh-layers/scenegraph-layer)
+- icon: [https://deck.gl/docs/api-reference/layers/icon-layer](https://deck.gl/docs/api-reference/layers/icon-layer)
+- bus_trip: GTFSのトラッキングデータを読み込んで時系列アニメーション表示ができます。形式はこの[GeoJSON](https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json)に準拠します。
+- temporal_polygon: GeoJSONポリゴンを、属性に応じて時系列アニメーション表示ができます。形式はこの[GeoJSON](https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson)に準拠します。
+- temporal_line: GeoJSONポリゴンを、属性に応じて時系列アニメーション表示ができます。形式はこの[GeoJSON](https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson)に準拠します。
+- trips_json: [https://deck.gl/docs/api-reference/geo-layers/trips-layer](https://deck.gl/docs/api-reference/geo-layers/trips-layer)
 
 #### 各種表示レイヤー設定のサンプル
 
@@ -267,23 +270,70 @@ yarn build
     {
       "id": "sample-bus-trip",
       "source": "GTFSのトラッキングデータURL",
-      "labels": {
-        "0": "0",
-        "180": "3",
-        "360": "6",
-        "540": "9",
-        "720": "12",
-        "900": "15",
-        "1080": "18",
-        "1260": "21",
-        "1440": "24"
-      },
-      "maxVal": 1440,
-      "speed": 0,
       "iconUrl": "images/bus_yellow.png"
     }
   ]
 }
+```
+
+#### temporal_polygon
+
+```json
+    {
+      "id": "jinryu_2d",
+      "type": "temporal_polygon",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "values": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ]
+    }
+```
+
+高さを示す値の範囲を設定することで3D表示もできます。
+
+```json
+{
+  "id": "jinryu_3d",
+  "type": "temporal_polygon",
+  "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+  "values": [0, 2000],
+  "colors": [
+    [255, 255, 255, 0],
+    [255, 0, 0, 200]
+  ],
+  "heights": [0, 2000]
+}
+```
+
+#### temporal_line
+
+```json
+    {
+      "id": "jinryu_line",
+      "type": "temporal_line",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson",
+      "values": [0, 100],
+      "colors": [
+        [255, 255, 255, 100],
+        [255, 0, 0, 200]
+      ],
+      "widths": [5, 20]
+    }
+```
+
+#### trips_json
+
+```json
+    {
+      "id": "trips_json_weekday",
+      "type": "trips_json",
+      "source": "https://data.digitalsmartcity.jp/person_flow/trips_weekday_susono_v8.json",
+      "width": 5,
+      "color": [0, 0, 255],
+      "trailLength": 30
+    }
 ```
 
 ### 高度なレイヤー設定

@@ -59,5 +59,61 @@
         "download_url": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json"
       }
     ]
+  },
+  {
+    "category": "メッシュベース疑似人流データ",
+    "url": "https://www.geospatial.jp/ckan/dataset/hinanbasho-13/resource/54b500b8-ef85-47fc-83d7-895b5488810e",
+    "data": [
+      {
+        "title": "メッシュベース疑似人流データ",
+        "type": "polygon",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["jinryu_2d"],
+        "checked": false,
+        "color": "#333333"
+      },
+      {
+        "title": "3Dメッシュベース疑似人流データ",
+        "type": "polygon",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["jinryu_3d"],
+        "checked": false,
+        "color": "#333333"
+      },
+      {
+        "title": "リンクベース疑似人流データ(東大)",
+        "type": "line",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["jinryu_line"],
+        "checked": true,
+        "color": "#333333"
+      },
+      {
+        "title": "平日の人の流れ",
+        "type": "line",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["trips_json_weekday"],
+        "checked": true,
+        "color": "#333333"
+      },
+      {
+        "title": "休日の人の流れ",
+        "type": "line",
+        "lng": 138.76875,
+        "lat": 34.954167,
+        "zoom": 12,
+        "id": ["trips_json_holiday"],
+        "checked": true,
+        "color": "#333333"
+      }
+    ]
   }
 ]

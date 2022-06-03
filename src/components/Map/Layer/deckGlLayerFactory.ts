@@ -7,7 +7,6 @@ import { addRenderOption } from '@/components/Map/Layer/renderOption';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
 import { makeIconLayers } from '@/components/Map/Layer/iconLayerMaker';
 import { Dispatch, SetStateAction } from 'react';
-import { MapboxLayer } from '@deck.gl/mapbox';
 import { Deck } from 'deck.gl';
 import { getDataList } from '@/components/LayerFilter/menu';
 import { makeTile3DLayers } from '@/components/Map/Layer/tile3DLayerMaker';
@@ -20,9 +19,6 @@ export const makeDeckGlLayers = (
   if (!map || !deck) return;
 
   const LayerLoader = (layer) => {
-    const mapboxLayer = new MapboxLayer({ id: layer.id, deck });
-    map.addLayer(mapboxLayer);
-
     deck.setProps({
       layers: [...deck.props.layers, layer],
     });
