@@ -62,6 +62,5 @@ export const getDataById = (targetResourceIds: string[]) => {
  export const filterLayerNameInputText = (inputRefinementWord: String) =>
  getMenu().filter((data) => {
    const regExp = new RegExp(`.*(${inputRefinementWord}).*`);
-   //console.log(data.category.match(regExp));
    return data.category.match(regExp);
  });
