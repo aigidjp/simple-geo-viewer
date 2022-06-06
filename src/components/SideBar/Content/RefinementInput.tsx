@@ -1,11 +1,8 @@
-import { useState, useContext } from 'react';
-import { filterLayerNameInputText } from "@/components/LayerFilter/menu"
-import { refinementKeywordContext } from "@/components/SideBar/Content/RefinementKeywordProvider"
+import { useState } from 'react';
 
-export const RefinementInput = () => {
+export const RefinementInput = (props) => {
 
     const [InputRefinementKeyword, setInputRefinementKeyword] = useState('');
-    const context = useContext(refinementKeywordContext);
 
     // 入力された値をstate保持させる関数
     const handleRefinementKeywordChange = e => {
@@ -17,7 +14,7 @@ export const RefinementInput = () => {
         e.preventDefault();
 
         // 絞り込みキーワードの更新
-        context.setKeyword(InputRefinementKeyword);
+        props.setRefinementKeyword(InputRefinementKeyword);
     }
 
     return (
