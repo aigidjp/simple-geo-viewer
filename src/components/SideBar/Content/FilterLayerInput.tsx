@@ -1,12 +1,16 @@
 import { useState } from 'react';
 
-export const RefinementInput = (props) => {
+type Props = {
+    setFilterKeyword: React.Dispatch<React.SetStateAction<string>>;
+};
 
-    const [InputRefinementKeyword, setInputRefinementKeyword] = useState('');
+export const FilterLayerInput: React.VFC<Props> = ({ setFilterKeyword }) => {
+
+    const [InputFilterKeyword, setInputFilterKeyword] = useState('');
 
     // 入力された値をstate保持させる関数
-    const handleRefinementKeywordChange = e => {
-        setInputRefinementKeyword(e.target.value);
+    const handleFilterKeywordChange = e => {
+        setInputFilterKeyword(e.target.value);
     };
 
     // 絞り込みボタン押下
@@ -14,7 +18,7 @@ export const RefinementInput = (props) => {
         e.preventDefault();
 
         // 絞り込みキーワードの更新
-        props.setRefinementKeyword(InputRefinementKeyword);
+        setFilterKeyword(InputFilterKeyword);
     }
 
     return (
@@ -26,7 +30,7 @@ export const RefinementInput = (props) => {
                     name="query"
                     className="rounded py-2 px-4 text-left border-2 border-black w-5/6 flex"
                     placeholder="絞込するキーワードを入力して下さい"
-                    onChange={handleRefinementKeywordChange}
+                    onChange={handleFilterKeywordChange}
                 />
                 <button className="ml-2 text-white bg-blue-500 rounded hover:opacity-75 w-1/6">
                     絞込

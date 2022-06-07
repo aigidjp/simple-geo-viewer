@@ -57,10 +57,13 @@ export const getDataById = (targetResourceIds: string[]) => {
 
 /**
  * 絞り込み入力で絞り込まれたレイヤだけ収集する
- * @param inputRefinementWord
+ * @param inputFilterKeyword
  */
- export const filterLayerNameInputText = (inputRefinementWord: String) =>
- getMenu().filter((data) => {
-   const regExp = new RegExp(`.*(${inputRefinementWord}).*`);
-   return data.category.match(regExp);
- });
+ export const filterLayerNameInputText = (inputFilterKeyword: String) => {
+  if (inputFilterKeyword === '') return getMenu();
+
+  return getMenu().filter((data) => {
+    const regExp = new RegExp(`.*(${inputFilterKeyword}).*`);
+    return data.category.match(regExp);
+  });
+};

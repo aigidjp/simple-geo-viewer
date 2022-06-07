@@ -1,28 +1,19 @@
-import React, {useContext, useState, useEffect, useCallback} from 'react';
+import React, { useState } from 'react';
 import { getVisiblyContent } from '@/components/LayerFilter/sideBar';
 import { Content } from '@/components/SideBar/Content';
 import { Layers } from '@/components/SideBar/Content/Layers';
 import { VisibleContent } from '@/components/SideBar/types';
-import { RefinementInput } from '@/components/SideBar/Content/RefinementInput';
+import { FilterLayerInput } from '@/components/SideBar/Content/FilterLayerInput';
 import { getMenu, filterLayerNameInputText } from "@/components/LayerFilter/menu"
 
 const Sidebar: React.FC = () => {
-  const [visiblyContentList, setVisiblyContentList] = useState(getVisiblyContent(getMenu()));
-  const [InputRefinementKeyword, setInputRefinementKeyword] = useState('');
-
-  useEffect(() => {
-    // 絞り込みキーワードの変更通知
-    if (InputRefinementKeyword !== '') {
-      const refinementContents = filterLayerNameInputText(InputRefinementKeyword);
-      setVisiblyContentList(getVisiblyContent(refinementContents));
-    } else {
-      setVisiblyContentList(getVisiblyContent(getMenu()));
-    }
-  }, [InputRefinementKeyword]);
+  const [InputFilterKeyword, setInputFilterKeyword] = useState('');
+  const filterContents = filterLayerNameInputText(InputFilterKeyword);
+  const visiblyContentList = getVisiblyContent(filterContents);
 
   return (
     <>
-      <RefinementInput setRefinementKeyword={setInputRefinementKeyword} />
+      <FilterLayerInput setFilterKeyword={setInputFilterKeyword} />
       {visiblyContentList.map((content: VisibleContent) => (
         <Content
           title={content.dataset}
