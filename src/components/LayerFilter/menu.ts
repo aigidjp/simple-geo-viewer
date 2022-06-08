@@ -54,3 +54,16 @@ export const getDataById = (targetResourceIds: string[]) => {
   //findだと型アサーションが必要
   return getDataList().filter((data) => data.id[0] === targetResourceIds[0])[0];
 };
+
+/**
+ * 絞り込み入力で絞り込まれたレイヤだけ収集する
+ * @param inputFilterKeyword
+ */
+ export const filterLayerNameInputText = (inputFilterKeyword: String) => {
+  if (inputFilterKeyword === '') return getMenu();
+
+  return getMenu().filter((data) => {
+    const regExp = new RegExp(`.*(${inputFilterKeyword}).*`);
+    return data.category.match(regExp);
+  });
+};

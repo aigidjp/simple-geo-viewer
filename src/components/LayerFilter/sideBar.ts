@@ -2,8 +2,8 @@ import { getIdByDataTitle } from '@/components/LayerFilter/menu';
 import { havingLegendIdList } from '@/components/Map/Legend/layerIds';
 import { getDataList, getMenu } from '@/components/LayerFilter/menu';
 
-export const getVisiblyContent = () => {
-  const visiblyItemList = getMenu();
+export const getVisiblyContent = (visiblyItemList) => {
+  //const visiblyItemList = getMenu();
   return visiblyItemList.map((item) => {
     return {
       dataset: item.category,
