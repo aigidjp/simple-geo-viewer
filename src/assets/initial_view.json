@@ -1,8 +1,11 @@
 {
-  "map": {
-    "center": [139.77, 35.67],
-    "zoom": 11,
-    "bearing": 0,
-    "pitch": 60
-  }
+    "map": {
+        "center": [
+            138.9067,
+            35.174
+        ],
+        "zoom": 11.0,
+        "bearing": 15,
+        "pitch": 60
+    }
 }
