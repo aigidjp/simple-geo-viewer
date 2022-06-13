@@ -1220,7 +1220,7 @@
         "open": false,
         "data": [
             {
-                "title": "テストデータ（国土数値情報（警察署）ー沖縄県）",
+                "title": "テストデータ（国土数値情報（警察署）ー沖縄県ーIcon）",
                 "type": "icon",
                 "lng": 127.255761,
                 "lat": 26.047428,
@@ -1233,7 +1233,7 @@
                 "url": "https://www.geospatial.jp/ckan/dataset/okinawa"
             },
             {
-                "title": "テストデータ（国土数値情報（警察署）ー沖縄県）",
+                "title": "テストデータ（国土数値情報（警察署）ー沖縄県ーPolygon）",
                 "type": "polygon",
                 "lng": 126.67081,
                 "lat": 25.773157,
