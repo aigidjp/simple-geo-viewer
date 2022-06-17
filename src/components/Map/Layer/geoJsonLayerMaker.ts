@@ -26,10 +26,15 @@ export function makeGeoJsonLayers(map: maplibregl.Map, layerConfig, init: boolea
   return geoJsonCreator.makeDeckGlLayers(init);
 }
 
+export function makeGeoJsonIconLayer(map: maplibregl.Map, layerConfig, init: boolean, setTooltipData) {
+  const geoJsonIconCreator = new GeoJsonIconLayerCreator(layerConfig, map, setTooltipData);
+  return geoJsonIconCreator.makeDeckGlLayers(init);
+}
+
 class GeoJsonLayerCreator {
   private readonly map: maplibregl.Map;
   private readonly layerConfig: any[];
-  private readonly layersType: string = 'geojson';
+  layersType: string = 'geojson';
   private readonly setTooltipData: Dispatch<SetStateAction<any>>;
 
   constructor(layerConfig: any[], map: maplibregl.Map, setTooltipData) {
@@ -57,22 +62,52 @@ class GeoJsonLayerCreator {
     return result;
   }
 
-  private extractLayerConfig = (layerConfig) => {
+  extractLayerConfig = (layerConfig) => {
     const { type, source, ...otherConfig } = layerConfig;
     return otherConfig;
   };
 
-  private extractTargetConfig() {
+  extractTargetConfig() {
     return this.layerConfig.filter((layer: geoJsonLayerConfig) => {
       return layer.type === this.layersType;
     });
   }
 
-  private showToolTip = (info: PickInfo<any>) => {
+  showToolTip = (info: PickInfo<any>) => {
     // @ts-ignore
     const { coordinate, object } = info;
     if (!coordinate) return;
     if (!object) return;
     show(object, coordinate[0], coordinate[1], this.map, this.setTooltipData);
   };
+}
+
+class GeoJsonIconLayerCreator extends GeoJsonLayerCreator {
+  layersType: string = "geojsonicon";
+  makeDeckGlLayers(init) {
+    const targetLayerConfigs = this.extractTargetConfig();
+
+    const result: GeoJsonLayer<any>[] = targetLayerConfigs.map((layerConfig) => {
+      const config = this.extractLayerConfig(layerConfig);
+
+      return new GeoJsonLayer({
+        data: layerConfig.source,
+        visible: init,
+        pickable: true,
+        autoHighlight: true,
+        onClick: this.showToolTip,
+        pointType:"icon",
+        getIcon: (_) => ({
+          url: layerConfig.icon.url,
+          width: layerConfig.icon.width,
+          height: layerConfig.icon.height,
+          anchorY: layerConfig.icon.anchorY,
+          mask: false,
+        }),
+        ...config,
+      });
+    });
+
+    return result;
+  }
 }
