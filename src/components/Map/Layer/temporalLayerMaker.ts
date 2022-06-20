@@ -288,12 +288,11 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
         // @ts-ignore
         getLineColor: (d: any) => {
 
-          // TODO:インターバルが1時間固定なので、パラメーターから取得した値で計算する必要がある
-          // timestampとの整合性を取る
-          const hourIndex: number = Math.trunc(timestamp / 60) - 1;
-          const temporalValue: number = JSON.parse(d.properties.traffic_volume)[hourIndex];
+          // dataの取得
+          const dataIndex: number = Math.trunc(timestamp / layerConfig.step) - 1;
+          const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
 
-          // TODO:この辺の処理はまとめる必要あり
+          // 0〜1の範囲にノーマライズの計算
           const normalizedValue = Math.max(
             0,
             Math.min(
@@ -302,7 +301,7 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
                 (layerConfig.values[1] - layerConfig.values[0])
             )
           );
-
+          // 色の決定
           const [r1, g1, b1, a1] = layerConfig.colors[0];
           const [r2, g2, b2, a2] = layerConfig.colors[1];
           const color: RGBAColor = [
@@ -315,8 +314,8 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
           return color;
         },
         getLineWidth: (d: any) => {
-          const hourIndex: number = Math.trunc(timestamp / 60) - 1;
-          const temporalValue: number = JSON.parse(d.properties.traffic_volume)[hourIndex];
+          const dataIndex: number = Math.trunc(timestamp / layerConfig.step) - 1;
+          const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
           const normalizedValue = Math.max(
             0,
             Math.min(
