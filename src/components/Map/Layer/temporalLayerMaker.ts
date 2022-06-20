@@ -282,7 +282,7 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
 
     const targetLayerConfigs = this.extractTargetConfig();
     const result: MVTLayer<any>[] = targetLayerConfigs.map((layerConfig) => {
-      const gLayer = new MVTLayer({
+      const mLayer = new MVTLayer({
         id: layerConfig.id,
         data: layerConfig.source,
         // @ts-ignore
@@ -334,10 +334,12 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
         stroked: false,
         filled: true,
         updateTriggers: {
+          getLineColor: [timestamp],
+          getLineWidth: [timestamp],
           currentTime: [timestamp],
         },
       });
-      return gLayer;
+      return mLayer;
     });
     return result;
 
