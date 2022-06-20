@@ -64,6 +64,20 @@
       "id": "trips_json_holiday",
       "type": "trips_json",
       "source": "https://data.digitalsmartcity.jp/person_flow/trips_holiday_susono_v8.json"
+    },
+    {
+      "id": "drm_trip",
+      "type": "trips_drm",
+      "source": "https://drm-link-volume.s3.ap-northeast-1.amazonaws.com/drm_o/{z}/{x}/{y}.pbf",
+      "values": [0, 5],
+      "colors": [
+        [255, 255, 255, 100],
+        [255, 0, 0, 200]
+      ],
+      "timeScale": "hour",
+      "interval": 1,
+      "start": "0:00",
+      "end": "24:00"
     }
   ]
 }

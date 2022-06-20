@@ -26,7 +26,7 @@
         "lat": 35.676572613649,
         "zoom": 12,
         "id": ["gyosei-tokyo"],
-        "checked": true,
+        "checked": false,
         "color": "#333333"
       },
       {
@@ -36,7 +36,7 @@
         "lat": 35.676572613649,
         "zoom": 12,
         "id": ["gyosei-tokyo"],
-        "checked": true,
+        "checked": false,
         "color": "#333333",
         "download_url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v2_3.html"
       }
@@ -54,7 +54,7 @@
         "lat": 35.18,
         "zoom": 12.5,
         "id": ["fujikyu_trip_wd"],
-        "checked": true,
+        "checked": false,
         "color": "#fa5032",
         "download_url": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json"
       }
@@ -91,7 +91,7 @@
         "lat": 34.954167,
         "zoom": 12,
         "id": ["jinryu_line"],
-        "checked": true,
+        "checked": false,
         "color": "#333333"
       },
       {
@@ -101,7 +101,7 @@
         "lat": 34.954167,
         "zoom": 12,
         "id": ["trips_json_weekday"],
-        "checked": true,
+        "checked": false,
         "color": "#333333"
       },
       {
@@ -111,7 +111,24 @@
         "lat": 34.954167,
         "zoom": 12,
         "id": ["trips_json_holiday"],
-        "checked": true,
+        "checked": false,
+        "color": "#333333"
+      }
+    ]
+  },
+  {
+    "category": "DRMテスト",
+    "url": "",
+    "open": true,
+    "data": [
+      {
+        "title": "DRMリンク交通量",
+        "type": "timeline",
+        "lng":  139.87948,
+        "lat": 42.66909,
+        "zoom": 14,
+        "id": ["drm_trip"],
+        "checked": false,
         "color": "#333333"
       }
     ]
