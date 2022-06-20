@@ -127,7 +127,7 @@
         "lng":  139.87948,
         "lat": 42.66909,
         "zoom": 14,
-        "id": ["drm_trip"],
+        "id": ["drm_test"],
         "checked": false,
         "color": "#333333"
       }

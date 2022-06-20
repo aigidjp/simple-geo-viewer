@@ -160,6 +160,7 @@ yarn build
 - temporal_polygon: GeoJSONポリゴンを、属性に応じて時系列アニメーション表示ができます。形式はこの[GeoJSON](https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson)に準拠します。
 - temporal_line: GeoJSONポリゴンを、属性に応じて時系列アニメーション表示ができます。形式はこの[GeoJSON](https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson)に準拠します。
 - trips_json: [https://deck.gl/docs/api-reference/geo-layers/trips-layer](https://deck.gl/docs/api-reference/geo-layers/trips-layer)
+- trips_drm: [https://deck.gl/docs/api-reference/geo-layers/mvt-layer](https://deck.gl/docs/api-reference/geo-layers/mvt-layer)
 
 #### 各種表示レイヤー設定のサンプル
 
@@ -282,7 +283,7 @@ yarn build
     {
       "id": "jinryu_2d",
       "type": "temporal_polygon",
-      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "source": "時系列geojsonデータ",
       "values": [0, 2000],
       "colors": [
         [255, 255, 255, 0],
@@ -297,7 +298,7 @@ yarn build
 {
   "id": "jinryu_3d",
   "type": "temporal_polygon",
-  "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+  "source": "時系列geojsonデータ",
   "values": [0, 2000],
   "colors": [
     [255, 255, 255, 0],
@@ -313,7 +314,7 @@ yarn build
     {
       "id": "jinryu_line",
       "type": "temporal_line",
-      "source": "https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson",
+      "source": "時系列geojsonデータ",
       "values": [0, 100],
       "colors": [
         [255, 255, 255, 100],
@@ -329,13 +330,28 @@ yarn build
     {
       "id": "trips_json_weekday",
       "type": "trips_json",
-      "source": "https://data.digitalsmartcity.jp/person_flow/trips_weekday_susono_v8.json",
+      "source": "時系列geojsonデータ",
       "width": 5,
       "color": [0, 0, 255],
       "trailLength": 30
     }
 ```
 
+#### trips_drm
+
+```json
+    {
+      "id": "trips_drm",
+      "type": "trips_drm",
+      "source": "DRMの時系列ベクトルデータ",
+      "values": [0, 5],
+      "colors": [
+        [255, 255, 255, 100],
+        [255, 0, 0, 200]
+      ],
+      "step": 60
+    }
+```
 ### 高度なレイヤー設定
 
 - ソースコードに簡単な修正を加えることで、凡例を表示したり、属性値に合わせて表示色を切り替えることができます。
