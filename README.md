@@ -179,6 +179,30 @@ yarn build
 }
 ```
 
+##### geojson(ICON)
+
+```json
+{
+  "layers": [
+    {
+      "id": "sample-icon-geojson",
+      "type": "geojsonicon",
+      "source": "./data/sample.geojson",
+      "download_url": "https://www.google.co.jp/",
+      "getPointRadius": 50,
+      "icon": {
+                "url": "./data/sample/icon.svg",
+                "width": 64,
+                "height": 64,
+                "anchorY": 64,
+                "color": "yellow"
+      },
+      "iconSizeScale": 60,
+    }
+  ]
+}
+```
+
 ##### raster
 
 ```json
