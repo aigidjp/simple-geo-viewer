@@ -1,6 +1,7 @@
 import maplibregl from 'maplibre-gl';
 import { PickInfo, RGBAColor } from 'deck.gl';
-import { ArcLayer ,GeoJsonLayer } from '@deck.gl/layers';
+import { GeoJsonLayer } from '@deck.gl/layers';
+
 import { show } from '@/components/Tooltip/show';
 import { Dispatch, SetStateAction } from 'react';
 
@@ -30,11 +31,9 @@ export function makeGeoJsonLayers(
 ) {
   const geoJsonLinePolygonCreator = new GeoJsonLinePolygonCreator(layerConfig, map, setTooltipData);
   const geoJsonIconCreator = new GeoJsonIconLayerCreator(layerConfig, map, setTooltipData);
-  const geoJsonArcCreator = new GeoJsonArcLayerCreator(layerConfig, map, setTooltipData);
   const layers = [
     ...geoJsonLinePolygonCreator.makeDeckGlLayers(init),
-    ...geoJsonIconCreator.makeDeckGlLayers(init),
-    ...geoJsonArcCreator .makeDeckGlLayers(init)
+    ...geoJsonIconCreator.makeDeckGlLayers(init)
   ];
   return layers;
 }
@@ -118,32 +117,6 @@ class GeoJsonIconLayerCreator extends GeoJsonLayerCreator {
           anchorY: layerConfig.icon.anchorY,
           mask: false,
         }),
-        ...config,
-      });
-    });
-
-    return result;
-  }
-}
-
-class GeoJsonArcLayerCreator extends GeoJsonLayerCreator {
-  layersType: string = "Arc";
-  makeDeckGlLayers(init) {
-    const targetLayerConfigs = this.extractTargetConfig();
-
-    const result: ArcLayer<any>[] = targetLayerConfigs.map((layerConfig) => {
-      const config = this.extractLayerConfig(layerConfig);
-
-      return new ArcLayer({
-        id: layerConfig.id,
-        visible: init,
-        pickable: true,
-        data: layerConfig.data,
-        getWidth: layerConfig.width,
-        getSourcePosition: d => d.from.coordinates,
-        getTargetPosition: d => d.to.coordinates,
-        getSourceColor: layerConfig.sourceColor,
-        getTargetColor: layerConfig.targetColor,
         ...config,
       });
     });
