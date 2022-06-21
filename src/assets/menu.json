@@ -13,7 +13,7 @@
                 ],
                 "checked": false,
                 "color": "#44a196",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-photo-1"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-photo-1"
             },
             {
                 "title": "裾野市航空写真（令和元年度）",
@@ -26,7 +26,7 @@
                 ],
                 "checked": true,
                 "color": "#44a196",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-photo-1"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-photo-1"
             }
         ]
     },
@@ -61,7 +61,7 @@
                 ],
                 "checked": false,
                 "color": "#dca050",
-                "url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
             },
             {
                 "title": "都市機能誘導区域-岩波 (平成31年3月時点）",
@@ -74,7 +74,7 @@
                 ],
                 "checked": false,
                 "color": "#a050dc",
-                "url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
             },
             {
                 "title": "都市機能誘導区域-裾野 (平成31年3月時点）",
@@ -87,7 +87,7 @@
                 ],
                 "checked": false,
                 "color": "#4050dc",
-                "url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
             },
             {
                 "title": "市街化区域(2019.3作成)",
@@ -100,7 +100,7 @@
                 ],
                 "checked": false,
                 "color": "#dcdc50",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             },
             {
                 "title": "用途地域(2019.3作成)",
@@ -113,7 +113,7 @@
                 ],
                 "checked": false,
                 "color": "#dc5050",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             },
             {
                 "title": "土地区画整理(2019.3作成)",
@@ -126,7 +126,7 @@
                 ],
                 "checked": false,
                 "color": "#50dc50",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             },
             {
                 "title": "地区計画(2019.3作成)",
@@ -139,7 +139,7 @@
                 ],
                 "checked": false,
                 "color": "#50dcdc",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             },
             {
                 "title": "準防火地域(2019.3作成)",
@@ -152,7 +152,7 @@
                 ],
                 "checked": false,
                 "color": "#ae5574",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             },
             {
                 "title": "その他の都市施設(2019.3作成)",
@@ -165,7 +165,7 @@
                 ],
                 "checked": false,
                 "color": "#435574",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "udownload_urlrl": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             },
             {
                 "title": "都市計画公園(2019.3作成)",
@@ -178,7 +178,7 @@
                 ],
                 "checked": false,
                 "color": "#43b57b",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             },
             {
                 "title": "都市計画緑地(2019.3作成)",
@@ -191,7 +191,7 @@
                 ],
                 "checked": false,
                 "color": "#43fca9",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
             }
         ]
     },
@@ -210,7 +210,7 @@
                 "checked": true,
                 "icon": "images/school_yellow.png",
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             },
             {
                 "title": "AED",
@@ -224,7 +224,7 @@
                 "checked": true,
                 "icon": "images/AED_yellow.png",
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             },
             {
                 "title": "観光ポイント",
@@ -238,7 +238,7 @@
                 "checked": true,
                 "icon": "images/tourism_yellow.png",
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             },
             {
                 "title": "公共施設",
@@ -252,7 +252,7 @@
                 "checked": true,
                 "color": "#f0f060",
                 "icon": "images/publicbulding_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             },
             {
                 "title": "wifi",
@@ -266,7 +266,7 @@
                 "checked": false,
                 "color": "#f0f060",
                 "icon": "images/Wifi_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             },
             {
                 "title": "宿泊施設",
@@ -280,7 +280,7 @@
                 "checked": false,
                 "color": "#f0f060",
                 "icon": "images/hotel_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             },
             {
                 "title": "医療施設",
@@ -294,7 +294,7 @@
                 "checked": false,
                 "color": "#f0f060",
                 "icon": "images/hospital_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             },
             {
                 "title": "Wikipedia記事QRコードシール貼付場所",
@@ -308,7 +308,7 @@
                 "checked": false,
                 "color": "#f0f060",
                 "icon": "images/tourism_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
             }
         ]
     },
@@ -343,6 +343,7 @@
     },
     {
         "category": "富士急シティバス",
+        "url": "",
         "data": [
             {
                 "title": "バスの動き(平日)",
@@ -354,7 +355,7 @@
                     "fujikyu_trip_wd"
                 ],
                 "checked": true,
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
                 "color": "#fa5032",
                 "icon": "images/bus_red.png"
             },
@@ -368,7 +369,7 @@
                     "fujikyu_trip_sat"
                 ],
                 "checked": false,
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
                 "color": "#fa5032",
                 "icon": "images/bus_red.png"
             },
@@ -382,7 +383,7 @@
                     "fujikyu_trip_holiday"
                 ],
                 "checked": false,
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
                 "color": "#fa5032",
                 "icon": "images/bus_red.png"
             },
@@ -398,7 +399,7 @@
                 "checked": true,
                 "color": "#f0f060",
                 "icon": "images/busstop_red.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus"
             },
             {
                 "title": "路線",
@@ -410,7 +411,7 @@
                     "fujikyu_line"
                 ],
                 "checked": true,
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
                 "color": "#fa5032"
             }
         ]
@@ -429,7 +430,7 @@
                 ],
                 "checked": true,
                 "color": "#44baf5",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs",
                 "icon": "images/bus_blue.png"
             },
             {
@@ -444,7 +445,7 @@
                 "checked": true,
                 "color": "#f0f060",
                 "icon": "images/busstop_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
             },
             {
                 "title": "路線",
@@ -457,7 +458,7 @@
                 ],
                 "checked": true,
                 "color": "#44baf5",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
             }
         ]
     },
@@ -475,7 +476,7 @@
                 ],
                 "checked": false,
                 "color": "#89BDDE",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
             },
             {
                 "title": "道路台帳1000",
@@ -488,7 +489,7 @@
                 ],
                 "checked": false,
                 "color": "#4D7198",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
             },
             {
                 "title": "認定路線",
@@ -501,7 +502,7 @@
                 ],
                 "checked": false,
                 "color": "#B7C1D2",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
             },
             {
                 "title": "橋梁",
@@ -515,7 +516,7 @@
                 "checked": false,
                 "color": "#f0f060",
                 "icon": "images/bridge_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
             }
         ]
     },
@@ -641,7 +642,7 @@
                 ],
                 "checked": false,
                 "color": "#ffffff",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
             },
             {
                 "title": "急傾斜R",
@@ -703,7 +704,7 @@
                 "checked": false,
                 "icon": "images/publicfacility_yellow.png",
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
             },
             {
                 "title": "救護所",
@@ -717,7 +718,7 @@
                 "checked": false,
                 "color": "#f0f060",
                 "icon": "images/medicalcenter_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
             },
             {
                 "title": "救護病院",
@@ -731,7 +732,7 @@
                 "checked": false,
                 "color": "#f0f060",
                 "icon": "images/medicalcenter_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
             },
             {
                 "title": "警察災害派遣隊",
@@ -745,7 +746,7 @@
                 "checked": false,
                 "icon": "images/government_yellow.png",
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
             },
             {
                 "title": "警察施設",
@@ -759,7 +760,7 @@
                 "checked": false,
                 "icon": "images/government_yellow.png",
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
             },
             {
                 "title": "公民館・集会所",
@@ -772,7 +773,7 @@
                 ],
                 "checked": false,
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
                 "icon": "images/convention_yellow.png"
             },
             {
@@ -786,7 +787,7 @@
                 ],
                 "checked": false,
                 "color": "#00ffff",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
             },
             {
                 "title": "指定避難所",
@@ -799,7 +800,7 @@
                 ],
                 "checked": false,
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
                 "icon": "images/shelter_yellow.png"
             },
             {
@@ -813,7 +814,7 @@
                 ],
                 "checked": false,
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
                 "icon": "images/firehouse_yellow.png"
             },
             {
@@ -827,7 +828,7 @@
                 ],
                 "checked": false,
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
                 "icon": "images/firehouse_yellow.png"
             },
             {
@@ -841,7 +842,7 @@
                 ],
                 "checked": false,
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
                 "icon": "images/healthcenter_yellow.png"
             },
             {
@@ -855,7 +856,7 @@
                 ],
                 "checked": false,
                 "color": "#f0f060",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
                 "icon": "images/school_yellow.png"
             }
         ]
@@ -874,7 +875,7 @@
                 ],
                 "checked": false,
                 "color": "#b2ccca",
-                "url": "https://www.geospatial.jp/ckan/dataset/susono-area-2019-4-1"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/susono-area-2019-4-1"
             }
         ]
     },
@@ -892,7 +893,7 @@
                 ],
                 "checked": true,
                 "color": "#44a196",
-                "url": "https://www.geospatial.jp/ckan/dataset/28-d0201-01",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/28-d0201-01",
                 "source": []
             },
             {
@@ -906,7 +907,7 @@
                 ],
                 "checked": false,
                 "color": "#44a196",
-                "url": "https://www.geospatial.jp/ckan/dataset/29-k2452-01"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/29-k2452-01"
             },
             {
                 "title": "平成28年度[第28-K2450-01号]二級河川巴川 (麻機遊水地)総合治水対策特定河川事業(防災・安全交付金)工事(安東川エリア掘削工)（静岡県）",
@@ -919,7 +920,7 @@
                 ],
                 "checked": false,
                 "color": "#44a196",
-                "url": "https://www.geospatial.jp/ckan/dataset/28-k2450-01"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/28-k2450-01"
             }
         ]
     },
@@ -937,7 +938,7 @@
                 ],
                 "checked": false,
                 "color": "#44a196",
-                "url": "https://www.geospatial.jp/ckan/dataset/kakegawacastle"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/kakegawacastle"
             },
             {
                 "title": "韮山反射炉（静岡県）",
@@ -950,7 +951,7 @@
                 ],
                 "checked": false,
                 "color": "#44a196",
-                "url": "https://www.geospatial.jp/ckan/dataset/h30nirayama"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/h30nirayama"
             }
         ]
     },
@@ -1077,7 +1078,7 @@
                 ],
                 "checked": false,
                 "color": "#00c0ff",
-                "url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-bridge",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-bridge",
                 "icon": "images/bridge_blue.png"
             }
         ]
@@ -1096,7 +1097,7 @@
                 ],
                 "checked": false,
                 "color": "#00c0ff",
-                "url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-tunnel",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-tunnel",
                 "icon": "images/tunnel_blue.png"
             }
         ]
@@ -1115,7 +1116,7 @@
                 ],
                 "checked": false,
                 "color": "#00c0ff",
-                "url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-footbridge",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-footbridge",
                 "icon": "images/footbridge_blue.png"
             }
         ]
@@ -1134,7 +1135,7 @@
                 ],
                 "checked": false,
                 "color": "#00c0ff",
-                "url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-underpass",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-underpass",
                 "icon": "images/underwalk_blue.png"
             }
         ]
@@ -1153,7 +1154,7 @@
                 ],
                 "checked": false,
                 "color": "#00c0ff",
-                "url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-light",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-light",
                 "icon": "images/streetlamp_blue.png"
             }
         ]
@@ -1172,7 +1173,7 @@
                 ],
                 "checked": false,
                 "color": "#00c0ff",
-                "url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-sign",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-sign",
                 "icon": "images/sign_blue.png"
             }
         ]
@@ -1191,7 +1192,7 @@
                 ],
                 "checked": true,
                 "color": "#FFFF00",
-                "url": "https://www.geospatial.jp/ckan/dataset/dsusono-wadai",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/dsusono-wadai",
                 "icon": "images/digitalring_yellow.png"
             }
         ]
@@ -1210,7 +1211,7 @@
                 ],
                 "checked": true,
                 "color": "#FFFF00",
-                "url": "https://www.geospatial.jp/ckan/dataset/dsusono-specificthemes",
+                "download_url": "https://www.geospatial.jp/ckan/dataset/dsusono-specificthemes",
                 "icon": "images/tourism_yellow.png"
             }
         ]
@@ -1230,7 +1231,7 @@
                 ],
                 "checked": true,
                 "icon": "images/shelter_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/okinawa"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/okinawa"
             },
             {
                 "title": "テストデータ（国土数値情報（警察署）ー沖縄県ーPolygon）",
@@ -1243,7 +1244,7 @@
                 ],
                 "checked": true,
                 "icon": "images/shelter_yellow.png",
-                "url": "https://www.geospatial.jp/ckan/dataset/okinawa"
+                "download_url": "https://www.geospatial.jp/ckan/dataset/okinawa"
             }
         ]
     }
