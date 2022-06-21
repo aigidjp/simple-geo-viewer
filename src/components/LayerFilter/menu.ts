@@ -71,7 +71,6 @@ export const getDataById = (targetResourceIds: string[]) => {
         return layerData.title.match(regExp);
       });
 
-    console.log(filterLayer);
     if (filterLayer.length > 0) {
       const filterMenuData = {...menuData}; // DeepCopy
       filterMenuData.data = filterLayer;
