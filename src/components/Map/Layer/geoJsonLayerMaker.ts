@@ -1,8 +1,10 @@
 import maplibregl from 'maplibre-gl';
 import { PickInfo, RGBAColor } from 'deck.gl';
 import { GeoJsonLayer } from '@deck.gl/layers';
+
 import { show } from '@/components/Tooltip/show';
 import { Dispatch, SetStateAction } from 'react';
+
 
 type geoJsonLayerConfig = {
   id: string;
