@@ -62,8 +62,21 @@ export const getDataById = (targetResourceIds: string[]) => {
  export const filterLayerNameInputText = (inputFilterKeyword: String) => {
   if (inputFilterKeyword === '') return getMenu();
 
-  return getMenu().filter((data) => {
-    const regExp = new RegExp(`.*(${inputFilterKeyword}).*`);
-    return data.category.match(regExp);
+  const regExp = new RegExp(`.*(${inputFilterKeyword}).*`);
+
+  let menuArray:Array<object> = [];
+  getMenu().forEach((menuData) => {
+    const filterLayer =
+      menuData.data.filter((layerData) => {
+        return layerData.title.match(regExp);
+      });
+
+    console.log(filterLayer);
+    if (filterLayer.length > 0) {
+      const filterMenuData = {...menuData}; // DeepCopy
+      filterMenuData.data = filterLayer;
+      menuArray.push(filterMenuData);
+    }
   });
+  return menuArray;
 };
