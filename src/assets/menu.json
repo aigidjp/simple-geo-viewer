@@ -1247,5 +1247,22 @@
                 "download_url": "https://www.geospatial.jp/ckan/dataset/okinawa"
             }
         ]
+    },
+    {
+      "category": "DRMテスト",
+      "url": "",
+      "open": true,
+      "data": [
+        {
+          "title": "DRMリンク交通量",
+          "type": "line",
+          "lng":  139.87948,
+          "lat": 42.66909,
+          "zoom": 14,
+          "id": ["drm_test"],
+          "checked": false,
+          "color": "#333333"
+        }
+      ]
     }
 ]

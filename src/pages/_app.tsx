@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>異種シミュレーション比較サイト（益城）</title>
+        <title>デジタルシティサービス</title>
       </Head>
       <Component {...pageProps} />
     </>

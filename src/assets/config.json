@@ -1431,6 +1431,17 @@
             },
             "minzoom": 12,
             "visible": true
+        },
+        {
+          "id": "drm_test",
+          "type": "trips_drm",
+          "source": "https://drm-link-volume.s3.ap-northeast-1.amazonaws.com/drm_o/{z}/{x}/{y}.pbf",
+          "values": [0, 5],
+          "colors": [
+            [255, 255, 255, 100],
+            [255, 0, 0, 200]
+          ],
+          "step": 60
         }
     ]
 }

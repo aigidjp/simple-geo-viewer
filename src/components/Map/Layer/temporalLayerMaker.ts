@@ -1,13 +1,15 @@
-type TemporalLayerType = 'bus_trip' | 'temporal_polygon' | 'temporal_line' | 'trips_json';
+type TemporalLayerType = 'bus_trip' | 'temporal_polygon' | 'temporal_line' | 'trips_json' | 'trips_drm';
 export const TEMPORAL_LAYER_TYPES: Array<TemporalLayerType | string> = [
   'bus_trip',
   'temporal_polygon',
   'temporal_line',
   'trips_json',
+  'trips_drm'
 ];
 
 import { IconLayer, GeoJsonLayer } from '@deck.gl/layers';
 import { RGBAColor, TripsLayer } from 'deck.gl';
+import { MVTLayer } from '@deck.gl/geo-layers';
 import { getDataList } from '@/components/LayerFilter/menu';
 
 /**
@@ -31,11 +33,13 @@ export function makeTemporalLayers(
   );
   const temporalLineCreator = new TemporalLineLayerCreator(layerConfig, checkedLayerTitleList);
   const tripsJsonCreator = new TripsJsonLayerCreator(layerConfig, checkedLayerTitleList);
+  const tripsDRMLayerCreator = new TripsDRMLayerCreator(layerConfig, checkedLayerTitleList);
   const layers = [
     ...bustripCreator.makeDeckGlLayers(init, timestamp),
     ...temporalPolygonCreator.makeDeckGlLayers(init, timestamp),
     ...temporalLineCreator.makeDeckGlLayers(init, timestamp),
     ...tripsJsonCreator.makeDeckGlLayers(init, timestamp),
+    ...tripsDRMLayerCreator.makeDeckGlLayers(init, timestamp),
   ];
   return layers;
 }
@@ -267,5 +271,76 @@ class TripsJsonLayerCreator extends TemporalLayerCreator {
       return gLayer;
     });
     return result;
+  }
+}
+
+
+class TripsDRMLayerCreator extends TemporalLayerCreator {
+  layerType: TemporalLayerType = 'trips_drm';
+
+  makeDeckGlLayers(init, timestamp: number) {
+
+    const targetLayerConfigs = this.extractTargetConfig();
+    const result: MVTLayer<any>[] = targetLayerConfigs.map((layerConfig) => {
+      const mLayer = new MVTLayer({
+        id: layerConfig.id,
+        data: layerConfig.source,
+        // @ts-ignore
+        getLineColor: (d: any) => {
+
+          // dataの取得
+          const dataIndex: number = Math.trunc(timestamp / layerConfig.step) - 1;
+          const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
+
+          // 0〜1の範囲にノーマライズの計算
+          const normalizedValue = Math.max(
+            0,
+            Math.min(
+              1,
+              (temporalValue - layerConfig.values[0]) /
+                (layerConfig.values[1] - layerConfig.values[0])
+            )
+          );
+          // 色の決定
+          const [r1, g1, b1, a1] = layerConfig.colors[0];
+          const [r2, g2, b2, a2] = layerConfig.colors[1];
+          const color: RGBAColor = [
+            r1 * (1 - normalizedValue) + r2 * normalizedValue,
+            g1 * (1 - normalizedValue) + g2 * normalizedValue,
+            b1 * (1 - normalizedValue) + b2 * normalizedValue,
+            a1 * (1 - normalizedValue) + a2 * normalizedValue,
+          ];
+
+          return color;
+        },
+        getLineWidth: (d: any) => {
+          const dataIndex: number = Math.trunc(timestamp / layerConfig.step) - 1;
+          const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
+          const normalizedValue = Math.max(
+            0,
+            Math.min(
+              1,
+              (temporalValue - layerConfig.values[0]) /
+                (layerConfig.values[1] - layerConfig.values[0])
+            )
+          );
+          const widths = layerConfig.widths || [5, 5];
+          const width = widths[0] * (1 - normalizedValue) + widths[1] * normalizedValue;
+          return width;
+        },
+        lineWidthMinPixels: 5,
+        visible: init && this.isChecked(layerConfig),
+        stroked: false,
+        filled: true,
+        updateTriggers: {
+          getLineColor: [timestamp],
+          getLineWidth: [timestamp],
+          currentTime: [timestamp],
+        },
+      });
+      return mLayer;
+    });
+    return result;
+
   }
 }

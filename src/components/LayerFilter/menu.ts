@@ -66,10 +66,10 @@ export const getDataById = (targetResourceIds: string[]) => {
 
   let menuArray:Array<object> = [];
   getMenu().forEach((menuData) => {
-    const filterLayer =
-      menuData.data.filter((layerData) => {
-        return layerData.title.match(regExp);
-      });
+    // @ts-ignore
+    const filterLayer = menuData.data.filter((layerData) => {
+      return layerData.title.match(regExp);
+    });
 
     if (filterLayer.length > 0) {
       const filterMenuData = {...menuData}; // DeepCopy
