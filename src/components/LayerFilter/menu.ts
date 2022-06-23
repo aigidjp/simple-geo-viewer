@@ -57,23 +57,25 @@ export const getDataById = (targetResourceIds: string[]) => {
 
 /**
  * 絞り込み入力で絞り込まれたレイヤだけ収集する
- * @param inputFilterKeyword
+ * （カテゴリーに関しては絞り込まない）
+ * @param inputFilterKeyword //入力されたキーワード
  */
- export const filterLayerNameInputText = (inputFilterKeyword: String) => {
+ export const getFilterdLayer = (inputFilterKeyword: String) => {
   if (inputFilterKeyword === '') return getMenu();
 
-  const regExp = new RegExp(`.*(${inputFilterKeyword}).*`);
+  // 正規表現にて絞り込み
+  const regExp = new RegExp(`.*(${inputFilterKeyword.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&')}).*`);
 
   let menuArray:Array<object> = [];
   getMenu().forEach((menuData) => {
     // @ts-ignore
-    const filterLayer = menuData.data.filter((layerData) => {
+    const filteredData = menuData.data.filter((layerData) => {
       return layerData.title.match(regExp);
     });
 
-    if (filterLayer.length > 0) {
+    if (filteredData.length > 0) {
       const filterMenuData = {...menuData}; // DeepCopy
-      filterMenuData.data = filterLayer;
+      filterMenuData.data = filteredData;
       menuArray.push(filterMenuData);
     }
   });
