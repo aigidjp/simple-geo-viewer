@@ -24,6 +24,7 @@ export const Tooltip: VFC<TooltipProps> = ({ properties, labels }) => {
         {labels.map((key) => {
           const value = String(properties[key]);
 
+          // "画像"というkeyの場合は画像を表示する・それ以外は文字列として表示する
           let content: JSX.Element | string;
           if (key === '画像') {
             content = <img src={value} />;
