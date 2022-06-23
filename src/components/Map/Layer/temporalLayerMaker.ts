@@ -274,8 +274,9 @@ class TripsJsonLayerCreator extends TemporalLayerCreator {
   }
 }
 
-
+// DRMデータの時系列表示対応
 class TripsDRMLayerCreator extends TemporalLayerCreator {
+  // レイヤータイプは'trips_drm'
   layerType: TemporalLayerType = 'trips_drm';
 
   makeDeckGlLayers(init, timestamp: number) {
@@ -286,6 +287,7 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
         id: layerConfig.id,
         data: layerConfig.source,
         // @ts-ignore
+        // 色の表示
         getLineColor: (d: any) => {
 
           // dataの取得
@@ -293,6 +295,7 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
           const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
 
           // 0〜1の範囲にノーマライズの計算
+          // このあたり、他の時系列表現で同じ処理が多いのでまとめるのを検討
           const normalizedValue = Math.max(
             0,
             Math.min(
@@ -313,6 +316,7 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
 
           return color;
         },
+        // 線幅の表示
         getLineWidth: (d: any) => {
           const dataIndex: number = Math.trunc(timestamp / layerConfig.step) - 1;
           const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
@@ -328,6 +332,7 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
           const width = widths[0] * (1 - normalizedValue) + widths[1] * normalizedValue;
           return width;
         },
+        // 最低5Pixcl幅で表示
         lineWidthMinPixels: 5,
         visible: init && this.isChecked(layerConfig),
         stroked: false,
