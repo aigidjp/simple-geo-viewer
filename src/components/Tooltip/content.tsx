@@ -23,10 +23,17 @@ export const Tooltip: VFC<TooltipProps> = ({ properties, labels }) => {
       <tbody>
         {labels.map((key) => {
           const value = String(properties[key]);
+
+          let content: JSX.Element | string;
+          if (key === '画像') {
+            content = <img src={value} />;
+          } else {
+            content = value;
+          }
           return (
             <tr key={key}>
               <th className="tooltip_th">{key}</th>
-              <td className="tooltip_td">{value}</td>
+              <td className="tooltip_td">{content}</td>
             </tr>
           );
         })}
