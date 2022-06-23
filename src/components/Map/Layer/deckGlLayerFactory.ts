@@ -1,7 +1,6 @@
 import maplibregl from 'maplibre-gl';
 import { makeGeoJsonLayers } from '@/components/Map/Layer/geoJsonLayerMaker';
 import { makeArcLayers } from '@/components/Map/Layer/arcLayerMaker';
-import { makePointCloudLayers } from '@/components/Map/Layer/pointCloudLayerMaker';
 import { makeMvtLayers } from '@/components/Map/Layer/mvtLayerMaker';
 import { makeGltfLayers } from '@/components/Map/Layer/gltfLayerMaker';
 import { makeTileLayers } from '@/components/Map/Layer/tileLayerMaker';
@@ -28,7 +27,6 @@ export const makeDeckGlLayers = (
   const layerCreator = [
     makeGeoJsonLayers,
     makeArcLayers,
-    makePointCloudLayers,
     makeMvtLayers,
     makeGltfLayers,
     makeTileLayers,
