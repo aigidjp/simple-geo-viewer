@@ -8,8 +8,8 @@ import { getMenu, getFilteredMenu } from '@/components/LayerFilter/menu';
 
 const Sidebar: React.FC = () => {
   const [InputFilterKeyword, setInputFilterKeyword] = useState('');
-  const filterContents = getFilteredMenu(getMenu(), InputFilterKeyword);
-  const visiblyContentList = getVisiblyContent(filterContents);
+  const filteredMenu = getFilteredMenu(getMenu(), InputFilterKeyword);
+  const visiblyContentList = getVisiblyContent(filteredMenu);
 
   return (
     <>
