@@ -1,7 +1,7 @@
 import menuJson from '../../assets/menu.json';
 
 type DataType = 'raster' | 'vector' | 'polygon' | 'line' | 'point' | 'building' | 'icon';
-export type Data = {
+type Data = {
   title: string;
   type: DataType;
   lng: number;
