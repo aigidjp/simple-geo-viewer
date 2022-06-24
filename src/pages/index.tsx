@@ -50,9 +50,9 @@ const App: NextPage = () => {
           <Header />
         </div>
         <div className="flex content">
-          <div className="w-1/3 flex flex-col h-5/6 m-8">
+          <div className="w-1/5 flex flex-col h-5/6 m-8">
             <div id="sideBar" className="overflow-auto relative flex-1">
-                <Sidebar />
+              <Sidebar />
             </div>
             {tooltipData.tooltip ? (
               <div className="relative h-1/3">
@@ -70,7 +70,7 @@ const App: NextPage = () => {
               </div>
             ) : undefined}
           </div>
-          <div className="w-2/3">
+          <div className="w-4/5">
             <Map setTooltipData={setTooltipData} />
           </div>
         </div>
