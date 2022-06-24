@@ -79,13 +79,23 @@ const menuJsonMock: Menu = [
         checked: false,
         color: '#333333',
       },
+      {
+        title: 'DRMリンク交通量2',
+        type: 'line',
+        lng: 139.87948,
+        lat: 42.66909,
+        zoom: 14,
+        id: ['drm_test2'],
+        checked: false,
+        color: '#333333',
+      },
     ],
   },
 ];
 
 describe('test menu.ts', () => {
   test('getFilterdIdList', () => {
-    expect(getFilteredIdList(menuJsonMock)).toHaveLength(8);
+    expect(getFilteredIdList(menuJsonMock)).toHaveLength(9);
   });
 
   test('filterIds', () => {
@@ -96,7 +106,7 @@ describe('test menu.ts', () => {
   });
 
   test('getDataList', () => {
-    expect(getDataList(menuJsonMock)).toHaveLength(5);
+    expect(getDataList(menuJsonMock)).toHaveLength(6);
   });
 
   test('getDataTitleById', () => {
@@ -134,8 +144,13 @@ describe('test menu.ts', () => {
   });
 
   test('getFilteredMenu', () => {
-    expect(getFilteredMenu(menuJsonMock, 'データ')).toHaveLength(2);
+    expect(getFilteredMenu(menuJsonMock, 'データ')).toHaveLength(2); // data.titleがマッチしたら親カテゴリ自体もヒット扱い
     expect(getFilteredMenu(menuJsonMock, '')).toHaveLength(3); // 空白なら全件返る
-    expect(getFilteredMenu(menuJsonMock, '(')).toHaveLength(1); // 要エスケープ文字
+    expect(getFilteredMenu(menuJsonMock, '(')).toHaveLength(1); // 要エスケープ文字でも壊れない
+
+    const filtered = getFilteredMenu(menuJsonMock, 'テスト');
+    expect(filtered).toHaveLength(2); // タイトル・data.titleいずれかが該当すればヒット扱い
+    expect(filtered[0].data).toHaveLength(1); // data.titleで該当した場合は、親カテゴリとその要素だけがヒット扱い
+    expect(filtered[1].data).toHaveLength(2); // カテゴリでヒットした場合は、カテゴリとその全要素がヒット扱い
   });
 });

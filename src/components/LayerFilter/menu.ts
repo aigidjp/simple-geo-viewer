@@ -88,6 +88,13 @@ export const getFilteredMenu = (menu: Menu, inputFilterKeyword: String): Menu =>
 
   const filteredMenu: Menu = [];
   menu.forEach((category) => {
+    // カテゴリ名で判定し、マッチしたらそのカテゴリおよび子Dataすべてをヒット扱いとする
+    if (category.category.match(regExp)) {
+      filteredMenu.push(category);
+      return;
+    }
+
+    // カテゴリ名ではヒットしなかったが、Data.titleがヒットした場合、親カテゴリおよびそのDataをヒット扱いとする
     const filteredData = category.data.filter((layerData) => {
       return layerData.title.match(regExp);
     });
