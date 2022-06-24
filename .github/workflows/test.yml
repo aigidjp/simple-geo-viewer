@@ -6,11 +6,14 @@ on:
         - main
     pull_request:
 jobs:
-    build:
+    test:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
             - name: Node setup
               uses: actions/setup-node@v1
+              with:
+                node-version: 16
+                architecture: x64
             - name: run test
               run: yarn install --frozen-lockfile && yarn test
