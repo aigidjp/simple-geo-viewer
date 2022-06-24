@@ -3,7 +3,7 @@ import { context } from '@/pages';
 import Content from '@/components/Map/Legend/Content';
 import { clickedLayerViewState } from '@/components/Map/types';
 import { havingLegendIdList } from '@/components/Map/Legend/layerIds';
-import { getDataTitleById } from '@/components/LayerFilter/menu';
+import { getDataTitleById, getMenu } from '@/components/LayerFilter/menu';
 import { getCheckedLayerIdByDataTitleList } from '@/components/LayerFilter/sideBar';
 import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 
@@ -31,7 +31,7 @@ export const useGetClickedLayerId = () => {
   // 現在凡例が表示されている場合、そのタイトルを取得
   let displayedLegendLayerTitle = '';
   if (displayedLegendLayerId !== '') {
-    displayedLegendLayerTitle = getDataTitleById(displayedLegendLayerId);
+    displayedLegendLayerTitle = getDataTitleById(getMenu(), displayedLegendLayerId);
   }
   // 初回にこの関数が呼ばれた際は何も返さない
   if (isDefault) {

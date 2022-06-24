@@ -13,7 +13,7 @@ import { context } from '@/pages';
 import Slider from 'react-rangeslider';
 import { Deck } from 'deck.gl';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
-import { getDataList } from '@/components/LayerFilter/menu';
+import { getDataList, getMenu } from '@/components/LayerFilter/menu';
 import { addRenderOption } from '@/components/Map/Layer/renderOption';
 import { makeTemporalLayers, TEMPORAL_LAYER_TYPES } from '../Layer/temporalLayerMaker';
 import maplibregl from 'maplibre-gl';
@@ -57,7 +57,7 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
 
   const getLayerConfig = () => {
     return getFilteredLayerConfig().filter((layer) => {
-      return getDataList().some(
+      return getDataList(getMenu()).some(
         (value) => value.id.includes(layer.id) && TEMPORAL_LAYER_TYPES.includes(layer.type)
       );
     });

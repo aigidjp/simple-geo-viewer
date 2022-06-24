@@ -15,7 +15,7 @@ export const TEMPORAL_LAYER_TYPES: Array<TemporalLayerType | string> = [
 import { IconLayer, GeoJsonLayer } from '@deck.gl/layers';
 import { RGBAColor, TripsLayer } from 'deck.gl';
 import { MVTLayer } from '@deck.gl/geo-layers';
-import { getDataList } from '@/components/LayerFilter/menu';
+import { getDataList, getMenu } from '@/components/LayerFilter/menu';
 
 /**
  * 時系列アニメーションDeckGLレイヤーを作成する
@@ -62,7 +62,7 @@ abstract class TemporalLayerCreator {
 
   isChecked(layerConfig) {
     // レイヤーがチェックされているか判定
-    const dataList = getDataList();
+    const dataList = getDataList(getMenu());
     let flag = false;
     for (const data of dataList) {
       if (data.id.includes(layerConfig.id)) {
