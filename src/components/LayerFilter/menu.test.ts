@@ -5,6 +5,8 @@ import {
   getDataList,
   getDataById,
   getFilteredMenu,
+  getDataTitleById,
+  getIdByDataTitle,
 } from './menu';
 
 const menuJsonMock: Menu = [
@@ -18,6 +20,17 @@ const menuJsonMock: Menu = [
         lat: 35.203515,
         zoom: 14,
         id: ['susono-arial', 'sample'],
+        checked: false,
+        color: '#44a196',
+        download_url: 'https://www.geospatial.jp/ckan/dataset/susono-photo-1',
+      },
+      {
+        title: '裾野市航空写真（平成28年度）',
+        type: 'raster',
+        lng: 138.903424,
+        lat: 35.203515,
+        zoom: 14,
+        id: ['duplicate1', 'duplicate2'],
         checked: false,
         color: '#44a196',
         download_url: 'https://www.geospatial.jp/ckan/dataset/susono-photo-1',
@@ -72,7 +85,7 @@ const menuJsonMock: Menu = [
 
 describe('test menu.ts', () => {
   test('getFilterdIdList', () => {
-    expect(getFilteredIdList(menuJsonMock)).toHaveLength(6);
+    expect(getFilteredIdList(menuJsonMock)).toHaveLength(8);
   });
 
   test('filterIds', () => {
@@ -83,7 +96,21 @@ describe('test menu.ts', () => {
   });
 
   test('getDataList', () => {
-    expect(getDataList(menuJsonMock)).toHaveLength(4);
+    expect(getDataList(menuJsonMock)).toHaveLength(5);
+  });
+
+  test('getDataTitleById', () => {
+    // 複数該当する場合は先に見つかったものが返る
+    expect(getDataTitleById(menuJsonMock, 'sample')).toBe('裾野市航空写真（平成28年度）');
+    // 該当しない条件を渡すと**TypeErrorになる**
+    expect(() => getDataTitleById(menuJsonMock, 'noexist')).toThrow(TypeError);
+  });
+
+  test('getIdByDataTitle', () => {
+    // 複数該当する場合は先に見つかったものが返る
+    expect(getIdByDataTitle(menuJsonMock, '裾野市航空写真（平成28年度）')).toStrictEqual(['susono-arial', 'sample']); // prettier-ignore
+    // 該当しない条件を渡すと**TypeErrorになる**
+    expect(() => getDataTitleById(menuJsonMock, 'noexist')).toThrow(TypeError);
   });
 
   test('getDataById', () => {
