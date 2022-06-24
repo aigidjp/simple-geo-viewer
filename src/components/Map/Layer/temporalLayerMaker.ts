@@ -73,7 +73,36 @@ abstract class TemporalLayerCreator {
   extractTargetConfig() {
     return this.layerConfig.filter((layer) => layer.type === this.layerType);
   }
-}
+
+  /**
+   * 値をlayerConfig.valuesの値とでnormalizeする
+   */
+  generateNormalizedValue(value, layerConfig) {
+    return Math.max(
+      0,
+      Math.min(
+        1,
+        (value - layerConfig.values[0]) /
+          (layerConfig.values[1] - layerConfig.values[0])
+      )
+    );
+  }
+
+  /**
+   * layerConfig.colorsの値からcolorを生成する
+   */
+  generateColor(value, layerConfig): RGBAColor{
+    const [r1, g1, b1, a1] = layerConfig.colors[0];
+    const [r2, g2, b2, a2] = layerConfig.colors[1];
+    return [
+      r1 * (1 - value) + r2 * value,
+      g1 * (1 - value) + g2 * value,
+      b1 * (1 - value) + b2 * value,
+      a1 * (1 - value) + a2 * value,
+    ];
+  }
+
+ }
 
 class BusTripLayerCreator extends TemporalLayerCreator {
   layerType: TemporalLayerType = 'bus_trip';
@@ -142,23 +171,9 @@ class TemporalPolygonLayerCreator extends TemporalLayerCreator {
           const normalizedTimestamp = timestamp - (timestamp % d.properties.step);
           const temporalValue: number =
             d.properties[String(normalizedTimestamp).padStart(2, '0')] || 0;
-          const normalizedValue = Math.max(
-            0,
-            Math.min(
-              1,
-              (temporalValue - layerConfig.values[0]) /
-                (layerConfig.values[1] - layerConfig.values[0])
-            )
-          );
-          const [r1, g1, b1, a1] = layerConfig.colors[0];
-          const [r2, g2, b2, a2] = layerConfig.colors[1];
-          const color: RGBAColor = [
-            r1 * (1 - normalizedValue) + r2 * normalizedValue,
-            g1 * (1 - normalizedValue) + g2 * normalizedValue,
-            b1 * (1 - normalizedValue) + b2 * normalizedValue,
-            a1 * (1 - normalizedValue) + a2 * normalizedValue,
-          ];
-          return color;
+
+          const normalizedValue = this.generateNormalizedValue(temporalValue, layerConfig);
+          return this.generateColor(normalizedValue, layerConfig);
         },
         getElevation: (d: any) => {
           const normalizedTimestamp = timestamp - (timestamp % d.properties.step);
@@ -203,36 +218,16 @@ class TemporalLineLayerCreator extends TemporalLayerCreator {
           const normalizedTimestamp = timestamp - (timestamp % d.properties.step);
           const temporalValue: number =
             d.properties[String(normalizedTimestamp).padStart(2, '0')] || 0;
-          const normalizedValue = Math.max(
-            0,
-            Math.min(
-              1,
-              (temporalValue - layerConfig.values[0]) /
-                (layerConfig.values[1] - layerConfig.values[0])
-            )
-          );
-          const [r1, g1, b1, a1] = layerConfig.colors[0];
-          const [r2, g2, b2, a2] = layerConfig.colors[1];
-          const color: RGBAColor = [
-            r1 * (1 - normalizedValue) + r2 * normalizedValue,
-            g1 * (1 - normalizedValue) + g2 * normalizedValue,
-            b1 * (1 - normalizedValue) + b2 * normalizedValue,
-            a1 * (1 - normalizedValue) + a2 * normalizedValue,
-          ];
-          return color;
+
+          const normalizedValue = this.generateNormalizedValue(temporalValue, layerConfig);
+          return this.generateColor(normalizedValue, layerConfig);
         },
         getLineWidth: (d: any) => {
           const normalizedTimestamp = timestamp - (timestamp % d.properties.step);
           const temporalValue: number =
             d.properties[String(normalizedTimestamp).padStart(2, '0')] || 0;
-          const normalizedValue = Math.max(
-            0,
-            Math.min(
-              1,
-              (temporalValue - layerConfig.values[0]) /
-                (layerConfig.values[1] - layerConfig.values[0])
-            )
-          );
+
+          const normalizedValue = this.generateNormalizedValue(temporalValue, layerConfig);
           const widths = layerConfig.widths || [5, 5];
           const width = widths[0] * (1 - normalizedValue) + widths[1] * normalizedValue;
           return width;
@@ -273,9 +268,8 @@ class TripsJsonLayerCreator extends TemporalLayerCreator {
     return result;
   }
 }
-
-
 class TripsDRMLayerCreator extends TemporalLayerCreator {
+  // レイヤータイプは'trips_drm'
   layerType: TemporalLayerType = 'trips_drm';
 
   makeDeckGlLayers(init, timestamp: number) {
@@ -287,47 +281,22 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
         data: layerConfig.source,
         // @ts-ignore
         getLineColor: (d: any) => {
-
-          // dataの取得
-          const dataIndex: number = Math.trunc(timestamp / layerConfig.step) - 1;
+          const dataIndex: number = Math.trunc(timestamp / layerConfig.step);
           const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
-
           // 0〜1の範囲にノーマライズの計算
-          const normalizedValue = Math.max(
-            0,
-            Math.min(
-              1,
-              (temporalValue - layerConfig.values[0]) /
-                (layerConfig.values[1] - layerConfig.values[0])
-            )
-          );
-          // 色の決定
-          const [r1, g1, b1, a1] = layerConfig.colors[0];
-          const [r2, g2, b2, a2] = layerConfig.colors[1];
-          const color: RGBAColor = [
-            r1 * (1 - normalizedValue) + r2 * normalizedValue,
-            g1 * (1 - normalizedValue) + g2 * normalizedValue,
-            b1 * (1 - normalizedValue) + b2 * normalizedValue,
-            a1 * (1 - normalizedValue) + a2 * normalizedValue,
-          ];
-
-          return color;
+          const normalizedValue = this.generateNormalizedValue(temporalValue, layerConfig);
+          return this.generateColor(normalizedValue, layerConfig);
         },
+        // 線幅の表示
         getLineWidth: (d: any) => {
-          const dataIndex: number = Math.trunc(timestamp / layerConfig.step) - 1;
+          const dataIndex: number = Math.trunc(timestamp / layerConfig.step);
           const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
-          const normalizedValue = Math.max(
-            0,
-            Math.min(
-              1,
-              (temporalValue - layerConfig.values[0]) /
-                (layerConfig.values[1] - layerConfig.values[0])
-            )
-          );
+          const normalizedValue = this.generateNormalizedValue(temporalValue, layerConfig);
           const widths = layerConfig.widths || [5, 5];
           const width = widths[0] * (1 - normalizedValue) + widths[1] * normalizedValue;
           return width;
         },
+        // 最低5Pixcl幅で表示
         lineWidthMinPixels: 5,
         visible: init && this.isChecked(layerConfig),
         stroked: false,
@@ -335,7 +304,6 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
         updateTriggers: {
           getLineColor: [timestamp],
           getLineWidth: [timestamp],
-          currentTime: [timestamp],
         },
       });
       return mLayer;
