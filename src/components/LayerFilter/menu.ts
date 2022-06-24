@@ -9,7 +9,7 @@ type Data = {
   zoom: number;
   id: string[];
   checked: boolean;
-  color: string;
+  color?: string;
   icon?: string;
   download_url?: string;
 };
