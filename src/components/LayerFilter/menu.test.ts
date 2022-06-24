@@ -74,6 +74,6 @@ const menuJsonMock: Menu = [
 
 describe('test menu.ts', () => {
   test('getFilterdLayer', () => {
-    expect(getFilteredIdList(menuJsonMock)).toHaveLength(90);
+    expect(getFilteredIdList(menuJsonMock)).toHaveLength(5);
   });
 });
