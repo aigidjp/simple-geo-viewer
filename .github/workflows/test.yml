@@ -1,0 +1,16 @@
+name: frontend-build
+
+on:
+    push:
+      branches:
+        - main
+    pull_request:
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Node setup
+              uses: actions/setup-node@v1
+            - name: build vue-project
+              run: yarn ci && yarn test
