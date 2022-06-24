@@ -5,8 +5,7 @@ import { getMenu, getFilteredIdList } from '@/components/LayerFilter/menu';
  * 表示可能なレイヤのconfigだけ収集する
  */
 export const getFilteredLayerConfig = () => {
-  const menu = getMenu();
-  return configJson['layers'].filter((layer) => getFilteredIdList(menu).includes(layer.id));
+  return configJson['layers'].filter((layer) => getFilteredIdList(getMenu()).includes(layer.id));
 };
 
 /**
