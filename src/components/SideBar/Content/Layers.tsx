@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { context } from '@/pages';
 import { resource } from '@/components/Map/types';
 import { getResourceIcon } from '@/components/SideBar/Icon';
-import { getDataById } from '@/components/LayerFilter/menu';
+import { getDataById, getMenu } from '@/components/LayerFilter/menu';
 import { filterCheckedData } from '@/components/LayerFilter/sideBar';
 import { DownloadIcon } from '@/components/SideBar/Icon';
 
@@ -11,7 +11,7 @@ const isSelected = (resourceName: string, selectedResourceNameList: string[]): b
 };
 
 const setResourceViewState = (resourceId: string[], setClickedLayerViewState: any) => {
-  const targetResource = getDataById(resourceId);
+  const targetResource = getDataById(getMenu(), resourceId);
 
   setClickedLayerViewState({
     longitude: targetResource.lng,

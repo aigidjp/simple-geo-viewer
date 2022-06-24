@@ -9,7 +9,7 @@ import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
 import { makeIconLayers } from '@/components/Map/Layer/iconLayerMaker';
 import { Dispatch, SetStateAction } from 'react';
 import { Deck } from 'deck.gl';
-import { getDataList } from '@/components/LayerFilter/menu';
+import { getDataList, getMenu } from '@/components/LayerFilter/menu';
 import { makeTile3DLayers } from '@/components/Map/Layer/tile3DLayerMaker';
 
 export const makeDeckGlLayers = (
@@ -36,7 +36,7 @@ export const makeDeckGlLayers = (
   // ここでフィルタリングのidを求める
   const layerConfig = getFilteredLayerConfig().filter((layer) => {
     // check状態になっているものを取り出し
-    return getDataList().some((value) => value.checked && value.id.includes(layer.id));
+    return getDataList(getMenu()).some((value) => value.checked && value.id.includes(layer.id));
   });
   layerCreator.forEach((func) => {
     addRenderOption(func(map, layerConfig, true, setTooltipData)).forEach(LayerLoader);
@@ -45,7 +45,7 @@ export const makeDeckGlLayers = (
   // 初期表示のレイヤーのロード完了を検知する方法がないため1sec初期表示以外のレイヤーのロードを遅らせる
   setTimeout(() => {
     const layerConfig = getFilteredLayerConfig().filter((layer) => {
-      return getDataList().some((value) => !value.checked && value.id.includes(layer.id));
+      return getDataList(getMenu()).some((value) => !value.checked && value.id.includes(layer.id));
     });
     layerCreator.forEach((func) => {
       addRenderOption(func(map, layerConfig, false, setTooltipData)).forEach(LayerLoader);

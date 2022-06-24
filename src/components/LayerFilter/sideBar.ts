@@ -23,7 +23,7 @@ export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[]) => {
     // 最後にチェックされたレイヤのidを取得するため反転
     const reverseLayerTitleList = [...layerTitleList];
     for (const layerTitle of reverseLayerTitleList.reverse()) {
-      const idList = getIdByDataTitle(layerTitle);
+      const idList = getIdByDataTitle(getMenu(), layerTitle);
       if (havingLegendIdList.includes(idList[0])) {
         return idList[0];
       }
@@ -36,6 +36,6 @@ export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[]) => {
  * menu.jsonの中でchecked=trueのdataのみ返す
  */
 export const filterCheckedData = () =>
-  getDataList().filter((data) => {
+  getDataList(getMenu()).filter((data) => {
     return data.checked === true;
   });

@@ -1,4 +1,4 @@
-import { getDataTitleById } from '@/components/LayerFilter/menu';
+import { getDataTitleById, getMenu } from '@/components/LayerFilter/menu';
 
 type props = {
   id: string;
@@ -6,6 +6,6 @@ type props = {
 
 export const Title = (props: props) => {
   const { id } = props;
-  const title = getDataTitleById(id);
+  const title = getDataTitleById(getMenu(), id);
   return <p className="text-center font-bold">{title}</p>;
 };
