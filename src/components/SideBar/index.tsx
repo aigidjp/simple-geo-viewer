@@ -4,12 +4,12 @@ import { Content } from '@/components/SideBar/Content';
 import { Layers } from '@/components/SideBar/Content/Layers';
 import { VisibleContent } from '@/components/SideBar/types';
 import { FilterLayerInput } from '@/components/SideBar/Content/FilterLayerInput';
-import { getMenu, getFilterdLayer } from '@/components/LayerFilter/menu';
+import { getMenu, getFilteredMenu } from '@/components/LayerFilter/menu';
 
 const Sidebar: React.FC = () => {
   const [InputFilterKeyword, setInputFilterKeyword] = useState('');
-  const filterContents = getFilterdLayer(getMenu(), InputFilterKeyword);
-  const visiblyContentList = getVisiblyContent(filterContents);
+  const filteredMenu = getFilteredMenu(getMenu(), InputFilterKeyword);
+  const visiblyContentList = getVisiblyContent(filteredMenu);
 
   return (
     <>

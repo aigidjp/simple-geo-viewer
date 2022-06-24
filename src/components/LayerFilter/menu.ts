@@ -9,7 +9,7 @@ type Data = {
   zoom: number;
   id: string[];
   checked: boolean;
-  color: string;
+  color?: string;
   icon?: string;
   download_url?: string;
 };
@@ -76,28 +76,27 @@ export const getDataById = (menu: Menu, targetResourceIds: string[]) => {
 };
 
 /**
- * 絞り込み入力で絞り込まれたレイヤだけ収集する
+ * 絞り込み入力で絞り込まれたMenuを取得する
  * （カテゴリーに関しては絞り込まない）
  * @param inputFilterKeyword //入力されたキーワード
  */
-export const getFilterdLayer = (menu: Menu, inputFilterKeyword: String) => {
+export const getFilteredMenu = (menu: Menu, inputFilterKeyword: String): Menu => {
   if (inputFilterKeyword === '') return menu;
 
   // 正規表現にて絞り込み
   const regExp = new RegExp(`.*(${inputFilterKeyword.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&')}).*`);
 
-  let menuArray: Array<object> = [];
+  const filteredMenu: Menu = [];
   menu.forEach((category) => {
-    // @ts-ignore
     const filteredData = category.data.filter((layerData) => {
       return layerData.title.match(regExp);
     });
 
     if (filteredData.length > 0) {
-      const filterMenuData = { ...category }; // DeepCopy
-      filterMenuData.data = filteredData;
-      menuArray.push(filterMenuData);
+      const filteredCategory: Category = { ...category }; // DeepCopy
+      filteredCategory.data = filteredData;
+      filteredMenu.push(filteredCategory);
     }
   });
-  return menuArray;
+  return filteredMenu;
 };
