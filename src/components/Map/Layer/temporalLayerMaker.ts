@@ -283,7 +283,6 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
         getLineColor: (d: any) => {
           const dataIndex: number = Math.trunc(timestamp / layerConfig.step);
           const temporalValue: number = JSON.parse(d.properties.traffic_volume)[dataIndex];
-console.log(dataIndex);
           // 0〜1の範囲にノーマライズの計算
           const normalizedValue = this.generateNormalizedValue(temporalValue, layerConfig);
           return this.generateColor(normalizedValue, layerConfig);
