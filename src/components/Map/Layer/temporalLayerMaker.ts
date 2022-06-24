@@ -1,10 +1,15 @@
-type TemporalLayerType = 'bus_trip' | 'temporal_polygon' | 'temporal_line' | 'trips_json' | 'trips_drm';
+type TemporalLayerType =
+  | 'bus_trip'
+  | 'temporal_polygon'
+  | 'temporal_line'
+  | 'trips_json'
+  | 'trips_drm';
 export const TEMPORAL_LAYER_TYPES: Array<TemporalLayerType | string> = [
   'bus_trip',
   'temporal_polygon',
   'temporal_line',
   'trips_json',
-  'trips_drm'
+  'trips_drm',
 ];
 
 import { IconLayer, GeoJsonLayer } from '@deck.gl/layers';
@@ -80,18 +85,14 @@ abstract class TemporalLayerCreator {
   generateNormalizedValue(value, layerConfig) {
     return Math.max(
       0,
-      Math.min(
-        1,
-        (value - layerConfig.values[0]) /
-          (layerConfig.values[1] - layerConfig.values[0])
-      )
+      Math.min(1, (value - layerConfig.values[0]) / (layerConfig.values[1] - layerConfig.values[0]))
     );
   }
 
   /**
    * layerConfig.colorsの値からcolorを生成する
    */
-  generateColor(value, layerConfig): RGBAColor{
+  generateColor(value, layerConfig): RGBAColor {
     const [r1, g1, b1, a1] = layerConfig.colors[0];
     const [r2, g2, b2, a2] = layerConfig.colors[1];
     return [
@@ -101,8 +102,7 @@ abstract class TemporalLayerCreator {
       a1 * (1 - value) + a2 * value,
     ];
   }
-
- }
+}
 
 class BusTripLayerCreator extends TemporalLayerCreator {
   layerType: TemporalLayerType = 'bus_trip';
@@ -273,7 +273,6 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
   layerType: TemporalLayerType = 'trips_drm';
 
   makeDeckGlLayers(init, timestamp: number) {
-
     const targetLayerConfigs = this.extractTargetConfig();
     const result: MVTLayer<any>[] = targetLayerConfigs.map((layerConfig) => {
       const mLayer = new MVTLayer({
@@ -309,6 +308,5 @@ class TripsDRMLayerCreator extends TemporalLayerCreator {
       return mLayer;
     });
     return result;
-
   }
 }

@@ -52,7 +52,7 @@ const App: NextPage = () => {
         <div className="flex content">
           <div className="w-1/5 flex flex-col h-5/6 m-8">
             <div id="sideBar" className="overflow-auto relative flex-1">
-                <Sidebar />
+              <Sidebar />
             </div>
             {tooltipData.tooltip ? (
               <div className="relative h-1/3">
