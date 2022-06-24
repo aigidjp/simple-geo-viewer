@@ -1,4 +1,4 @@
-import menuJson from '@/assets/menu.json';
+import menuJson from '../../assets/menu.json';
 
 /**
  * menu.jsonを返す
@@ -59,12 +59,12 @@ export const getDataById = (targetResourceIds: string[]) => {
  * 絞り込み入力で絞り込まれたレイヤだけ収集する
  * @param inputFilterKeyword
  */
- export const filterLayerNameInputText = (inputFilterKeyword: String) => {
+export const filterLayerNameInputText = (inputFilterKeyword: String) => {
   if (inputFilterKeyword === '') return getMenu();
 
   const regExp = new RegExp(`.*(${inputFilterKeyword}).*`);
 
-  let menuArray:Array<object> = [];
+  let menuArray: Array<object> = [];
   getMenu().forEach((menuData) => {
     // @ts-ignore
     const filterLayer = menuData.data.filter((layerData) => {
@@ -72,7 +72,7 @@ export const getDataById = (targetResourceIds: string[]) => {
     });
 
     if (filterLayer.length > 0) {
-      const filterMenuData = {...menuData}; // DeepCopy
+      const filterMenuData = { ...menuData }; // DeepCopy
       filterMenuData.data = filterLayer;
       menuArray.push(filterMenuData);
     }
