@@ -4,6 +4,8 @@ import { GeoJsonLayer } from '@deck.gl/layers';
 
 import { show } from '@/components/Tooltip/show';
 import { Dispatch, SetStateAction } from 'react';
+import IconClusterLayer from './icon-cluster-layer';
+
 
 
 type geoJsonLayerConfig = {
@@ -103,13 +105,19 @@ class GeoJsonIconLayerCreator extends GeoJsonLayerCreator {
     const result: GeoJsonLayer<any>[] = targetLayerConfigs.map((layerConfig) => {
       const config = this.extractLayerConfig(layerConfig);
 
-      return new GeoJsonLayer({
+      return new IconClusterLayer({
         data: layerConfig.source,
         visible: init,
         pickable: true,
         autoHighlight: true,
         onClick: this.showToolTip,
         pointType:"icon",
+        minzoom:layerConfig.icon.minzoom,
+        sizeUnits: 'meters',
+        sizeScale: 2000,
+        sizeMinPixels: 6,
+        iconMapping : '/public/images/location-icon-mapping.json',
+        iconAtlas : '/public/images/location-icon-atlas.png',
         getIcon: (_) => ({
           url: layerConfig.icon.url,
           width: layerConfig.icon.width,
