@@ -76,11 +76,11 @@ export const getDataById = (menu: Menu, targetResourceIds: string[]) => {
 };
 
 /**
- * 絞り込み入力で絞り込まれたレイヤだけ収集する
+ * 絞り込み入力で絞り込まれたMenuを取得する
  * （カテゴリーに関しては絞り込まない）
  * @param inputFilterKeyword //入力されたキーワード
  */
-export const getFilterdLayer = (menu: Menu, inputFilterKeyword: String): Menu => {
+export const getFilteredMenu = (menu: Menu, inputFilterKeyword: String): Menu => {
   if (inputFilterKeyword === '') return menu;
 
   // 正規表現にて絞り込み
