@@ -13,6 +13,8 @@ describe('Rendering', () => {
       returnvalue = text;
     });
     const filterLayerInput = render(<FilterLayerInput setFilterKeyword={mockSetFilterKeyword} />);
+
+    // ボタンとテキストエリアが存在する
     const button = filterLayerInput.getByRole('button');
     const textarea = filterLayerInput.getByRole('searchbox') as HTMLInputElement;
 
