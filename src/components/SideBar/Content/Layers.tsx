@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { context } from '@/pages';
-import { resource } from '@/components/Map/types';
+import { Data } from '@/components/LayerFilter/menu';
 import { getResourceIcon } from '@/components/SideBar/Icon';
 import { getDataById, getMenu } from '@/components/LayerFilter/menu';
 import { filterCheckedData } from '@/components/LayerFilter/sideBar';
@@ -26,7 +26,7 @@ const getDefaultVisiblyLayerTitles = () => {
 };
 
 type LayersProps = {
-  layers: resource[];
+  layers: Data[];
 };
 
 export const Layers = (props: LayersProps) => {

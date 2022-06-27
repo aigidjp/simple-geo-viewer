@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { resource } from '@/components/Map/types';
+import { Data } from '@/components/LayerFilter/menu';
 
 const getIconSize = () => {
   return {
@@ -156,7 +156,7 @@ const BuildingIcon = (color: string) => {
   );
 };
 
-export const getResourceIcon = (resource: resource) => {
+export const getResourceIcon = (resource: Data) => {
   const color = resource.color;
 
   const type = resource.type;

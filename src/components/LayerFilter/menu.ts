@@ -1,7 +1,12 @@
 import menuJson from '../../assets/menu.json';
 
 type DataType = 'raster' | 'vector' | 'polygon' | 'line' | 'point' | 'building' | 'icon';
-type Data = {
+
+/**
+ * menu.json直下のFolderがもつレイヤー定義
+ * menu.json内ではdata:Data[]として配列で保持されている
+ */
+export type Data = {
   title: string;
   type: DataType;
   lng: number;
@@ -14,14 +19,21 @@ type Data = {
   download_url?: string;
 };
 
-type Category = {
+/**
+ * menu.json直下の各要素
+ * Folderはメタデータのほかdata: Data[]として子要素の配列を持つ
+ */
+type Folder = {
   category: string;
   url?: string;
   open?: boolean;
   data: Data[];
 };
 
-export type Menu = Category[];
+/**
+ * menu.jsonの構造と一致する型
+ */
+export type Menu = Folder[];
 
 /**
  * menu.jsonを返す
@@ -100,7 +112,7 @@ export const getFilteredMenu = (menu: Menu, inputFilterKeyword: String): Menu =>
     });
 
     if (filteredData.length > 0) {
-      const filteredCategory: Category = { ...category }; // DeepCopy
+      const filteredCategory: Folder = { ...category }; // DeepCopy
       filteredCategory.data = filteredData;
       filteredMenu.push(filteredCategory);
     }
