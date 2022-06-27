@@ -15,9 +15,9 @@ const Sidebar: React.FC = () => {
       <FilterLayerInput setFilterKeyword={setInputFilterKeyword} />
       {visiblyContentList.map((content) => (
         <Content
-          title={content.dataset}
+          title={content.title}
           layers={<Layers layers={content.layers} />}
-          key={content.dataset}
+          key={content.title}
         />
       ))}
     </>
