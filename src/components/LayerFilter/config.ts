@@ -5,9 +5,10 @@ import { RGBAColor } from 'deck.gl';
 type LayerGenericProps = {
   id: string;
   source: string;
-  minzoom: number;
-  maxzoom: number;
-  visible;
+  minzoom?: number;
+  maxzoom?: number;
+  opacity?: number;
+  visible: boolean;
 };
 
 type RasterLayer = LayerGenericProps & {
@@ -83,7 +84,6 @@ type TemporalPolygonLayer = LayerGenericProps & {
 type TripsJsonLayer = LayerGenericProps & {
   type: 'trips_json';
   color: RGBAColor;
-  opacity: number;
   trailLength: number;
 };
 
