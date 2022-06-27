@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { getVisiblyContent } from '@/components/LayerFilter/sideBar';
 import { Content } from '@/components/SideBar/Content';
 import { Layers } from '@/components/SideBar/Content/Layers';
-import { VisibleContent } from '@/components/SideBar/types';
 import { FilterLayerInput } from '@/components/SideBar/Content/FilterLayerInput';
 import { getMenu, getFilteredMenu } from '@/components/LayerFilter/menu';
 
@@ -14,7 +13,7 @@ const Sidebar: React.FC = () => {
   return (
     <>
       <FilterLayerInput setFilterKeyword={setInputFilterKeyword} />
-      {visiblyContentList.map((content: VisibleContent) => (
+      {visiblyContentList.map((content) => (
         <Content
           title={content.dataset}
           layers={<Layers layers={content.layers} />}
