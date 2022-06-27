@@ -40,6 +40,12 @@ type GeojsonIconLayer = LayerGenericProps & {
   iconSizeScale: number;
 };
 
+type IconLayer = LayerGenericProps & {
+  type: 'icon';
+  coords: [number, number, number];
+  color: RGBAColor;
+};
+
 type BustripLayer = LayerGenericProps & {
   type: 'bus_trip';
   iconUrl: string;
@@ -77,8 +83,22 @@ type TemporalPolygonLayer = LayerGenericProps & {
   type: 'temporal_polygon';
   values: [number, number];
   colors: [RGBAColor, RGBAColor];
-  heights: [number, number];
+  heights?: [number, number];
   colorScale: number;
+};
+
+type TemporalLineLayer = LayerGenericProps & {
+  type: 'temporal_line';
+  values: [number, number];
+  colors: [RGBAColor, RGBAColor];
+  widths: [number, number];
+};
+
+type GltfLayer = LayerGenericProps & {
+  type: 'gltf';
+  coords: [number, number, number];
+  color: RGBAColor;
+  orientation: [number, number, number];
 };
 
 type TripsJsonLayer = LayerGenericProps & {
@@ -99,11 +119,14 @@ type Layer =
   | MvtLayer
   | GeojsonLayer
   | GeojsonIconLayer
+  | IconLayer
   | BustripLayer
   | Tile3dLayer
   | ScatterprotLayer
   | ArcLayer
   | TemporalPolygonLayer
+  | TemporalLineLayer
+  | GltfLayer
   | TripsJsonLayer
   | TripsDrmLayer;
 
