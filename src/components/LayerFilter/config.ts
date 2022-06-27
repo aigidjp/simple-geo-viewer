@@ -32,10 +32,10 @@ type GeojsonIconLayer = LayerGenericProps & {
   stroked: boolean;
   filled: boolean;
   icon: {
-    url: 'images/school_yellow.png';
-    width: 64;
-    height: 64;
-    anchorY: 64;
+    url: string;
+    width: number;
+    height: number;
+    anchorY: number;
   };
   iconSizeScale: number;
 };
