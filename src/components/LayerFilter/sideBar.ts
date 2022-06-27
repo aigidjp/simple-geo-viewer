@@ -2,11 +2,13 @@ import { getIdByDataTitle } from '@/components/LayerFilter/menu';
 import { havingLegendIdList } from '@/components/Map/Legend/layerIds';
 import { getDataList, getMenu } from '@/components/LayerFilter/menu';
 
-export const getVisiblyContent = (visiblyItemList) => {
+import { Menu } from '@/components/LayerFilter/menu';
+
+export const getVisiblyContent = (visiblyItemList: Menu) => {
   //const visiblyItemList = getMenu();
   return visiblyItemList.map((item) => {
     return {
-      dataset: item.category,
+      title: item.category,
       layers: item.data,
     };
   });
