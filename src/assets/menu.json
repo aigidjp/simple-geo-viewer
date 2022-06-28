@@ -1256,9 +1256,9 @@
         {
           "title": "DRMリンク交通量",
           "type": "line",
-          "lng":  139.87948,
-          "lat": 42.66909,
-          "zoom": 14,
+          "lng":  139.7673068,
+          "lat": 35.6809591,
+          "zoom": 11,
           "id": ["drm_test"],
           "checked": false,
           "color": "#333333"
