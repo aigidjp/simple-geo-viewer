@@ -1436,7 +1436,7 @@
           "id": "drm_test",
           "type": "trips_drm",
           "source": "https://drm-link-volume.s3.ap-northeast-1.amazonaws.com/drm/{z}/{x}/{y}.pbf",
-          "values": [0, 5],
+          "values": [0, 500],
           "colors": [
             [255, 255, 255, 100],
             [255, 0, 0, 200]
