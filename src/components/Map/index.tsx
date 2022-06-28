@@ -9,7 +9,7 @@ import GL from '@luma.gl/constants';
 import { context } from '@/pages';
 import { useFlyTo } from '@/components/Map/Animation/flyTo';
 import { makeDeckGlLayers } from '@/components/Map/Layer/deckGlLayerFactory';
-import { toggleVisibly } from '@/components/Map/Layer/visibly';
+import { toggleVisibly, zoomVisibly, visiblyLayers } from '@/components/Map/Layer/visibly';
 import Legend, { useGetClickedLayerId } from '@/components/Map/Legend';
 import { initialViewState } from '@/components/Map/initialViewState';
 
@@ -20,6 +20,7 @@ import { TEMPORAL_LAYER_TYPES } from '@/components/Map/Layer/temporalLayerMaker'
 
 let map: maplibregl.Map;
 let deck: Deck;
+let visLayers: visiblyLayers;
 
 const getViewStateFromMaplibre = (map) => {
   const { lng, lat } = map.getCenter();
@@ -56,6 +57,12 @@ const getInitialStyle = (): maplibregl.Style => {
   return style;
 };
 
+const checkZoomVisible = () => {
+  const deckGlLayers = deck.props.layers;
+  const zommVisibleLayers = zoomVisibly(deckGlLayers,visLayers);
+  deck.setProps({ layers: zommVisibleLayers });
+}
+
 const useInitializeMap = (
   maplibreContainer: React.MutableRefObject<HTMLDivElement | null>,
   deckglContainer: React.MutableRefObject<HTMLCanvasElement | null>
@@ -76,6 +83,7 @@ const useInitializeMap = (
       });
     }
 
+    visLayers = new visiblyLayers();
     // @ts-ignore
     const gl = map.painter.context.gl;
     deck = new Deck({
@@ -89,10 +97,14 @@ const useInitializeMap = (
           bearing: viewState.bearing,
           pitch: viewState.pitch,
         });
+        visLayers.setzoomLevel(viewState.zoom);
+      },
+      onBeforeRender:()=>{
+        checkZoomVisible();
       },
       layers: [],
     });
-
+    
     map.addControl(new maplibregl.NavigationControl());
 
     map.on('moveend', (_e) => {
@@ -107,7 +119,9 @@ const useToggleVisibly = () => {
   if (!deck) return;
   const deckGlLayers = deck.props.layers;
   const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList);
-  deck.setProps({ layers: toggleVisibleLayers });
+  const zommVisibleLayers = zoomVisibly(toggleVisibleLayers,visLayers);
+  deck.setProps({ layers: zommVisibleLayers });
+  visLayers.setlayerList(checkedLayerTitleList);
 };
 
 type Props = {
@@ -130,6 +144,7 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
   useEffect(() => {
     map.on('load', () => {
       makeDeckGlLayers(map, deck, setTooltipData);
+      checkZoomVisible();
     });
   }, []);
 
