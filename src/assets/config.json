@@ -268,7 +268,7 @@
         {
             "type": "geojsonicon",
             "id": "susono-aed",
-            "data": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
+            "source": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
@@ -277,14 +277,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "iconMapping": {
-                "x":0,
-                "y":0,
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
+            "minzoom": 13,
             "iconSizeScale": 60,
             "visible": true
         },
@@ -1284,7 +1277,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 14,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
@@ -1316,7 +1309,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 15,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
@@ -1332,7 +1325,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 15,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
@@ -1348,7 +1341,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 16,
+            "minzoom": 9,
             "visible": false
         },
         {
@@ -1363,7 +1356,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 16,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
