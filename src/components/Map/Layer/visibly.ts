@@ -44,7 +44,7 @@ export function toggleVisibly(originalLayers: any[], targetLayerIdList: string[]
  * @param zoomlevel
  * @param targetLayerIdList
  */
-export function zoomVisibly(originalLayers: any[], visLayers: visiblylayers) {
+export function zoomVisibly(originalLayers: any[], visLayers: visiblyLayers) {
   const visibleLayerIdList = visLayers.getlayerList();
 
   return originalLayers.map((layer: any) => {
@@ -62,7 +62,7 @@ export function zoomVisibly(originalLayers: any[], visLayers: visiblylayers) {
   });
 }
 
-export class visiblylayers {
+export class visiblyLayers {
   private layerList: any[];
   private zoomLevel: number = initialViewState.zoom;
   constructor() {

@@ -9,7 +9,7 @@ import GL from '@luma.gl/constants';
 import { context } from '@/pages';
 import { useFlyTo } from '@/components/Map/Animation/flyTo';
 import { makeDeckGlLayers } from '@/components/Map/Layer/deckGlLayerFactory';
-import { toggleVisibly, zoomVisibly, visiblylayers } from '@/components/Map/Layer/visibly';
+import { toggleVisibly, zoomVisibly, visiblyLayers } from '@/components/Map/Layer/visibly';
 import Legend, { useGetClickedLayerId } from '@/components/Map/Legend';
 import { initialViewState } from '@/components/Map/initialViewState';
 
@@ -20,7 +20,7 @@ import { TEMPORAL_LAYER_TYPES } from '@/components/Map/Layer/temporalLayerMaker'
 
 let map: maplibregl.Map;
 let deck: Deck;
-let visLayers: visiblylayers;
+let visLayers: visiblyLayers;
 
 const getViewStateFromMaplibre = (map) => {
   const { lng, lat } = map.getCenter();
@@ -83,7 +83,7 @@ const useInitializeMap = (
       });
     }
 
-    visLayers = new visiblylayers();
+    visLayers = new visiblyLayers();
     // @ts-ignore
     const gl = map.painter.context.gl;
     deck = new Deck({
