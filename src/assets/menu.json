@@ -388,7 +388,7 @@
                 "icon": "images/bus_red.png"
             },
             {
-                "title": "停留所",
+                "title": "停留所(富士急シティバス)",
                 "type": "icon",
                 "lng": 138.91,
                 "lat": 35.18,
@@ -402,7 +402,7 @@
                 "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus"
             },
             {
-                "title": "路線",
+                "title": "路線(富士急シティバス)",
                 "type": "line",
                 "lng": 138.92,
                 "lat": 35.18,
@@ -434,7 +434,7 @@
                 "icon": "images/bus_blue.png"
             },
             {
-                "title": "停留所",
+                "title": "停留所(すそのーる（自主運行バス）)",
                 "type": "icon",
                 "lng": 138.91,
                 "lat": 35.18,
@@ -448,7 +448,7 @@
                 "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
             },
             {
-                "title": "路線",
+                "title": "路線(すそのーる（自主運行バス）)",
                 "type": "line",
                 "lng": 138.91,
                 "lat": 35.18,
@@ -1068,11 +1068,11 @@
         "category": "橋梁",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "橋梁（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-bridge"
                 ],
@@ -1087,11 +1087,11 @@
         "category": "トンネル",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "トンネル（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-tunnel"
                 ],
@@ -1106,11 +1106,11 @@
         "category": "横断歩道橋",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "横断歩道橋（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-footbridge"
                 ],
@@ -1125,11 +1125,11 @@
         "category": "アンダーパス地下歩道",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "アンダーパス地下歩道（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-underpass"
                 ],
@@ -1144,11 +1144,11 @@
         "category": "道路照明灯",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "道路照明灯（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-roadlight"
                 ],
@@ -1163,11 +1163,11 @@
         "category": "道路案内標識",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "道路案内標識（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-guidesign"
                 ],
