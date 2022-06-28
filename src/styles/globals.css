@@ -1,0 +1,4 @@
+.maplibregl-control-container {
+    position: inherit;
+    z-index: 10;
+}
