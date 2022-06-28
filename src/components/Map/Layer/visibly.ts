@@ -41,7 +41,6 @@ export function toggleVisibly(originalLayers: any[], targetLayerIdList: string[]
 /**
  * リソースの表示/非表示をズームレベルで切り替える
  * @param originalLayers
- * @param zoomlevel
  * @param targetLayerIdList
  */
 export function zoomVisibly(originalLayers: any[], visLayers: visiblyLayers) {
