@@ -75,7 +75,7 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
     900: '15',
     1080: '18',
     1260: '21',
-    1440: '24',
+    1439: '24',
   };
 
   // callback関数に変更があった場合のみanimateを再生成する
