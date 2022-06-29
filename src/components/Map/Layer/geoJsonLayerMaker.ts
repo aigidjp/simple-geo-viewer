@@ -1,4 +1,4 @@
-import maplibregl from 'maplibre-gl';
+import type { Map } from 'maplibre-gl';
 import { PickInfo } from 'deck.gl';
 import { GeoJsonLayer } from '@deck.gl/layers';
 
@@ -19,7 +19,7 @@ import {
  * @param setTooltipData Click時に表示するsetTooltipData関数
  */
 export function makeGeoJsonLayers(
-  map: maplibregl.Map,
+  map: Map,
   layerConfig: LayerConfig[],
   init: boolean,
   setTooltipData
@@ -36,10 +36,10 @@ export function makeGeoJsonLayers(
 class GeoJsonLinePolygonCreator {
   layersType: string = 'geojson';
   private readonly layerConfig: LayerConfig[];
-  private readonly map: maplibregl.Map;
+  private readonly map: Map;
   private readonly setTooltipData: Dispatch<SetStateAction<any>>;
 
-  constructor(layerConfig: LayerConfig[], map: maplibregl.Map, setTooltipData) {
+  constructor(layerConfig: LayerConfig[], map: Map, setTooltipData) {
     this.layerConfig = layerConfig;
     this.map = map;
     this.setTooltipData = setTooltipData;
@@ -87,10 +87,10 @@ class GeoJsonLinePolygonCreator {
 class GeoJsonIconLayerCreator {
   layersType: string = 'geojsonicon';
   private readonly layerConfig: LayerConfig[];
-  private readonly map: maplibregl.Map;
+  private readonly map: Map;
   private readonly setTooltipData: Dispatch<SetStateAction<any>>;
 
-  constructor(layerConfig: LayerConfig[], map: maplibregl.Map, setTooltipData) {
+  constructor(layerConfig: LayerConfig[], map: Map, setTooltipData) {
     this.layerConfig = layerConfig;
     this.map = map;
     this.setTooltipData = setTooltipData;
