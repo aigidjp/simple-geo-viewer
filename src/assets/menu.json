@@ -36,8 +36,8 @@
             {
                 "title": "ゼンリン三次元建物形状データ",
                 "type": "vector",
-                "lng": 138.914248,
-                "lat": 35.047566,
+                "lng": 138.9067,
+                "lat": 35.174,
                 "zoom": 14,
                 "id": [
                     "shizuoka-building"
@@ -94,7 +94,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-urbanization-area"
                 ],
@@ -107,7 +107,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 11,
+                "zoom": 13,
                 "id": [
                     "susono-land-use"
                 ],
@@ -120,7 +120,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-land-relocation"
                 ],
@@ -133,7 +133,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-area-plan"
                 ],
@@ -146,7 +146,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-jyunbouka"
                 ],
@@ -159,7 +159,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-toshisonota"
                 ],
@@ -172,7 +172,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-toshikouen"
                 ],
@@ -185,7 +185,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-toshiryokuchi"
                 ],
@@ -217,7 +217,7 @@
                 "type": "icon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 11,
+                "zoom": 14,
                 "id": [
                     "susono-aed"
                 ],
@@ -231,7 +231,7 @@
                 "type": "icon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 11,
+                "zoom": 14,
                 "id": [
                     "susono-kankou"
                 ],
@@ -245,7 +245,7 @@
                 "type": "icon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 11,
+                "zoom": 15,
                 "id": [
                     "susono-public-facilities"
                 ],
@@ -257,9 +257,9 @@
             {
                 "title": "wifi",
                 "type": "icon",
-                "lng": 138.95,
-                "lat": 35.18,
-                "zoom": 11,
+                "lng": 138.9067,
+                "lat": 35.174,
+                "zoom": 16,
                 "id": [
                     "susono-public-wifi"
                 ],
@@ -271,9 +271,9 @@
             {
                 "title": "宿泊施設",
                 "type": "icon",
-                "lng": 138.95,
-                "lat": 35.18,
-                "zoom": 11,
+                "lng": 138.9067,
+                "lat": 35.174,
+                "zoom": 15,
                 "id": [
                     "susono_hotels_and_campsites"
                 ],
@@ -285,9 +285,9 @@
             {
                 "title": "医療施設",
                 "type": "icon",
-                "lng": 138.95,
-                "lat": 35.18,
-                "zoom": 11,
+                "lng": 138.9067,
+                "lat": 35.174,
+                "zoom": 15,
                 "id": [
                     "susono_medical_institution"
                 ],
@@ -299,9 +299,9 @@
             {
                 "title": "Wikipedia記事QRコードシール貼付場所",
                 "type": "icon",
-                "lng": 138.95,
-                "lat": 35.18,
-                "zoom": 11,
+                "lng": 138.9067,
+                "lat": 35.174,
+                "zoom": 16,
                 "id": [
                     "susono_wikipedia_qrcode"
                 ],
@@ -320,7 +320,7 @@
                 "type": "line",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 10,
                 "id": [
                     "susono-railway-railway"
                 ],
@@ -332,7 +332,7 @@
                 "type": "line",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 13,
                 "id": [
                     "susono-railway-station"
                 ],
@@ -388,11 +388,11 @@
                 "icon": "images/bus_red.png"
             },
             {
-                "title": "停留所",
+                "title": "停留所(富士急シティバス)",
                 "type": "icon",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 16,
                 "id": [
                     "fujikyu-busstop"
                 ],
@@ -402,11 +402,11 @@
                 "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus"
             },
             {
-                "title": "路線",
+                "title": "路線(富士急シティバス)",
                 "type": "line",
                 "lng": 138.92,
                 "lat": 35.18,
-                "zoom": 12.5,
+                "zoom": 11,
                 "id": [
                     "fujikyu_line"
                 ],
@@ -434,11 +434,11 @@
                 "icon": "images/bus_blue.png"
             },
             {
-                "title": "停留所",
+                "title": "停留所(すそのーる（自主運行バス）)",
                 "type": "icon",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 16,
                 "id": [
                     "susono-busstop"
                 ],
@@ -448,11 +448,11 @@
                 "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
             },
             {
-                "title": "路線",
+                "title": "路線(すそのーる（自主運行バス）)",
                 "type": "line",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 11,
                 "id": [
                     "susono-busline"
                 ],
@@ -470,7 +470,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-roadh30-road-500"
                 ],
@@ -483,7 +483,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono-roadh30-road-1000"
                 ],
@@ -496,7 +496,7 @@
                 "type": "line",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 15,
                 "id": [
                     "susono-roadh30-road"
                 ],
@@ -509,7 +509,7 @@
                 "type": "icon",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 15,
                 "id": [
                     "susono-roadh30-road-bridge"
                 ],
@@ -528,7 +528,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-kisegawa-flood-01"
                 ],
@@ -540,7 +540,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-kisegawa-flood-02"
                 ],
@@ -552,7 +552,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-kisegawa-flood-03"
                 ],
@@ -564,7 +564,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-kisegawa-flood-04"
                 ],
@@ -576,7 +576,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-oobagawa-flood-01"
                 ],
@@ -588,7 +588,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-oobagawa-flood-02"
                 ],
@@ -600,7 +600,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-oobagawa-flood-03"
                 ],
@@ -612,7 +612,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-oobagawa-flood-04"
                 ],
@@ -624,7 +624,7 @@
                 "type": "line",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 15,
                 "id": [
                     "susono-bousaih28-yusouro"
                 ],
@@ -636,7 +636,7 @@
                 "type": "line",
                 "lng": 138.91,
                 "lat": 35.18,
-                "zoom": 12,
+                "zoom": 15,
                 "id": [
                     "susono-bousaih28-yusouro-city"
                 ],
@@ -649,7 +649,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-keisya_r"
                 ],
@@ -661,7 +661,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-keisya_y"
                 ],
@@ -673,7 +673,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-doseki_r"
                 ],
@@ -685,7 +685,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-doseki_y"
                 ],
@@ -697,7 +697,7 @@
                 "type": "icon",
                 "lng": 138.8720984,
                 "lat": 35.24766,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-refreshcenter"
                 ],
@@ -711,7 +711,7 @@
                 "type": "icon",
                 "lng": 138.9097425,
                 "lat": 35.179235,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-firstaid"
                 ],
@@ -725,7 +725,7 @@
                 "type": "icon",
                 "lng": 138.911929616,
                 "lat": 35.178901,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-hospital"
                 ],
@@ -739,7 +739,7 @@
                 "type": "icon",
                 "lng": 138.9142461,
                 "lat": 35.199425,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-police-saigai"
                 ],
@@ -753,7 +753,7 @@
                 "type": "icon",
                 "lng": 138.906566,
                 "lat": 35.1670576,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-police"
                 ],
@@ -767,7 +767,7 @@
                 "type": "icon",
                 "lng": 138.9036233,
                 "lat": 35.167438,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-publichall"
                 ],
@@ -794,7 +794,7 @@
                 "type": "icon",
                 "lng": 138.90442,
                 "lat": 35.156269,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-shelter"
                 ],
@@ -808,7 +808,7 @@
                 "type": "icon",
                 "lng": 138.90750496,
                 "lat": 35.1700929,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-firestation"
                 ],
@@ -822,7 +822,7 @@
                 "type": "icon",
                 "lng": 138.90750496,
                 "lat": 35.1700929,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-firefacility"
                 ],
@@ -836,7 +836,7 @@
                 "type": "icon",
                 "lng": 138.90750496,
                 "lat": 35.1700929,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-walfare"
                 ],
@@ -850,7 +850,7 @@
                 "type": "icon",
                 "lng": 138.9142461,
                 "lat": 35.199425,
-                "zoom": 14,
+                "zoom": 15,
                 "id": [
                     "susono-bosaih28-supply"
                 ],
@@ -869,7 +869,7 @@
                 "type": "polygon",
                 "lng": 138.9067,
                 "lat": 35.174,
-                "zoom": 10.5,
+                "zoom": 13,
                 "id": [
                     "susono_gyoseiH30"
                 ],
@@ -963,7 +963,7 @@
                 "type": "transaction",
                 "lng": 138.906795,
                 "lat": 35.207141,
-                "zoom": 9,
+                "zoom": 12,
                 "id": [
                     "deckgl-circle-2014",
                     "deckgl-arc-2014"
@@ -976,7 +976,7 @@
                 "type": "transaction",
                 "lng": 138.906795,
                 "lat": 35.207141,
-                "zoom": 9,
+                "zoom": 12,
                 "id": [
                     "deckgl-circle-2015",
                     "deckgl-arc-2015"
@@ -989,7 +989,7 @@
                 "type": "transaction",
                 "lng": 138.906795,
                 "lat": 35.207141,
-                "zoom": 9,
+                "zoom": 12,
                 "id": [
                     "deckgl-circle-2016",
                     "deckgl-arc-2016"
@@ -1068,11 +1068,11 @@
         "category": "橋梁",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "橋梁（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-bridge"
                 ],
@@ -1087,11 +1087,11 @@
         "category": "トンネル",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "トンネル（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-tunnel"
                 ],
@@ -1106,11 +1106,11 @@
         "category": "横断歩道橋",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "横断歩道橋（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-footbridge"
                 ],
@@ -1125,11 +1125,11 @@
         "category": "アンダーパス地下歩道",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "アンダーパス地下歩道（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-underpass"
                 ],
@@ -1144,11 +1144,11 @@
         "category": "道路照明灯",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "道路照明灯（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-roadlight"
                 ],
@@ -1163,11 +1163,11 @@
         "category": "道路案内標識",
         "data": [
             {
-                "title": "基本情報（静岡県）",
+                "title": "道路案内標識（静岡県）",
                 "type": "icon",
                 "lng": 138.3837,
                 "lat": 34.9785,
-                "zoom": 9,
+                "zoom": 10,
                 "id": [
                     "prefectural-guidesign"
                 ],

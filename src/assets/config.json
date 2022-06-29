@@ -268,18 +268,11 @@
         {
             "type": "geojsonicon",
             "id": "susono-aed",
-            "data": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
+            "source": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
                 "url": "images/AED_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "iconMapping": {
-                "x":0,
-                "y":0,
                 "width": 64,
                 "height": 64,
                 "anchorY": 64
@@ -291,7 +284,7 @@
         {
             "type": "geojsonicon",
             "id": "susono-kankou",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/kankou_map.json",
+            "source": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
@@ -1275,7 +1268,7 @@
         {
             "type": "geojsonicon",
             "id": "prefectural-bridge",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/bridge_all.json",
+            "source": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/bridge_all.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
@@ -1284,14 +1277,14 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 14,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
         {
             "type": "geojsonicon",
             "id": "prefectural-tunnel",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/tonnel_all.json",
+            "source": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/tonnel_all.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
@@ -1307,7 +1300,7 @@
         {
             "type": "geojsonicon",
             "id": "prefectural-footbridge",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/footbridge.json",
+            "source": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/footbridge.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
@@ -1316,14 +1309,14 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 15,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
         {
             "type": "geojsonicon",
             "id": "prefectural-underpass",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/underpass.json",
+            "source": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/underpass.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
@@ -1332,14 +1325,14 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 15,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
         {
             "type": "geojsonicon",
             "id": "prefectural-roadlight",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/light_all.json",
+            "source": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/light_all.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
@@ -1348,13 +1341,13 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 16,
+            "minzoom": 9,
             "visible": false
         },
         {
             "type": "geojsonicon",
             "id": "prefectural-guidesign",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/sign_all.json",
+            "source": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/sign_all.json",
             "getSize": 9,
             "sizeScale": 8,
             "icon": {
@@ -1363,7 +1356,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 16,
+            "minzoom": 9,
             "iconSizeScale": 60,
             "visible": false
         },
