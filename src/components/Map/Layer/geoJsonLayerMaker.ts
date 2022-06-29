@@ -144,7 +144,13 @@ class GeoJsonIconLayerCreator {
   };
 }
 
-async function getJsonFeatures(url:string,filterFunc:(any)=>any = (_)=>{return _}):Promise<any>{
+/**
+ * JSON形式のfeatureCollectionの取得
+ * @param url JSONのURL
+ * @param filterFunc featureを一括で処理する関数(例:要素名を変える)
+ */
+async function getJsonFeatures(url: string,
+                               filterFunc: (any) => any = (_) => {return _}): Promise<any> {
   const respons  = await fetch(url);
   const jsonData = await respons.json();
   const features = jsonData.map(filterFunc);
@@ -169,7 +175,8 @@ class GeoJsonFeatureCollectionIconLayerCreator {
     const result: GeoJsonLayer<any>[] = targetLayerConfigs.map( (layerConfig) => {
       const config = this.extractLayerConfig(layerConfig);
       let features: any;
-      if (layerConfig.id=="susono-aed") {
+      // aedレイヤーは要素名が日本語や座標の値が特殊なため修正する関数を定義
+      if (layerConfig.id == "susono-aed") {
         const aedFiler = (feature) => {
           const fixFeature = {
             "type":feature["種類"],
