@@ -2,7 +2,7 @@ import configJson from '@/assets/config.json';
 import { getMenu, getFilteredIdList } from '@/components/LayerFilter/menu';
 import { RGBAColor } from 'deck.gl';
 
-export type LayerConfigType =
+type LayerConfigType =
   | 'raster'
   | 'mvt'
   | 'geojson'
@@ -18,7 +18,7 @@ export type LayerConfigType =
   | 'trips_json'
   | 'trips_drm';
 
-export type LayerConfigGenericProps = {
+type LayerConfigGenericProps = {
   id: string;
   source: string;
   type: LayerConfigType;
@@ -28,11 +28,11 @@ export type LayerConfigGenericProps = {
   visible?: boolean;
 };
 
-export type RasterLayerConfig = LayerConfigGenericProps & {
+type RasterLayerConfig = LayerConfigGenericProps & {
   type: 'raster';
 };
 
-export type MvtLayerConfig = LayerConfigGenericProps & {
+type MvtLayerConfig = LayerConfigGenericProps & {
   type: 'mvt';
   getFillColor: RGBAColor;
 };
@@ -57,23 +57,23 @@ export type GeojsonIconLayerConfig = LayerConfigGenericProps & {
   iconSizeScale: number;
 };
 
-export type IconLayerConfig = LayerConfigGenericProps & {
+type IconLayerConfig = LayerConfigGenericProps & {
   type: 'icon';
   coords: [number, number, number];
   color: RGBAColor;
 };
 
-export type BustripLayerConfig = LayerConfigGenericProps & {
+type BustripLayerConfig = LayerConfigGenericProps & {
   type: 'bus_trip';
   iconUrl: string;
 };
 
-export type Tile3dLayerConfig = LayerConfigGenericProps & {
+type Tile3dLayerConfig = LayerConfigGenericProps & {
   type: '3dtiles';
   pointsize: number;
 };
 
-export type ScatterprotLayerConfig = {
+type ScatterprotLayerConfig = {
   type: 'Scatterplot';
   id: string;
   data: string;
@@ -84,7 +84,7 @@ export type ScatterprotLayerConfig = {
   visible: boolean;
 };
 
-export type ArcLayerConfig = {
+type ArcLayerConfig = {
   type: 'Arc';
   id: string;
   data: string;
@@ -96,7 +96,7 @@ export type ArcLayerConfig = {
   visible: boolean;
 };
 
-export type TemporalPolygonLayerConfig = LayerConfigGenericProps & {
+type TemporalPolygonLayerConfig = LayerConfigGenericProps & {
   type: 'temporal_polygon';
   values: [number, number];
   colors: [RGBAColor, RGBAColor];
@@ -104,27 +104,27 @@ export type TemporalPolygonLayerConfig = LayerConfigGenericProps & {
   colorScale: number;
 };
 
-export type TemporalLineLayerConfig = LayerConfigGenericProps & {
+type TemporalLineLayerConfig = LayerConfigGenericProps & {
   type: 'temporal_line';
   values: [number, number];
   colors: [RGBAColor, RGBAColor];
   widths: [number, number];
 };
 
-export type GltfLayerConfig = LayerConfigGenericProps & {
+type GltfLayerConfig = LayerConfigGenericProps & {
   type: 'gltf';
   coords: [number, number, number];
   color: RGBAColor;
   orientation: [number, number, number];
 };
 
-export type TripsJsonLayerConfig = LayerConfigGenericProps & {
+type TripsJsonLayerConfig = LayerConfigGenericProps & {
   type: 'trips_json';
   color: RGBAColor;
   trailLength: number;
 };
 
-export type TripsDrmLayerConfig = LayerConfigGenericProps & {
+type TripsDrmLayerConfig = LayerConfigGenericProps & {
   type: 'trips_drm';
   values: [number, number];
   colors: [RGBAColor, RGBAColor];
