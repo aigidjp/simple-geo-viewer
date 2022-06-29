@@ -1,1447 +1,1175 @@
 {
-    "layers": [
-        {
-            "id": "susono-arial",
-            "type": "raster",
-            "source": "https://data.mlit-data.jp/susono/photo/{z}/{x}/{y}.png",
-            "minzoom": 11,
-            "maxzoom": 18,
-            "visible": false
-        },
-        {
-            "id": "susono-arial-2020",
-            "type": "raster",
-            "source": "https://data.mlit-data.jp/susono/photo/{z}/{x}/{y}.png",
-            "minzoom": 11,
-            "maxzoom": 18,
-            "visible": true
-        },
-        {
-            "id": "shizuoka-building",
-            "type": "mvt",
-            "source": "https://mvt.digitalsmartcity.jp/v1/22/22220/{z}/{x}/{y}.pbf",
-            "getFillColor": [
-                200,
-                200,
-                200,
-                200
-            ],
-            "minZoom": 14,
-            "maxZoom": 18,
-            "visible": true
-        },
-        {
-            "type": "geojson",
-            "id": "susono-kyojyu-yudo",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/kyojyu_yudo.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                220,
-                160,
-                80,
-                140
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-toshi-kinou-yudo-iwanami",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/toshi_kinou_yudo_iwanami.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                160,
-                80,
-                220,
-                140
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-toshi-kinou-yudo-susono",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/toshi_kinou_yudo_susono.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                64,
-                80,
-                220,
-                140
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-urbanization-area",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/urbanization_area_2019.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                220,
-                220,
-                80,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-land-use",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/susono_youto_2019_fc.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                220,
-                80,
-                80,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-land-relocation",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/land_relocation_2019.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                80,
-                220,
-                80,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-area-plan",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/area_plan_2019.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                80,
-                220,
-                220,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-jyunbouka",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/jyunbouka_2019.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                174,
-                85,
-                116,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-toshisonota",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/toshisonota_2019.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                67,
-                85,
-                116,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-toshikouen",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/toshikouen_2019.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                67,
-                181,
-                123,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-toshiryokuchi",
-            "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/toshiryokuchi_2019.geojson",
-            "getLineColor": [
-                0,
-                0,
-                240,
-                200
-            ],
-            "lineWidthMinPixels": 2,
-            "getFillColor": [
-                67,
-                262,
-                169,
-                120
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "id": "susono-school",
-            "type": "geojsonicon",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/susono_school_list.json",
-            "stroked": false,
-            "filled": false,
-            "icon": {
-                "url": "images/school_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-aed",
-            "data": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/AED_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "iconMapping": {
-                "x":0,
-                "y":0,
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-kankou",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/kankou_map.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/tourism_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 13,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-public-facilities",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/public_facilities.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/publicbulding_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-public-wifi",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/public_wifi.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/Wifi_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono_hotels_and_campsites",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/susono_hotels_and_campsites.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/hotel_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono_medical_institution",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/susono_medical_institution.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/hospital_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono_wikipedia_qrcode",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/susono_wikipedia_qrcode.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/tourism_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-railway-railway",
-            "source": "https://data.digitalsmartcity.jp/susono/railway/susono_railroad.geojson",
-            "getLineWidth": 15.0,
-            "getLineColor": [
-                102,
-                107,
-                52
-            ],
-            "minzoom": 9,
-            "visible": true
-        },
-        {
-            "type": "geojson",
-            "id": "susono-railway-station",
-            "source": "https://data.digitalsmartcity.jp/susono/railway/susono_station.geojson",
-            "getLineWidth": 15.0,
-            "getLineColor": [
-                102,
-                149,
-                0
-            ],
-            "minzoom": 12,
-            "visible": true
-        },
-        {
-            "id": "fujikyu_trip_wd",
-            "type": "bus_trip",
-            "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json",
-            "iconUrl": "images/bus_red.png"
-        },
-        {
-            "id": "fujikyu_trip_sat",
-            "type": "bus_trip",
-            "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_sat.json",
-            "iconUrl": "images/bus_red.png"
-        },
-        {
-            "id": "fujikyu_trip_holiday",
-            "type": "bus_trip",
-            "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_holiday.json",
-            "iconUrl": "images/bus_red.png"
-        },
-        {
-            "type": "geojsonicon",
-            "id": "fujikyu-busstop",
-            "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/GTFS-stops_fujikyu_202012.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/busstop_red.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojson",
-            "id": "fujikyu_line",
-            "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/routes_fujikyu_202012.geojson",
-            "minzoom": 10,
-            "getLineWidth": 4,
-            "lineWidthScale": 1,
-            "getLineColor": [
-                250,
-                80,
-                50
-            ],
-            "visible": true
-        },
-        {
-            "id": "susonoru",
-            "type": "bus_trip",
-            "source": "https://data.digitalsmartcity.jp/susono/GTFS/GTFS-trips.json",
-            "iconUrl": "images/bus_blue.png"
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-busstop",
-            "data": "https://data.digitalsmartcity.jp/susono/GTFS/GTFS-stops.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/busstop_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojson",
-            "id": "susono-busline",
-            "source": "https://data.digitalsmartcity.jp/susono/GTFS/GTFS-shapes.geojson",
-            "minzoom": 10,
-            "getLineColor": [
-                68,
-                186,
-                245
-            ],
-            "getLineWidth": 5,
-            "lineWidthScale": 1,
-            "visible": true
-        },
-        {
-            "type": "geojson",
-            "id": "susono-roadh30-road-500",
-            "source": "https://data.digitalsmartcity.jp/susono/roadh30/index500.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                137,
-                189,
-                222,
-                140
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-roadh30-road-1000",
-            "source": "https://data.digitalsmartcity.jp/susono/roadh30/index1000.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                77,
-                113,
-                152,
-                140
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-roadh30-road",
-            "source": "https://data.digitalsmartcity.jp/susono/roadh30/road.geojson",
-            "visible": false,
-            "getLineColor": [
-                183,
-                193,
-                210,
-                200
-            ],
-            "minzoom": 14,
-            "getLineWidth": 1
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-roadh30-road-bridge",
-            "source": "https://data.digitalsmartcity.jp/susono/roadh30/bridge.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/bridge_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-kisegawa-flood-01",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_01.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                249,
-                214,
-                75,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-kisegawa-flood-02",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_02.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                204,
-                255,
-                153,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-kisegawa-flood-03",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_03.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                153,
-                255,
-                255,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-kisegawa-flood-04",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_04.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                30,
-                144,
-                255,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-oobagawa-flood-01",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_01.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                249,
-                214,
-                75,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-oobagawa-flood-02",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_02.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                204,
-                255,
-                153,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-oobagawa-flood-03",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_03.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                153,
-                255,
-                255,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-oobagawa-flood-04",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_04.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                30,
-                144,
-                255,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-bousaih28-yusouro",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/yusouro.geojson",
-            "visible": false,
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "minzoom": 14,
-            "getLineWidth": 2
-        },
-        {
-            "type": "geojson",
-            "id": "susono-bousaih28-yusouro-city",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/yusouro_city.geojson",
-            "visible": false,
-            "minzoom": 14,
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2
-        },
-        {
-            "type": "geojson",
-            "id": "susono-bosaih28-keisya_r",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/keisya_r.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                255,
-                174,
-                43,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-bosaih28-keisya_y",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/keisya_y.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                255,
-                131,
-                43,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-bosaih28-doseki_r",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/doseki_r.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                244,
-                173,
-                199,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-bosaih28-doseki_y",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/doseki_y.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                255,
-                153,
-                255,
-                140
-            ],
-            "minzoom": 14,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-refreshcenter",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/refreshcenter.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/publicfacility_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-firstaid",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/firstaid.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/medicalcenter_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-hospital",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/hospital.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/medicalcenter_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-police-saigai",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/police-saigai.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/government_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-police",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/police.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/government_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-publichall",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/publichall.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/convention_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono-bosaih28-wideareaevacuationsite",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/wideareaevacuationsite.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                181,
-                132,
-                103,
-                140
-            ],
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-shelter",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/shelter.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/shelter_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-firestation",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/firestation.geojson",
-            "getSize": 9,
-            "sizeScale": 6,
-            "icon": {
-                "url": "images/firehouse_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-firefacility",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/firefacility.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/firehouse_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-walfare",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/walfare.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/healthcenter_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "susono-bosaih28-supply",
-            "source": "https://data.digitalsmartcity.jp/susono/bosaih28/supply.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/school_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojson",
-            "id": "susono_gyoseiH30",
-            "source": "https://data.digitalsmartcity.jp/susono/susono_gyosei2018_vis.geojson",
-            "getLineColor": [
-                0,
-                0,
-                0,
-                200
-            ],
-            "getLineWidth": 2,
-            "getFillColor": [
-                178,
-                204,
-                202,
-                140
-            ],
-            "minzoom": 12,
-            "visible": false
-        },
-        {
-            "id": "28-D0201-01",
-            "type": "3dtiles",
-            "source": "https://data.digitalsmartcity.jp/3dtiles/las19/tileset.json",
-            "pointsize": 3.0,
-            "minzoom": 11,
-            "visible": true
-        },
-        {
-            "id": "29-K2452-01",
-            "type": "3dtiles",
-            "source": "https://data.digitalsmartcity.jp/3dtiles/las36/tileset.json",
-            "pointsize": 3.0,
-            "minzoom": 11,
-            "visible": false
-        },
-        {
-            "id": "28-K2450-01",
-            "type": "3dtiles",
-            "source": "https://data.digitalsmartcity.jp/3dtiles/las40/tileset.json",
-            "pointsize": 3.0,
-            "minzoom": 11,
-            "visible": false
-        },
-        {
-            "id": "1-kakegawa",
-            "type": "3dtiles",
-            "source": "https://data.digitalsmartcity.jp/shizuoka-las/1-kakegawa/3dtiles/tileset.json",
-            "pointsize": 3.0,
-            "minzoom": 11,
-            "visible": false
-        },
-        {
-            "id": "2-nirayama",
-            "type": "3dtiles",
-            "source": "https://data.digitalsmartcity.jp/shizuoka-las/2-nirayama/3dtiles/tileset.json",
-            "pointsize": 3.0,
-            "minzoom": 11,
-            "visible": false
-        },
-        {
-            "type": "Scatterplot",
-            "id": "deckgl-circle-2014",
-            "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2014.json",
-            "getLineColor": [
-                0,
-                0,
-                0
-            ],
-            "getFillColor": [
-                255,
-                255,
-                102
-            ],
-            "minzoom": 11,
-            "maxzoom": 16,
-            "visible": false
-        },
-        {
-            "type": "Arc",
-            "id": "deckgl-arc-2014",
-            "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2014.json",
-            "width": 2,
-            "sourceColor": [
-                255,
-                255,
-                102
-            ],
-            "targetColor": [
-                255,
-                255,
-                255
-            ],
-            "minzoom": 11,
-            "maxzoom": 16,
-            "visible": false
-        },
-        {
-            "type": "Scatterplot",
-            "id": "deckgl-circle-2015",
-            "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2015.json",
-            "getLineColor": [
-                0,
-                0,
-                0
-            ],
-            "getFillColor": [
-                153,
-                255,
-                153
-            ],
-            "minzoom": 11,
-            "maxzoom": 16,
-            "visible": false
-        },
-        {
-            "type": "Arc",
-            "id": "deckgl-arc-2015",
-            "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2015.json",
-            "width": 2,
-            "sourceColor": [
-                153,
-                255,
-                153
-            ],
-            "targetColor": [
-                255,
-                255,
-                255
-            ],
-            "minzoom": 11,
-            "maxzoom": 16,
-            "visible": false
-        },
-        {
-            "type": "Scatterplot",
-            "id": "deckgl-circle-2016",
-            "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2016.json",
-            "getLineColor": [
-                0,
-                0,
-                0
-            ],
-            "getFillColor": [
-                255,
-                102,
-                51
-            ],
-            "minzoom": 11,
-            "maxzoom": 16,
-            "visible": false
-        },
-        {
-            "type": "Arc",
-            "id": "deckgl-arc-2016",
-            "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2016.json",
-            "width": 2,
-            "sourceColor": [
-                255,
-                102,
-                51
-            ],
-            "targetColor": [
-                255,
-                255,
-                255
-            ],
-            "minzoom": 11,
-            "maxzoom": 16,
-            "visible": false
-        },
-        {
-            "type": "temporal_polygon",
-            "id": "boundaryvolume",
-            "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
-            "values": [0, 2000],
-            "colors": [
-              [255, 255, 255, 0],
-              [255, 0, 0, 200]
-            ],
-            "heights": [0, 2000],
-            "colorScale": 3100,
-            "minzoom": 12.5,
-            "visible": false
-        },
-        {
-            "type": "temporal_polygon",
-            "id": "boundaryvolume_h",
-            "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
-            "values": [0, 2000],
-            "colors": [
-              [255, 255, 255, 0],
-              [255, 0, 0, 200]
-            ],
-            "heights": [0, 2000],
-            "colorScale": 3100,
-            "elevationScale": 0.1,
-            "minzoom": 1,
-            "maxzoom": 12.5,
-            "visible": false
-        },
-        {
-            "type": "temporal_polygon",
-            "id": "linkvolume",
-            "source": "https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson",
-            "visible": true,
-            "values": [0, 2000],
-            "colors": [
-              [255, 255, 255, 0],
-              [255, 0, 0, 200]
-            ],
-            "heights": [0, 2000],
-            "colorScale": 200,
-            "minzoom": 1,
-            "lineWidthScale": 5,
-            "getLineWidth": 3
-        },
-        {
-            "type": "trips_json",
-            "id": "persontrips-weekday",
-            "source": "https://data.digitalsmartcity.jp/person_flow/trips_weekday_susono_v8.json",
-            "color": [
-                0,
-                153,
-                255
-            ],
-            "opacity": 0.3,
-            "trailLength": 20,
-            "minzoom": 11,
-            "visible": false
-        },
-        {
-            "type": "trips_json",
-            "id": "persontrips-holiday",
-            "source": "https://data.digitalsmartcity.jp/person_flow/trips_holiday_susono_v8.json",
-            "color": [
-                255,
-                0,
-                102
-            ],
-            "opacity": 0.3,
-            "trailLength": 20,
-            "minzoom": 11,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "prefectural-bridge",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/bridge_all.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/bridge_blue.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 14,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "prefectural-tunnel",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/tonnel_all.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/tunnel_blue.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 9,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "prefectural-footbridge",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/footbridge.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/footbridge_blue.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "prefectural-underpass",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/underpass.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/underwalk_blue.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 15,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "prefectural-roadlight",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/light_all.json",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/streetlamp_blue.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 16,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "prefectural-guidesign",
-            "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/sign_all.json",
-            "getSize": 9,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/sign_blue.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 16,
-            "iconSizeScale": 60,
-            "visible": false
-        },
-        {
-            "type": "geojsonicon",
-            "id": "732c04ae-70e2-46c0-8eba-14ade5652f6f",
-            "source": "https://www.geospatial.jp/ckan/dataset/d4383ed4-084f-4e7b-9b08-28c0d2d900d7/resource/732c04ae-70e2-46c0-8eba-14ade5652f6f/download/.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/digitalring_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 12,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojsonicon",
-            "id": "7b27e8ca-2844-4cb2-ae25-0d8a74765406",
-            "source": "https://digitalcityservice.s3.ap-northeast-1.amazonaws.com/dcs/susono_city/SpecificThemes/specific_themes.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/tourism_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64
-            },
-            "minzoom": 5,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojsonicon",
-            "id": "i7f7b134a-8a9b-4f4b-843d-23e86d675ee5_p18-1247policestation",
-            "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/7f7b134a-8a9b-4f4b-843d-23e86d675ee5/p18-1247policestation.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "images/shelter_yellow.png",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64,
-                "color": "yellow"
-            },
-            "minzoom": 12,
-            "iconSizeScale": 60,
-            "visible": true
-        },
-        {
-            "type": "geojson",
-            "id": "i7f7b134a-8a9b-4f4b-843d-23e86d675ee5_p18-1247policestationjurisdiction",
-            "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/7f7b134a-8a9b-4f4b-843d-23e86d675ee5/p18-1247policestationjurisdiction.geojson",
-            "getSize": 10,
-            "sizeScale": 8,
-            "icon": {
-                "url": "",
-                "width": 64,
-                "height": 64,
-                "anchorY": 64,
-                "color": "yellow"
-            },
-            "minzoom": 12,
-            "visible": true
-        },
-        {
-          "id": "drm_test",
-          "type": "trips_drm",
-          "source": "https://drm-link-volume.s3.ap-northeast-1.amazonaws.com/drm/{z}/{x}/{y}.pbf",
-          "values": [0, 500],
-          "colors": [
-            [255, 255, 255, 100],
-            [255, 0, 0, 200]
-          ],
-          "step": 60
-        }
-    ]
+  "layers": [
+    {
+      "id": "susono-arial",
+      "type": "raster",
+      "source": "https://data.mlit-data.jp/susono/photo/{z}/{x}/{y}.png",
+      "minzoom": 11,
+      "maxzoom": 18,
+      "visible": false
+    },
+    {
+      "id": "susono-arial-2020",
+      "type": "raster",
+      "source": "https://data.mlit-data.jp/susono/photo/{z}/{x}/{y}.png",
+      "minzoom": 11,
+      "maxzoom": 18,
+      "visible": true
+    },
+    {
+      "id": "shizuoka-building",
+      "type": "mvt",
+      "source": "https://mvt.digitalsmartcity.jp/v1/22/22220/{z}/{x}/{y}.pbf",
+      "getFillColor": [200, 200, 200, 200],
+      "minZoom": 14,
+      "maxZoom": 18,
+      "visible": true
+    },
+    {
+      "type": "geojson",
+      "id": "susono-kyojyu-yudo",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/kyojyu_yudo.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [220, 160, 80, 140],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-toshi-kinou-yudo-iwanami",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/toshi_kinou_yudo_iwanami.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [160, 80, 220, 140],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-toshi-kinou-yudo-susono",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/toshi_kinou_yudo_susono.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [64, 80, 220, 140],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-urbanization-area",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/urbanization_area_2019.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [220, 220, 80, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-land-use",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/susono_youto_2019_fc.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [220, 80, 80, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-land-relocation",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/land_relocation_2019.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [80, 220, 80, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-area-plan",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/area_plan_2019.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [80, 220, 220, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-jyunbouka",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/jyunbouka_2019.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [174, 85, 116, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-toshisonota",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/toshisonota_2019.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [67, 85, 116, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-toshikouen",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/toshikouen_2019.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [67, 181, 123, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-toshiryokuchi",
+      "source": "https://data.digitalsmartcity.jp/susono/cityplanh31/toshiryokuchi_2019.geojson",
+      "getLineColor": [0, 0, 240, 200],
+      "lineWidthMinPixels": 2,
+      "getFillColor": [67, 262, 169, 120],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "id": "susono-school",
+      "type": "geojsonicon",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/susono_school_list.json",
+      "stroked": false,
+      "filled": false,
+      "icon": {
+        "url": "images/school_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-aed",
+      "data": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/AED_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "iconMapping": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 15,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-kankou",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/kankou_map.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/tourism_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 13,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-public-facilities",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/public_facilities.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/publicbulding_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-public-wifi",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/public_wifi.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/Wifi_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 15,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono_hotels_and_campsites",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/susono_hotels_and_campsites.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/hotel_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono_medical_institution",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/susono_medical_institution.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/hospital_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono_wikipedia_qrcode",
+      "source": "https://data.digitalsmartcity.jp/susono/facility/susono_wikipedia_qrcode.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/tourism_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 15,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-railway-railway",
+      "source": "https://data.digitalsmartcity.jp/susono/railway/susono_railroad.geojson",
+      "getLineWidth": 15.0,
+      "getLineColor": [102, 107, 52],
+      "minzoom": 9,
+      "visible": true
+    },
+    {
+      "type": "geojson",
+      "id": "susono-railway-station",
+      "source": "https://data.digitalsmartcity.jp/susono/railway/susono_station.geojson",
+      "getLineWidth": 15.0,
+      "getLineColor": [102, 149, 0],
+      "minzoom": 12,
+      "visible": true
+    },
+    {
+      "id": "fujikyu_trip_wd",
+      "type": "bus_trip",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_wd.json",
+      "iconUrl": "images/bus_red.png"
+    },
+    {
+      "id": "fujikyu_trip_sat",
+      "type": "bus_trip",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_sat.json",
+      "iconUrl": "images/bus_red.png"
+    },
+    {
+      "id": "fujikyu_trip_holiday",
+      "type": "bus_trip",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/trips_fujikyu_202012_holiday.json",
+      "iconUrl": "images/bus_red.png"
+    },
+    {
+      "type": "geojsonicon",
+      "id": "fujikyu-busstop",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/GTFS-stops_fujikyu_202012.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/busstop_red.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 15,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojson",
+      "id": "fujikyu_line",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS_FUJIKYU_CITYBUS/routes_fujikyu_202012.geojson",
+      "minzoom": 10,
+      "getLineWidth": 4,
+      "lineWidthScale": 1,
+      "getLineColor": [250, 80, 50],
+      "visible": true
+    },
+    {
+      "id": "susonoru",
+      "type": "bus_trip",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS/GTFS-trips.json",
+      "iconUrl": "images/bus_blue.png"
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-busstop",
+      "data": "https://data.digitalsmartcity.jp/susono/GTFS/GTFS-stops.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/busstop_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 15,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojson",
+      "id": "susono-busline",
+      "source": "https://data.digitalsmartcity.jp/susono/GTFS/GTFS-shapes.geojson",
+      "minzoom": 10,
+      "getLineColor": [68, 186, 245],
+      "getLineWidth": 5,
+      "lineWidthScale": 1,
+      "visible": true
+    },
+    {
+      "type": "geojson",
+      "id": "susono-roadh30-road-500",
+      "source": "https://data.digitalsmartcity.jp/susono/roadh30/index500.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [137, 189, 222, 140],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-roadh30-road-1000",
+      "source": "https://data.digitalsmartcity.jp/susono/roadh30/index1000.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [77, 113, 152, 140],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-roadh30-road",
+      "source": "https://data.digitalsmartcity.jp/susono/roadh30/road.geojson",
+      "visible": false,
+      "getLineColor": [183, 193, 210, 200],
+      "minzoom": 14,
+      "getLineWidth": 1
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-roadh30-road-bridge",
+      "source": "https://data.digitalsmartcity.jp/susono/roadh30/bridge.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/bridge_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-kisegawa-flood-01",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_01.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [249, 214, 75, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-kisegawa-flood-02",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_02.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [204, 255, 153, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-kisegawa-flood-03",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_03.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [153, 255, 255, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-kisegawa-flood-04",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/kisegawa_04.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [30, 144, 255, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-oobagawa-flood-01",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_01.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [249, 214, 75, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-oobagawa-flood-02",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_02.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [204, 255, 153, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-oobagawa-flood-03",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_03.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [153, 255, 255, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-oobagawa-flood-04",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/oobagawa_04.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [30, 144, 255, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-bousaih28-yusouro",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/yusouro.geojson",
+      "visible": false,
+      "getLineColor": [0, 0, 0, 200],
+      "minzoom": 14,
+      "getLineWidth": 2
+    },
+    {
+      "type": "geojson",
+      "id": "susono-bousaih28-yusouro-city",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/yusouro_city.geojson",
+      "visible": false,
+      "minzoom": 14,
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2
+    },
+    {
+      "type": "geojson",
+      "id": "susono-bosaih28-keisya_r",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/keisya_r.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [255, 174, 43, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-bosaih28-keisya_y",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/keisya_y.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [255, 131, 43, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-bosaih28-doseki_r",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/doseki_r.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [244, 173, 199, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-bosaih28-doseki_y",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/doseki_y.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [255, 153, 255, 140],
+      "minzoom": 14,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-refreshcenter",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/refreshcenter.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/publicfacility_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-firstaid",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/firstaid.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/medicalcenter_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-hospital",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/hospital.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/medicalcenter_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-police-saigai",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/police-saigai.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/government_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-police",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/police.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/government_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-publichall",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/publichall.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/convention_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono-bosaih28-wideareaevacuationsite",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/wideareaevacuationsite.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [181, 132, 103, 140],
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-shelter",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/shelter.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/shelter_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-firestation",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/firestation.geojson",
+      "getSize": 9,
+      "sizeScale": 6,
+      "icon": {
+        "url": "images/firehouse_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-firefacility",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/firefacility.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/firehouse_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-walfare",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/walfare.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/healthcenter_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "susono-bosaih28-supply",
+      "source": "https://data.digitalsmartcity.jp/susono/bosaih28/supply.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/school_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojson",
+      "id": "susono_gyoseiH30",
+      "source": "https://data.digitalsmartcity.jp/susono/susono_gyosei2018_vis.geojson",
+      "getLineColor": [0, 0, 0, 200],
+      "getLineWidth": 2,
+      "getFillColor": [178, 204, 202, 140],
+      "minzoom": 12,
+      "visible": false
+    },
+    {
+      "id": "28-D0201-01",
+      "type": "3dtiles",
+      "source": "https://data.digitalsmartcity.jp/3dtiles/las19/tileset.json",
+      "pointsize": 3.0,
+      "minzoom": 11,
+      "visible": true
+    },
+    {
+      "id": "29-K2452-01",
+      "type": "3dtiles",
+      "source": "https://data.digitalsmartcity.jp/3dtiles/las36/tileset.json",
+      "pointsize": 3.0,
+      "minzoom": 11,
+      "visible": false
+    },
+    {
+      "id": "28-K2450-01",
+      "type": "3dtiles",
+      "source": "https://data.digitalsmartcity.jp/3dtiles/las40/tileset.json",
+      "pointsize": 3.0,
+      "minzoom": 11,
+      "visible": false
+    },
+    {
+      "id": "1-kakegawa",
+      "type": "3dtiles",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/1-kakegawa/3dtiles/tileset.json",
+      "pointsize": 3.0,
+      "minzoom": 11,
+      "visible": false
+    },
+    {
+      "id": "2-nirayama",
+      "type": "3dtiles",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/2-nirayama/3dtiles/tileset.json",
+      "pointsize": 3.0,
+      "minzoom": 11,
+      "visible": false
+    },
+    {
+      "type": "Scatterplot",
+      "id": "deckgl-circle-2014",
+      "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2014.json",
+      "getLineColor": [0, 0, 0],
+      "getFillColor": [255, 255, 102],
+      "minzoom": 11,
+      "maxzoom": 16,
+      "visible": false
+    },
+    {
+      "type": "Arc",
+      "id": "deckgl-arc-2014",
+      "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2014.json",
+      "width": 2,
+      "sourceColor": [255, 255, 102],
+      "targetColor": [255, 255, 255],
+      "minzoom": 11,
+      "maxzoom": 16,
+      "visible": false
+    },
+    {
+      "type": "Scatterplot",
+      "id": "deckgl-circle-2015",
+      "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2015.json",
+      "getLineColor": [0, 0, 0],
+      "getFillColor": [153, 255, 153],
+      "minzoom": 11,
+      "maxzoom": 16,
+      "visible": false
+    },
+    {
+      "type": "Arc",
+      "id": "deckgl-arc-2015",
+      "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2015.json",
+      "width": 2,
+      "sourceColor": [153, 255, 153],
+      "targetColor": [255, 255, 255],
+      "minzoom": 11,
+      "maxzoom": 16,
+      "visible": false
+    },
+    {
+      "type": "Scatterplot",
+      "id": "deckgl-circle-2016",
+      "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2016.json",
+      "getLineColor": [0, 0, 0],
+      "getFillColor": [255, 102, 51],
+      "minzoom": 11,
+      "maxzoom": 16,
+      "visible": false
+    },
+    {
+      "type": "Arc",
+      "id": "deckgl-arc-2016",
+      "data": "https://data.digitalsmartcity.jp/tdb_transaction/susono_trd_2016.json",
+      "width": 2,
+      "sourceColor": [255, 102, 51],
+      "targetColor": [255, 255, 255],
+      "minzoom": 11,
+      "maxzoom": 16,
+      "visible": false
+    },
+    {
+      "type": "temporal_polygon",
+      "id": "boundaryvolume",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "values": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ],
+      "heights": [0, 2000],
+      "colorScale": 3100,
+      "minzoom": 12.5,
+      "visible": false
+    },
+    {
+      "type": "temporal_polygon",
+      "id": "boundaryvolume_h",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/boundaryvolume.geojson",
+      "values": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ],
+      "heights": [0, 2000],
+      "colorScale": 3100,
+      "elevationScale": 0.1,
+      "minzoom": 1,
+      "maxzoom": 12.5,
+      "visible": false
+    },
+    {
+      "type": "temporal_polygon",
+      "id": "linkvolume",
+      "source": "https://data.digitalsmartcity.jp/susono/persontrip/linkvolume.geojson",
+      "visible": true,
+      "values": [0, 2000],
+      "colors": [
+        [255, 255, 255, 0],
+        [255, 0, 0, 200]
+      ],
+      "heights": [0, 2000],
+      "colorScale": 200,
+      "minzoom": 1,
+      "lineWidthScale": 5,
+      "getLineWidth": 3
+    },
+    {
+      "type": "trips_json",
+      "id": "persontrips-weekday",
+      "source": "https://data.digitalsmartcity.jp/person_flow/trips_weekday_susono_v8.json",
+      "color": [0, 153, 255],
+      "opacity": 0.3,
+      "trailLength": 20,
+      "minzoom": 11,
+      "visible": false
+    },
+    {
+      "type": "trips_json",
+      "id": "persontrips-holiday",
+      "source": "https://data.digitalsmartcity.jp/person_flow/trips_holiday_susono_v8.json",
+      "color": [255, 0, 102],
+      "opacity": 0.3,
+      "trailLength": 20,
+      "minzoom": 11,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "prefectural-bridge",
+      "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/bridge_all.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/bridge_blue.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 14,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "prefectural-tunnel",
+      "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/tonnel_all.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/tunnel_blue.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 9,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "prefectural-footbridge",
+      "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/footbridge.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/footbridge_blue.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 15,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "prefectural-underpass",
+      "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/underpass.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/underwalk_blue.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 15,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "prefectural-roadlight",
+      "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/light_all.json",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/streetlamp_blue.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 16,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "prefectural-guidesign",
+      "data": "https://data.digitalsmartcity.jp/road_facility/gs/prefectural/sign_all.json",
+      "getSize": 9,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/sign_blue.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 16,
+      "iconSizeScale": 60,
+      "visible": false
+    },
+    {
+      "type": "geojsonicon",
+      "id": "732c04ae-70e2-46c0-8eba-14ade5652f6f",
+      "source": "https://www.geospatial.jp/ckan/dataset/d4383ed4-084f-4e7b-9b08-28c0d2d900d7/resource/732c04ae-70e2-46c0-8eba-14ade5652f6f/download/.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/digitalring_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 12,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojsonicon",
+      "id": "7b27e8ca-2844-4cb2-ae25-0d8a74765406",
+      "source": "https://digitalcityservice.s3.ap-northeast-1.amazonaws.com/dcs/susono_city/SpecificThemes/specific_themes.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/tourism_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64
+      },
+      "minzoom": 5,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojsonicon",
+      "id": "i7f7b134a-8a9b-4f4b-843d-23e86d675ee5_p18-1247policestation",
+      "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/7f7b134a-8a9b-4f4b-843d-23e86d675ee5/p18-1247policestation.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "images/shelter_yellow.png",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64,
+        "color": "yellow"
+      },
+      "minzoom": 12,
+      "iconSizeScale": 60,
+      "visible": true
+    },
+    {
+      "type": "geojson",
+      "id": "i7f7b134a-8a9b-4f4b-843d-23e86d675ee5_p18-1247policestationjurisdiction",
+      "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/7f7b134a-8a9b-4f4b-843d-23e86d675ee5/p18-1247policestationjurisdiction.geojson",
+      "getSize": 10,
+      "sizeScale": 8,
+      "icon": {
+        "url": "",
+        "width": 64,
+        "height": 64,
+        "anchorY": 64,
+        "color": "yellow"
+      },
+      "minzoom": 12,
+      "visible": true
+    },
+    {
+      "id": "drm_test",
+      "type": "trips_drm",
+      "source": "https://drm-link-volume.s3.ap-northeast-1.amazonaws.com/drm/{z}/{x}/{y}.pbf",
+      "values": [0, 500],
+      "colors": [
+        [255, 255, 255, 100],
+        [255, 0, 0, 200]
+      ],
+      "step": 60
+    },
+    {
+      "id": "census-agriculture-susono-001",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/5bf15ef1-400a-4809-a5b3-db3bda460edb/resource/05f071b6-3c6b-4fc8-8247-f9d1814bee03/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-002",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/0d9c6180-4c03-4da2-9dca-fdad34c5728e/resource/da250460-67f7-49d1-95d3-27ceca48a39c/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-003",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/dd76d058-e1d9-428e-bd30-95db21a0017b/resource/243ccae0-05dd-4b7f-998d-8b2f66903028/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-004",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/10604da3-334a-473a-9e52-95efcec1ed98/resource/6f688ce2-3b10-49e4-9688-7bd1bc65a9a3/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-005",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/62ec91f2-43d1-406d-a02e-186d5fa9226d/resource/31c1bca8-1749-497f-8144-dfef48a1ddb2/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-006",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/0778d4b0-6f73-4298-8991-bd814f9dbba7/resource/36ccaed6-bafb-4233-a711-f1fd77c3d02a/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-007",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/ee1bc7a3-9712-46ab-9871-8ff225ab524e/resource/05e2a496-f45d-4294-9264-48ff630f76b3/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-008",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/b6f3a50a-425b-444a-81ab-a738ab093223/resource/163d990e-0ab8-4e43-b536-2fbbeff1d422/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-009",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/4c0b5c36-4cc6-408a-94e9-45a1924897ce/resource/fbd8668c-82ed-449a-bd6b-0ef75de7b7de/download/.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    },
+    {
+      "id": "census-agriculture-susono-010",
+      "type": "geojson",
+      "source": "https://www.geospatial.jp/ckan/dataset/fdfb036f-39b2-49fe-85c8-2ffaa807ec76/resource/689cd9ba-0db1-475a-91f2-88e69cad7cde/download/census-agriculture-susono-010.geojson",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "getLineColor": [192, 240, 192, 240],
+      "lineWidthMinPixels": 2
+    }
+  ]
 }
