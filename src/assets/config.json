@@ -737,7 +737,7 @@
     {
       "id": "28-D0201-01",
       "type": "3dtiles",
-      "source": "https://data.digitalsmartcity.jp/3dtiles/las19/tileset.json",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/ukairoko/tileset.json",
       "pointsize": 3.0,
       "minzoom": 11,
       "visible": true
@@ -745,7 +745,7 @@
     {
       "id": "29-K2452-01",
       "type": "3dtiles",
-      "source": "https://data.digitalsmartcity.jp/3dtiles/las36/tileset.json",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/yusuichi/tileset.json",
       "pointsize": 3.0,
       "minzoom": 11,
       "visible": false
@@ -753,7 +753,7 @@
     {
       "id": "28-K2450-01",
       "type": "3dtiles",
-      "source": "https://data.digitalsmartcity.jp/3dtiles/las40/tileset.json",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/LS0AS001/tileset.json",
       "pointsize": 3.0,
       "minzoom": 11,
       "visible": false
@@ -761,7 +761,7 @@
     {
       "id": "1-kakegawa",
       "type": "3dtiles",
-      "source": "https://data.digitalsmartcity.jp/shizuoka-las/1-kakegawa/3dtiles/tileset.json",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/kakegawazyo/tileset.json",
       "pointsize": 3.0,
       "minzoom": 11,
       "visible": false
@@ -769,7 +769,7 @@
     {
       "id": "2-nirayama",
       "type": "3dtiles",
-      "source": "https://data.digitalsmartcity.jp/shizuoka-las/2-nirayama/3dtiles/tileset.json",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/hansyaro/tileset.json",
       "pointsize": 3.0,
       "minzoom": 11,
       "visible": false
