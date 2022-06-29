@@ -769,7 +769,7 @@
     {
       "id": "2-nirayama",
       "type": "3dtiles",
-      "source": "https://data.digitalsmartcity.jp/shizuoka-las/2-nirayama/3dtiles/tileset.json",
+      "source": "https://data.digitalsmartcity.jp/shizuoka-las/hansyaro/tileset.json",
       "pointsize": 3.0,
       "minzoom": 11,
       "visible": false
