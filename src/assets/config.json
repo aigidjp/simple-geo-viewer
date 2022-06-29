@@ -284,7 +284,7 @@
         {
             "type": "geojsonicon",
             "id": "susono-kankou",
-            "source": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
+            "source": "https://data.digitalsmartcity.jp/susono/facility/kankou_map.json",
             "getSize": 10,
             "sizeScale": 8,
             "icon": {
