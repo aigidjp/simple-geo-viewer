@@ -59,9 +59,9 @@ const getInitialStyle = (): maplibregl.Style => {
 
 const checkZoomVisible = () => {
   const deckGlLayers = deck.props.layers;
-  const zommVisibleLayers = zoomVisibly(deckGlLayers,visLayers);
+  const zommVisibleLayers = zoomVisibly(deckGlLayers, visLayers);
   deck.setProps({ layers: zommVisibleLayers });
-}
+};
 
 const useInitializeMap = (
   maplibreContainer: React.MutableRefObject<HTMLDivElement | null>,
@@ -99,12 +99,12 @@ const useInitializeMap = (
         });
         visLayers.setzoomLevel(viewState.zoom);
       },
-      onBeforeRender:()=>{
+      onBeforeRender: () => {
         checkZoomVisible();
       },
       layers: [],
     });
-    
+
     map.addControl(new maplibregl.NavigationControl());
 
     map.on('moveend', (_e) => {
@@ -119,7 +119,7 @@ const useToggleVisibly = () => {
   if (!deck) return;
   const deckGlLayers = deck.props.layers;
   const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList);
-  const zommVisibleLayers = zoomVisibly(toggleVisibleLayers,visLayers);
+  const zommVisibleLayers = zoomVisibly(toggleVisibleLayers, visLayers);
   deck.setProps({ layers: zommVisibleLayers });
   visLayers.setlayerList(checkedLayerTitleList);
 };

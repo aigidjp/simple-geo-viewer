@@ -49,7 +49,7 @@ export function zoomVisibly(originalLayers: any[], visLayers: visiblyLayers) {
   return originalLayers.map((layer: any) => {
     if (!layer) return;
 
-    if (checkzoom(layer,visLayers.getzoomLevel())&&visibleLayerIdList.includes(layer.id)) {
+    if (checkzoom(layer, visLayers.getzoomLevel()) && visibleLayerIdList.includes(layer.id)) {
       return layer.clone({
         visible: true,
       });
@@ -67,27 +67,27 @@ export class visiblyLayers {
   constructor() {
     this.layerList = filterCheckedData().map((layer) => layer.title);
   }
-  setlayerList(targetLayerIdList: string[]){
+  setlayerList(targetLayerIdList: string[]) {
     this.layerList = filterIds(getMenu(), getVisiblyLayerIdList(targetLayerIdList));
   }
-  getlayerList(){
+  getlayerList() {
     return this.layerList;
   }
-  setzoomLevel(zoomlevel: number){
+  setzoomLevel(zoomlevel: number) {
     this.zoomLevel = zoomlevel;
   }
-  getzoomLevel(){
+  getzoomLevel() {
     return this.zoomLevel;
   }
 }
 
-export function checkzoom(layer:any,zoomlevel:number) {
+export function checkzoom(layer: any, zoomlevel: number) {
   if (layer.props.minzoom == undefined) {
     return true;
   }
   if (layer.props.minzoom <= zoomlevel) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
