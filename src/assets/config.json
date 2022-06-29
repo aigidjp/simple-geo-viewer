@@ -277,11 +277,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-<<<<<<< HEAD
             "minzoom": 13,
-=======
-            "minzoom": 15,
->>>>>>> c1489e7d78b0ec07e6d0bd955c9b1f79bd58ca91
             "iconSizeScale": 60,
             "visible": true
         },
