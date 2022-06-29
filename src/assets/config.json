@@ -277,7 +277,7 @@
                 "height": 64,
                 "anchorY": 64
             },
-            "minzoom": 13,
+            "minzoom": 15,
             "iconSizeScale": 60,
             "visible": true
         },
