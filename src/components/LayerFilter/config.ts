@@ -2,32 +2,49 @@ import configJson from '@/assets/config.json';
 import { getMenu, getFilteredIdList } from '@/components/LayerFilter/menu';
 import { RGBAColor } from 'deck.gl';
 
-type LayerGenericProps = {
+export type LayerConfigType =
+  | 'raster'
+  | 'mvt'
+  | 'geojson'
+  | 'geojsonicon'
+  | 'icon'
+  | 'bus_trip'
+  | '3dtiles'
+  | 'Scatterplot'
+  | 'Arc'
+  | 'temporal_polygon'
+  | 'temporal_line'
+  | 'gltf'
+  | 'trips_json'
+  | 'trips_drm';
+
+export type LayerConfigGenericProps = {
   id: string;
   source: string;
+  type: LayerConfigType;
   minzoom?: number;
   maxzoom?: number;
   opacity?: number;
-  visible: boolean;
+  visible?: boolean;
 };
 
-type RasterLayer = LayerGenericProps & {
+export type RasterLayerConfig = LayerConfigGenericProps & {
   type: 'raster';
 };
 
-type MvtLayer = LayerGenericProps & {
+export type MvtLayerConfig = LayerConfigGenericProps & {
   type: 'mvt';
   getFillColor: RGBAColor;
 };
 
-type GeojsonLayer = LayerGenericProps & {
+export type GeojsonLayerConfig = LayerConfigGenericProps & {
   type: 'geojson';
   getLineColor: RGBAColor;
   lineWidthMinPixels: number;
-  getFillColor: RGBAColor;
+  getFillColor?: RGBAColor;
 };
 
-type GeojsonIconLayer = LayerGenericProps & {
+export type GeojsonIconLayerConfig = LayerConfigGenericProps & {
   type: 'geojsonicon';
   stroked: boolean;
   filled: boolean;
@@ -40,23 +57,23 @@ type GeojsonIconLayer = LayerGenericProps & {
   iconSizeScale: number;
 };
 
-type IconLayer = LayerGenericProps & {
+export type IconLayerConfig = LayerConfigGenericProps & {
   type: 'icon';
   coords: [number, number, number];
   color: RGBAColor;
 };
 
-type BustripLayer = LayerGenericProps & {
+export type BustripLayerConfig = LayerConfigGenericProps & {
   type: 'bus_trip';
   iconUrl: string;
 };
 
-type Tile3dLayer = LayerGenericProps & {
+export type Tile3dLayerConfig = LayerConfigGenericProps & {
   type: '3dtiles';
   pointsize: number;
 };
 
-type ScatterprotLayer = {
+export type ScatterprotLayerConfig = {
   type: 'Scatterplot';
   id: string;
   data: string;
@@ -67,7 +84,7 @@ type ScatterprotLayer = {
   visible: boolean;
 };
 
-type ArcLayer = {
+export type ArcLayerConfig = {
   type: 'Arc';
   id: string;
   data: string;
@@ -79,7 +96,7 @@ type ArcLayer = {
   visible: boolean;
 };
 
-type TemporalPolygonLayer = LayerGenericProps & {
+export type TemporalPolygonLayerConfig = LayerConfigGenericProps & {
   type: 'temporal_polygon';
   values: [number, number];
   colors: [RGBAColor, RGBAColor];
@@ -87,51 +104,51 @@ type TemporalPolygonLayer = LayerGenericProps & {
   colorScale: number;
 };
 
-type TemporalLineLayer = LayerGenericProps & {
+export type TemporalLineLayerConfig = LayerConfigGenericProps & {
   type: 'temporal_line';
   values: [number, number];
   colors: [RGBAColor, RGBAColor];
   widths: [number, number];
 };
 
-type GltfLayer = LayerGenericProps & {
+export type GltfLayerConfig = LayerConfigGenericProps & {
   type: 'gltf';
   coords: [number, number, number];
   color: RGBAColor;
   orientation: [number, number, number];
 };
 
-type TripsJsonLayer = LayerGenericProps & {
+export type TripsJsonLayerConfig = LayerConfigGenericProps & {
   type: 'trips_json';
   color: RGBAColor;
   trailLength: number;
 };
 
-type TripsDrmLayer = LayerGenericProps & {
+export type TripsDrmLayerConfig = LayerConfigGenericProps & {
   type: 'trips_drm';
   values: [number, number];
   colors: [RGBAColor, RGBAColor];
   step: number;
 };
 
-type Layer =
-  | RasterLayer
-  | MvtLayer
-  | GeojsonLayer
-  | GeojsonIconLayer
-  | IconLayer
-  | BustripLayer
-  | Tile3dLayer
-  | ScatterprotLayer
-  | ArcLayer
-  | TemporalPolygonLayer
-  | TemporalLineLayer
-  | GltfLayer
-  | TripsJsonLayer
-  | TripsDrmLayer;
+export type LayerConfig =
+  | RasterLayerConfig
+  | MvtLayerConfig
+  | GeojsonLayerConfig
+  | GeojsonIconLayerConfig
+  | IconLayerConfig
+  | BustripLayerConfig
+  | Tile3dLayerConfig
+  | ScatterprotLayerConfig
+  | ArcLayerConfig
+  | TemporalPolygonLayerConfig
+  | TemporalLineLayerConfig
+  | GltfLayerConfig
+  | TripsJsonLayerConfig
+  | TripsDrmLayerConfig;
 
 type Config = {
-  layers: Layer[];
+  layers: LayerConfig[];
 };
 
 const loadConfigJson = () => configJson as Config;
