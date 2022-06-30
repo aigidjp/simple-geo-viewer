@@ -151,7 +151,7 @@
       "visible": true
     },
     {
-      "type": "geojsonicon",
+      "type": "geojsonfcicon",
       "id": "susono-aed",
       "source": "https://data.digitalsmartcity.jp/susono/facility/aed.json",
       "getSize": 10,
