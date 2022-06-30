@@ -1183,7 +1183,7 @@
         {
           "type": "geojsonicon",
           "id": "i059ac989-b2b6-49b1-b51f-b209a2dd62ce_p33-14_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/059ac989-b2b6-49b1-b51f-b209a2dd62ce/p33-14_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/059ac989-b2b6-49b1-b51f-b209a2dd62ce/resource/39b618d4-6051-47c3-953d-b825fa983f95/download/p33-14_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1194,12 +1194,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_biomasspowerstation22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/biomasspowerstation22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/f08d81ff-09f5-449b-bfaf-20d5abb78ad4/download/biomasspowerstation22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1210,12 +1211,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_generalhydroelectricpowerplant22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/generalhydroelectricpowerplant22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/72883f42-a4bc-4893-823b-589436f27acb/download/generalhydroelectricpowerplant22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1226,12 +1228,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_nuclearpowerplant22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/nuclearpowerplant22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/b275b04d-0e98-46d5-aaaa-288aa6fc21af/download/nuclearpowerplant22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1242,12 +1245,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_photovoltaicpowerplant22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/photovoltaicpowerplant22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/ead28d64-ff86-4b1c-a214-5cc48aaa4326/download/photovoltaicpowerplant22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1258,12 +1262,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_pondinformation22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/pondinformation22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/3676cff5-a46e-4bdf-bb65-d4298b36cbcf/download/pondinformation22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1274,12 +1279,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_powerplantcomplex22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/powerplantcomplex22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/7ff7d339-32cb-4250-b39d-71c74103dea8/download/powerplantcomplex22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1290,12 +1296,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_pumpedstoragehydroelectricplant22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/pumpedstoragehydroelectricplant22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/ea8dcd58-1442-4ab2-a0a7-dbec2bf59d83/download/pumpedstoragehydroelectricplant22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1306,12 +1313,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_thermalpowerplant22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/thermalpowerplant22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/9b449d26-a45b-4c36-a7f0-cf1b937df4af/download/thermalpowerplant22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1322,12 +1330,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i105fbd11-39f1-47db-b51f-6e97900be14d_windpowerplant22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/105fbd11-39f1-47db-b51f-6e97900be14d/windpowerplant22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/105fbd11-39f1-47db-b51f-6e97900be14d/resource/a0d03e29-4cab-4450-a0b5-f5197d228fd0/download/windpowerplant22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1338,12 +1347,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i10a18a17-29d6-404b-8bec-ea0520b45338_p13-11_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/10a18a17-29d6-404b-8bec-ea0520b45338/p13-11_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/10a18a17-29d6-404b-8bec-ea0520b45338/resource/8199fc71-9b03-4041-8e07-381434ca6e8a/download/p13-11_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1354,12 +1364,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojson",
           "id": "i1a161149-2ce4-4e38-9213-59b80a69d0cc_l05-0922-gindustrialcomplex",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/1a161149-2ce4-4e38-9213-59b80a69d0cc/l05-0922-gindustrialcomplex.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/1a161149-2ce4-4e38-9213-59b80a69d0cc/resource/379d0c90-4cdb-47b7-be06-2dd680d55bed/download/l05-0922-gindustrialcomplex.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1375,7 +1386,7 @@
         {
           "type": "geojson",
           "id": "i1a161149-2ce4-4e38-9213-59b80a69d0cc_l05-0922-gisolatedindustrialsite",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/1a161149-2ce4-4e38-9213-59b80a69d0cc/l05-0922-gisolatedindustrialsite.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/1a161149-2ce4-4e38-9213-59b80a69d0cc/resource/226e1668-e917-448f-b7bd-282147eb2577/download/l05-0922-gisolatedindustrialsite.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1391,7 +1402,7 @@
         {
           "type": "geojsonicon",
           "id": "i1d3b38e5-a631-4756-be64-dc1cdbfcfb89_p27-13_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/1d3b38e5-a631-4756-be64-dc1cdbfcfb89/p27-13_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/1d3b38e5-a631-4756-be64-dc1cdbfcfb89/resource/de4d0035-2a07-4d2a-93f9-338145433f16/download/p27-13_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1402,12 +1413,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i248ffb6f-197f-47b5-8ba3-902799ae13df_p02-06_22-g_publicfacility",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/248ffb6f-197f-47b5-8ba3-902799ae13df/p02-06_22-g_publicfacility.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/248ffb6f-197f-47b5-8ba3-902799ae13df/resource/0cdf6701-2b8e-4b91-b3e9-388bc3738c2b/download/p02-06_22-g_publicfacility.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1418,12 +1430,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i28b7de2f-0af1-4d03-b2f5-1f72ba3df4c0_p14-15_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/28b7de2f-0af1-4d03-b2f5-1f72ba3df4c0/p14-15_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/28b7de2f-0af1-4d03-b2f5-1f72ba3df4c0/resource/21a8c37a-4964-4e4d-9318-1017e1674d82/download/p14-15_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1434,12 +1447,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i36636519-4958-4c84-bde9-520aeade4f1e_p26-13_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/36636519-4958-4c84-bde9-520aeade4f1e/p26-13_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/36636519-4958-4c84-bde9-520aeade4f1e/resource/8e4b5266-ff05-45ae-bfe0-e1a1e3cdc013/download/p26-13_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1450,12 +1464,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i3a87acc6-c6bd-4e0e-8985-07d07b8149f4_p18-1222policestation",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/3a87acc6-c6bd-4e0e-8985-07d07b8149f4/p18-1222policestation.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/3a87acc6-c6bd-4e0e-8985-07d07b8149f4/resource/e9055613-2366-46e0-81de-461849f86997/download/p18-1222policestation.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1466,12 +1481,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojson",
           "id": "i3a87acc6-c6bd-4e0e-8985-07d07b8149f4_p18-1222policestationjurisdiction",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/3a87acc6-c6bd-4e0e-8985-07d07b8149f4/p18-1222policestationjurisdiction.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/3a87acc6-c6bd-4e0e-8985-07d07b8149f4/resource/78529e5c-cd02-4906-af23-849cd13ae114/download/p18-1222policestationjurisdiction.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1487,7 +1503,7 @@
         {
           "type": "geojsonicon",
           "id": "i3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303_gesuiponpu22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303/gesuiponpu22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303/resource/386ff75c-e178-4420-bcae-54798cf38d93/download/gesuiponpu22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1498,12 +1514,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303_gesuishori22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303/gesuishori22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303/resource/44e80103-7b37-4abb-8924-fe4d33915aba/download/gesuishori22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1514,12 +1531,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i58b59bcb-260e-4b71-9edd-7c8d9845fb40_p16-12_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/58b59bcb-260e-4b71-9edd-7c8d9845fb40/p16-12_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/58b59bcb-260e-4b71-9edd-7c8d9845fb40/resource/f3d1ce18-9072-4c4f-8e84-2ef48b0c5d73/download/p16-12_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1530,12 +1548,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i6efec041-92b8-4ccb-8401-6c7ad3d85450_p31-13_22_e",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/6efec041-92b8-4ccb-8401-6c7ad3d85450/p31-13_22_e.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/6efec041-92b8-4ccb-8401-6c7ad3d85450/resource/263d3348-0944-4370-96e4-e51fe43caefe/download/p31-13_22_e.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1546,12 +1565,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i6f4e580a-a158-4124-b627-34bc791dae90_generalwastedisposalfacilities22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/6f4e580a-a158-4124-b627-34bc791dae90/generalwastedisposalfacilities22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/6f4e580a-a158-4124-b627-34bc791dae90/resource/fc0cfca2-46c6-4695-a698-269b13c68e63/download/generalwastedisposalfacilities22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1562,12 +1582,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i6f4e580a-a158-4124-b627-34bc791dae90_industrialwastedisposalfacilities22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/6f4e580a-a158-4124-b627-34bc791dae90/industrialwastedisposalfacilities22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/6f4e580a-a158-4124-b627-34bc791dae90/resource/df712387-5969-463a-8a38-2707b18aed94/download/industrialwastedisposalfacilities22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1578,12 +1599,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojson",
           "id": "i714a7d2f-de63-45b1-a6b3-61273d819eda_p21-1222a",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/714a7d2f-de63-45b1-a6b3-61273d819eda/p21-1222a.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/714a7d2f-de63-45b1-a6b3-61273d819eda/resource/3779966a-8e1a-466b-ad47-9cf2f0b1c461/download/p21-1222a.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1594,12 +1616,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i714a7d2f-de63-45b1-a6b3-61273d819eda_p21-1222b",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/714a7d2f-de63-45b1-a6b3-61273d819eda/p21-1222b.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/714a7d2f-de63-45b1-a6b3-61273d819eda/resource/fe8d8d30-e98c-4e7c-be19-88fac023088b/download/p21-1222b.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1610,12 +1633,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i80261f3b-aac6-4e7b-8ee9-87f2e495ec39_p07-15_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/80261f3b-aac6-4e7b-8ee9-87f2e495ec39/p07-15_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/80261f3b-aac6-4e7b-8ee9-87f2e495ec39/resource/c740e17c-ce0d-4729-85d7-b181724dd3b3/download/p07-15_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1626,12 +1650,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i82de159e-2390-4449-b103-e343520d07b6_p28-13_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/82de159e-2390-4449-b103-e343520d07b6/p28-13_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/82de159e-2390-4449-b103-e343520d07b6/resource/92ae845e-9390-4381-8dc1-0189475ebe84/download/p28-13_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1642,12 +1667,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "i9bb09f14-e0e5-4466-a55d-97494a3bd061_p04-20_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/9bb09f14-e0e5-4466-a55d-97494a3bd061/p04-20_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/9bb09f14-e0e5-4466-a55d-97494a3bd061/resource/806c54de-c8f8-4a49-8a37-d29732e9bf08/download/p04-20_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1658,12 +1684,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "iaf4ea1db-c66f-480f-a233-fea2dc3b380e_p05-10_22-g_localgovernmentofficeandpublicmeetingfacility",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/af4ea1db-c66f-480f-a233-fea2dc3b380e/p05-10_22-g_localgovernmentofficeandpublicmeetingfacility.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/af4ea1db-c66f-480f-a233-fea2dc3b380e/resource/4965fecd-6508-4b50-bbe1-355c0022a86b/download/p05-10_22-g_localgovernmentofficeandpublicmeetingfacility.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1674,12 +1701,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "ib415de0c-8c3c-485f-b494-1e86734b1540_p24_12_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/b415de0c-8c3c-485f-b494-1e86734b1540/p24_12_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/b415de0c-8c3c-485f-b494-1e86734b1540/resource/30d3d072-3a0a-450c-b8f0-3612d5f45ddc/download/p24_12_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1690,12 +1718,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "ic2c0f3d0-a361-415b-b6dd-774af6f85691_p30-13_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/c2c0f3d0-a361-415b-b6dd-774af6f85691/p30-13_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/c2c0f3d0-a361-415b-b6dd-774af6f85691/resource/8d5433f4-9799-438b-817f-132124800e80/download/p30-13_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1706,12 +1735,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "id627dc60-b4f4-4062-af86-39d27369b6ec_p17-1222firestation",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/d627dc60-b4f4-4062-af86-39d27369b6ec/p17-1222firestation.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/d627dc60-b4f4-4062-af86-39d27369b6ec/resource/e0245f66-b14d-41d3-94d5-1987db77a602/download/p17-1222firestation.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1722,12 +1752,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojson",
           "id": "id627dc60-b4f4-4062-af86-39d27369b6ec_p17-1222firestationjurisdiction",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/d627dc60-b4f4-4062-af86-39d27369b6ec/p17-1222firestationjurisdiction.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/d627dc60-b4f4-4062-af86-39d27369b6ec/resource/ea08e609-8c8a-4556-978b-817b4110afff/download/p17-1222firestationjurisdiction.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1743,7 +1774,7 @@
         {
           "type": "geojsonicon",
           "id": "ie158530c-4328-417f-a3e7-b7585e67926c_p35_18_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/e158530c-4328-417f-a3e7-b7585e67926c/p35_18_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/e158530c-4328-417f-a3e7-b7585e67926c/resource/dbbdc17c-8514-4e25-a95e-147fa1cbe1dd/download/p35_18_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1754,12 +1785,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "ie43bb7dc-ae6f-4511-9a8d-bdb2db878555_p34-14_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/e43bb7dc-ae6f-4511-9a8d-bdb2db878555/p34-14_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/e43bb7dc-ae6f-4511-9a8d-bdb2db878555/resource/c2393cc7-c736-4154-a697-a853002341c9/download/p34-14_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1770,12 +1802,13 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         },
         {
           "type": "geojsonicon",
           "id": "if31c39f5-996b-4d12-a94a-6df95c202e35_p29-13_22",
-          "source": "/app/download/ed9416a0-600a-4d14-9f44-360857619286/f31c39f5-996b-4d12-a94a-6df95c202e35/p29-13_22.geojson",
+          "source": "https://www.geospatial.jp/ckan/dataset/f31c39f5-996b-4d12-a94a-6df95c202e35/resource/b0866f9a-09a8-4693-82e2-d61d64467677/download/p29-13_22.geojson",
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
@@ -1786,6 +1819,7 @@
               "color": "red"
           },
           "minzoom": 12,
+          "iconSizeScale": 60,
           "visible": true
         }
   ]
