@@ -178,7 +178,7 @@ class GeoJsonFeatureCollectionIconLayerCreator {
       // aedレイヤーは要素名が日本語や座標の値が特殊なため修正する関数を定義
       if (layerConfig.id == "susono-aed") {
         const aedFiler = (feature) => {
-          const fixFeature = {
+          return {
             "type":feature["種類"],
             "properties":feature["properties"],
             "geometry":{
@@ -186,7 +186,6 @@ class GeoJsonFeatureCollectionIconLayerCreator {
               "coordinates":feature["geometry"]["coordinates"].slice(0,2)
             }
           }
-          return fixFeature;
         };
         features = getJsonFeatures(layerConfig.source,aedFiler);
       }else{
