@@ -1,5 +1,6 @@
 {
-  "layers": [
+  "layers": 
+    [
         {
           "id": "susono-arial",
           "type": "raster",
@@ -1187,7 +1188,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/shop_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1204,7 +1205,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1221,7 +1222,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1238,7 +1239,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1255,7 +1256,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1272,7 +1273,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/watergate_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1289,7 +1290,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1306,7 +1307,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1323,7 +1324,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1340,7 +1341,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/industrial_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1357,7 +1358,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/park_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1373,6 +1374,9 @@
           "source": "https://www.geospatial.jp/ckan/dataset/1a161149-2ce4-4e38-9213-59b80a69d0cc/resource/379d0c90-4cdb-47b7-be06-2dd680d55bed/download/l05-0922-gindustrialcomplex.geojson",
           "getSize": 10,
           "sizeScale": 8,
+          "getLineColor": [0, 0, 240, 200],
+          "lineWidthMinPixels": 2,
+          "getFillColor": [220, 160, 80, 140],
           "icon": {
               "url": "",
               "width": 64,
@@ -1389,6 +1393,9 @@
           "source": "https://www.geospatial.jp/ckan/dataset/1a161149-2ce4-4e38-9213-59b80a69d0cc/resource/226e1668-e917-448f-b7bd-282147eb2577/download/l05-0922-gisolatedindustrialsite.geojson",
           "getSize": 10,
           "sizeScale": 8,
+          "getLineColor": [0, 0, 240, 200],
+          "lineWidthMinPixels": 2,
+          "getFillColor": [220, 160, 80, 140],
           "icon": {
               "url": "",
               "width": 64,
@@ -1406,7 +1413,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/cultual_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1423,7 +1430,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/cultual_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1440,7 +1447,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/cultual_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1457,7 +1464,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicfacility_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1474,7 +1481,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1490,6 +1497,9 @@
           "source": "https://www.geospatial.jp/ckan/dataset/3a87acc6-c6bd-4e0e-8985-07d07b8149f4/resource/78529e5c-cd02-4906-af23-849cd13ae114/download/p18-1222policestationjurisdiction.geojson",
           "getSize": 10,
           "sizeScale": 8,
+          "getLineColor": [0, 0, 240, 200],
+          "lineWidthMinPixels": 2,
+          "getFillColor": [220, 160, 80, 140],
           "icon": {
               "url": "",
               "width": 64,
@@ -1507,7 +1517,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1524,7 +1534,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1541,7 +1551,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1558,7 +1568,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1575,7 +1585,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1592,7 +1602,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1608,6 +1618,9 @@
           "source": "https://www.geospatial.jp/ckan/dataset/714a7d2f-de63-45b1-a6b3-61273d819eda/resource/3779966a-8e1a-466b-ad47-9cf2f0b1c461/download/p21-1222a.geojson",
           "getSize": 10,
           "sizeScale": 8,
+          "getLineColor": [0, 0, 240, 200],
+          "lineWidthMinPixels": 2,
+          "getFillColor": [220, 160, 80, 140],
           "icon": {
               "url": "",
               "width": 64,
@@ -1626,7 +1639,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/waterplant_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1643,7 +1656,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1660,7 +1673,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1677,7 +1690,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/medicalcenter_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1694,7 +1707,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1711,7 +1724,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1728,7 +1741,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1745,7 +1758,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1761,6 +1774,9 @@
           "source": "https://www.geospatial.jp/ckan/dataset/d627dc60-b4f4-4062-af86-39d27369b6ec/resource/ea08e609-8c8a-4556-978b-817b4110afff/download/p17-1222firestationjurisdiction.geojson",
           "getSize": 10,
           "sizeScale": 8,
+          "getLineColor": [0, 0, 240, 200],
+          "lineWidthMinPixels": 2,
+          "getFillColor": [220, 160, 80, 140],
           "icon": {
               "url": "",
               "width": 64,
@@ -1778,7 +1794,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1795,7 +1811,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/publicbulding_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1812,7 +1828,7 @@
           "getSize": 10,
           "sizeScale": 8,
           "icon": {
-              "url": "images/shelter_red.png",
+              "url": "images/school_red.png",
               "width": 64,
               "height": 64,
               "anchorY": 64,
@@ -1821,6 +1837,17 @@
           "minzoom": 12,
           "iconSizeScale": 60,
           "visible": true
+        },
+        {
+            "id": "drm_test",
+            "type": "trips_drm",
+            "source": "https://drm-link-volume.s3.ap-northeast-1.amazonaws.com/drm/{z}/{x}/{y}.pbf",
+            "values": [0, 500],
+            "colors": [
+              [255, 255, 255, 100],
+              [255, 0, 0, 200]
+            ],
+            "step": 60
         }
-  ]
+    ]
 }

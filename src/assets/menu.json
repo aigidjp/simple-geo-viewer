@@ -168,121 +168,6 @@
     ]
   },
   {
-    "category": "農業センサスデータ",
-    "data": [
-      {
-        "title": "有機農業に取り組んでいる経営体の取組品目別作付（栽培）経営体数と（栽培）面積",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-001"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-001"
-      },
-      {
-        "title": "農産物販売金額規模別経営体数",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-002"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-002"
-      },
-      {
-        "title": "販売目的の作物の類別作付（栽培）経営体数と作付（栽培）面積",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-003"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-003"
-      },
-      {
-        "title": "単一経営経営体数",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-004"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-004"
-      },
-      {
-        "title": "組織形態別経営体数",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-005"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-005"
-      },
-      {
-        "title": "青色申告を行っている経営体の取組年数別経営体数",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-006"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-006"
-      },
-      {
-        "title": "後継者の確保状況別経営体数",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-007"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-007"
-      },
-      {
-        "title": "経営耕地面積規模別経営体数",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-008"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-008"
-      },
-      {
-        "title": "経営主年齢階層別の経営体数",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-009"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-009"
-      },
-      {
-        "title": "６０日以上従事した世帯員、役員・構成員（経営主を含む）の状況",
-        "type": "polygon",
-        "lng": 138.876,
-        "lat": 35.22,
-        "zoom": 11,
-        "id": ["census-agriculture-susono-010"],
-        "checked": false,
-        "color": "#c0c0c0",
-        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-010"
-      }
-    ]
-  },
-  {
     "category": "施設",
     "data": [
       {
@@ -1163,140 +1048,120 @@
   {
     "category": "農業センサスデータ",
     "data": [
-        {
-            "title": "有機農業に取り組んでいる経営体の取組品目別作付（栽培）経営体数と（栽培）面積",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-001"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-001"
-        },
-        {
-            "title": "農産物販売金額規模別経営体数",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-002"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-002"
-        },
-        {
-            "title": "販売目的の作物の類別作付（栽培）経営体数と作付（栽培）面積",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-003"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-003"
-        },
-        {
-            "title": "単一経営経営体数",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-004"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-004"
-        },
-        {
-            "title": "組織形態別経営体数",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-005"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-005"
-        },
-        {
-            "title": "青色申告を行っている経営体の取組年数別経営体数",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-006"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-006"
-        },
-        {
-            "title": "後継者の確保状況別経営体数",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-007"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-007"
-        },
-        {
-            "title": "経営耕地面積規模別経営体数",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-008"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-008"
-        },
-        {
-            "title": "経営主年齢階層別の経営体数",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-009"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-009"
-        },
-        {
-            "title": "６０日以上従事した世帯員、役員・構成員（経営主を含む）の状況",
-            "type": "polygon",
-            "lng": 138.876,
-            "lat": 35.22,
-            "zoom": 11,
-            "id": [
-                "census-agriculture-susono-010"
-            ],
-            "checked": false,
-            "color": "#c0c0c0",
-            "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-010"
-        }
+      {
+        "title": "有機農業に取り組んでいる経営体の取組品目別作付（栽培）経営体数と（栽培）面積",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-001"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-001"
+      },
+      {
+        "title": "農産物販売金額規模別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-002"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-002"
+      },
+      {
+        "title": "販売目的の作物の類別作付（栽培）経営体数と作付（栽培）面積",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-003"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-003"
+      },
+      {
+        "title": "単一経営経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-004"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-004"
+      },
+      {
+        "title": "組織形態別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-005"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-005"
+      },
+      {
+        "title": "青色申告を行っている経営体の取組年数別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-006"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-006"
+      },
+      {
+        "title": "後継者の確保状況別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-007"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-007"
+      },
+      {
+        "title": "経営耕地面積規模別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-008"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-008"
+      },
+      {
+        "title": "経営主年齢階層別の経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-009"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-009"
+      },
+      {
+        "title": "６０日以上従事した世帯員、役員・構成員（経営主を含む）の状況",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-010"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-010"
+      }
     ]
-},
-{
-    "category": "不動産・建設経済局",
+  },
+  {
+    "category": "国土数値情報",
     "open": false,
     "data": [
         {
@@ -1308,12 +1173,12 @@
             "id": [
                 "i059ac989-b2b6-49b1-b51f-b209a2dd62ce_p33-14_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/shop_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p33-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・バイオマス）-静岡県",
             "type": "icon",
             "lng": 138.219948,
             "lat": 34.91226,
@@ -1321,12 +1186,12 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_biomasspowerstation22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・水力）-静岡県",
             "type": "icon",
             "lng": 138.390591,
             "lat": 35.110209,
@@ -1334,12 +1199,12 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_generalhydroelectricpowerplant22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・原子力）-静岡県",
             "type": "icon",
             "lng": 138.146089,
             "lat": 34.621557,
@@ -1347,12 +1212,12 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_nuclearpowerplant22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・太陽光）-静岡県",
             "type": "icon",
             "lng": 138.131473,
             "lat": 34.856182,
@@ -1360,12 +1225,12 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_photovoltaicpowerplant22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・池情報）-静岡県",
             "type": "icon",
             "lng": 138.184028,
             "lat": 35.32025,
@@ -1373,8 +1238,8 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_pondinformation22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/watergate_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
@@ -1386,12 +1251,12 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_powerplantcomplex22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・揚水式）-静岡県",
             "type": "icon",
             "lng": 138.184028,
             "lat": 35.32025,
@@ -1399,12 +1264,12 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_pumpedstoragehydroelectricplant22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・火力）-静岡県",
             "type": "icon",
             "lng": 138.663899,
             "lat": 35.128883,
@@ -1412,12 +1277,12 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_thermalpowerplant22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
-            "title": "国土数値情報（発電施設）-静岡県",
+            "title": "国土数値情報（発電施設・風力）-静岡県",
             "type": "icon",
             "lng": 138.230394,
             "lat": 34.69192,
@@ -1425,8 +1290,8 @@
             "id": [
                 "i105fbd11-39f1-47db-b51f-6e97900be14d_windpowerplant22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
         },
         {
@@ -1438,8 +1303,8 @@
             "id": [
                 "i10a18a17-29d6-404b-8bec-ea0520b45338_p13-11_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/park_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p13-22"
         },
         {
@@ -1451,12 +1316,12 @@
             "id": [
                 "i1a161149-2ce4-4e38-9213-59b80a69d0cc_l05-0922-gindustrialcomplex"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-l05-22"
         },
         {
-            "title": "国土数値情報（工業用地）ー静岡県",
+            "title": "国土数値情報（単独工業用地）ー静岡県",
             "type": "polygon",
             "lng": 138.322581,
             "lat": 34.9339,
@@ -1464,8 +1329,8 @@
             "id": [
                 "i1a161149-2ce4-4e38-9213-59b80a69d0cc_l05-0922-gisolatedindustrialsite"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/industrial_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-l05-22"
         },
         {
@@ -1477,8 +1342,8 @@
             "id": [
                 "i1d3b38e5-a631-4756-be64-dc1cdbfcfb89_p27-13_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/cultual_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p27-22"
         },
         {
@@ -1490,8 +1355,8 @@
             "id": [
                 "i248ffb6f-197f-47b5-8ba3-902799ae13df_p02-06_22-g_publicfacility"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/cultual_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p02-22"
         },
         {
@@ -1503,8 +1368,8 @@
             "id": [
                 "i28b7de2f-0af1-4d03-b2f5-1f72ba3df4c0_p14-15_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/cultual_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p14-22"
         },
         {
@@ -1516,8 +1381,8 @@
             "id": [
                 "i36636519-4958-4c84-bde9-520aeade4f1e_p26-13_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicfacility_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p26-22"
         },
         {
@@ -1529,12 +1394,12 @@
             "id": [
                 "i3a87acc6-c6bd-4e0e-8985-07d07b8149f4_p18-1222policestation"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p18-22"
         },
         {
-            "title": "国土数値情報（警察署）ー静岡県",
+            "title": "国土数値情報（警察署管轄範囲）ー静岡県",
             "type": "polygon",
             "lng": 138.327498,
             "lat": 35.020055,
@@ -1542,12 +1407,12 @@
             "id": [
                 "i3a87acc6-c6bd-4e0e-8985-07d07b8149f4_p18-1222policestationjurisdiction"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p18-22"
         },
         {
-            "title": "国土数値情報（下水道関連施設）-静岡県",
+            "title": "国土数値情報（下水道関連施設・下水ポンプ）-静岡県",
             "type": "icon",
             "lng": 138.285019,
             "lat": 34.861506,
@@ -1555,12 +1420,12 @@
             "id": [
                 "i3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303_gesuiponpu22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p22-22"
         },
         {
-            "title": "国土数値情報（下水道関連施設）-静岡県",
+            "title": "国土数値情報（下水道関連施設・処理場施設）-静岡県",
             "type": "icon",
             "lng": 138.345575,
             "lat": 34.909798,
@@ -1568,8 +1433,8 @@
             "id": [
                 "i3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303_gesuishori22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p22-22"
         },
         {
@@ -1581,8 +1446,8 @@
             "id": [
                 "i58b59bcb-260e-4b71-9edd-7c8d9845fb40_p16-12_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p16-22"
         },
         {
@@ -1594,12 +1459,12 @@
             "id": [
                 "i6efec041-92b8-4ccb-8401-6c7ad3d85450_p31-13_22_e"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p31-22"
         },
         {
-            "title": "国土数値情報（廃棄物処理施設）-静岡県",
+            "title": "国土数値情報（一般廃棄物処理施設）-静岡県",
             "type": "icon",
             "lng": 138.416118,
             "lat": 34.914361,
@@ -1607,12 +1472,12 @@
             "id": [
                 "i6f4e580a-a158-4124-b627-34bc791dae90_generalwastedisposalfacilities22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p15-22"
         },
         {
-            "title": "国土数値情報（廃棄物処理施設）-静岡県",
+            "title": "国土数値情報（産業廃棄物処理施設）-静岡県",
             "type": "icon",
             "lng": 138.344662,
             "lat": 34.949434,
@@ -1620,12 +1485,12 @@
             "id": [
                 "i6f4e580a-a158-4124-b627-34bc791dae90_industrialwastedisposalfacilities22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p15-22"
         },
         {
-            "title": "国土数値情報（上水道関連施設）ー静岡県",
+            "title": "国土数値情報（上水道関連施設・給水区域）ー静岡県",
             "type": "polygon",
             "lng": 138.278131,
             "lat": 34.903605,
@@ -1633,12 +1498,12 @@
             "id": [
                 "i714a7d2f-de63-45b1-a6b3-61273d819eda_p21-1222a"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/waterplant_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p21-22"
         },
         {
-            "title": "国土数値情報（上水道関連施設）ー静岡県",
+            "title": "国土数値情報（上水道関連施設・浄水場）ー静岡県",
             "type": "icon",
             "lng": 138.117253,
             "lat": 34.991448,
@@ -1646,8 +1511,8 @@
             "id": [
                 "i714a7d2f-de63-45b1-a6b3-61273d819eda_p21-1222b"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/waterplant_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p21-22"
         },
         {
@@ -1659,8 +1524,8 @@
             "id": [
                 "i80261f3b-aac6-4e7b-8ee9-87f2e495ec39_p07-15_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p07-22"
         },
         {
@@ -1672,8 +1537,8 @@
             "id": [
                 "i82de159e-2390-4449-b103-e343520d07b6_p28-13_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p28-22"
         },
         {
@@ -1685,8 +1550,8 @@
             "id": [
                 "i9bb09f14-e0e5-4466-a55d-97494a3bd061_p04-20_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/medicalcenter_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p04-22"
         },
         {
@@ -1698,8 +1563,8 @@
             "id": [
                 "iaf4ea1db-c66f-480f-a233-fea2dc3b380e_p05-10_22-g_localgovernmentofficeandpublicmeetingfacility"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p05-22"
         },
         {
@@ -1711,8 +1576,8 @@
             "id": [
                 "ib415de0c-8c3c-485f-b494-1e86734b1540_p24_12_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p24-22"
         },
         {
@@ -1724,8 +1589,8 @@
             "id": [
                 "ic2c0f3d0-a361-415b-b6dd-774af6f85691_p30-13_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p30-22"
         },
         {
@@ -1737,12 +1602,12 @@
             "id": [
                 "id627dc60-b4f4-4062-af86-39d27369b6ec_p17-1222firestation"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p17-22"
         },
         {
-            "title": "国土数値情報（消防署）ー静岡県",
+            "title": "国土数値情報（消防署管轄範囲）ー静岡県",
             "type": "polygon",
             "lng": 138.327498,
             "lat": 35.020055,
@@ -1750,8 +1615,8 @@
             "id": [
                 "id627dc60-b4f4-4062-af86-39d27369b6ec_p17-1222firestationjurisdiction"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p17-22"
         },
         {
@@ -1763,8 +1628,8 @@
             "id": [
                 "ie158530c-4328-417f-a3e7-b7585e67926c_p35_18_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p35-22"
         },
         {
@@ -1776,8 +1641,8 @@
             "id": [
                 "ie43bb7dc-ae6f-4511-9a8d-bdb2db878555_p34-14_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/publicbulding_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p34-22"
         },
         {
@@ -1789,9 +1654,26 @@
             "id": [
                 "if31c39f5-996b-4d12-a94a-6df95c202e35_p29-13_22"
             ],
-            "checked": true,
-            "icon": "images/shelter_red.png",
+            "checked": false,
+            "icon": "images/school_red.png",
             "url": "https://www.geospatial.jp/ckan/dataset/ksj-p29-22"
+        }
+    ]
+  },
+  {
+    "category": "DRMテスト",
+    "url": "",
+    "open": true,
+    "data": [
+        {
+            "title": "DRMリンク交通量",
+            "type": "line",
+            "lng": 139.7673068,
+            "lat": 35.6809591,
+            "zoom": 11,
+            "id": ["drm_test"],
+            "checked": false,
+            "color": "#333333"
         }
     ]
   }
