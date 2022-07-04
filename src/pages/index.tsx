@@ -49,17 +49,17 @@ const App: NextPage = () => {
         <div className="h-12">
           <Header />
         </div>
-        <div className="flex content">
-          <div className="w-1/5 flex flex-col h-5/6 m-8">
+        <div className="flex content" style={{overflow:'hidden'}}>
+          <div className="w-1/5 flex flex-col h-full ml-4 mr-2 mt-4 pb-10">
             <div id="sideBar" className="overflow-auto relative flex-1">
               <Sidebar />
             </div>
             {tooltipData.tooltip ? (
-              <div className="relative h-1/3">
-                <div className={'relative overflow-y-scroll pl-2 pr-14 h-full'}>
+              <div className="relative h-1/3 border-2 border-black">
+                <div className={'relative overflow-auto pt-2 pl-2 pr-2 h-full'}>
                   {tooltipData.tooltip ? <Tooltip {...tooltipData.tooltip} /> : undefined}
                 </div>
-                <div className="text-right bg-white absolute top-0 right-6">
+                <div className="text-right bg-white absolute top-0 right-2">
                   <button
                     className="text-2xl"
                     onClick={() => removeExistingTooltip(setTooltipData)}
@@ -70,7 +70,7 @@ const App: NextPage = () => {
               </div>
             ) : undefined}
           </div>
-          <div className="w-4/5">
+          <div className="w-4/5 m-2 pb-5 h-full">
             <Map setTooltipData={setTooltipData} />
           </div>
         </div>

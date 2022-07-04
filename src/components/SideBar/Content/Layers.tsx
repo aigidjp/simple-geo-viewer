@@ -62,6 +62,13 @@ export const Layers = (props: LayersProps) => {
     fontSize: '0.75rem',
   };
 
+  const textStyle = {
+    overflow: 'hidden',
+    'text-overflow': 'ellipsis',
+    'white-space': 'nowrap',
+    'min-width': 0,
+  }
+
   return (
     <>
       {layers.map((resource, index) => (
@@ -71,7 +78,7 @@ export const Layers = (props: LayersProps) => {
             style={resourceStyle}
             key={index}
           >
-            <div className="w-11/12 flex">
+            <div className="w-11/12 pr-3 flex">
               <input
                 type="checkbox"
                 className="rounded-full mx-1 text-cyan-600 focus:outline-none"
@@ -81,7 +88,7 @@ export const Layers = (props: LayersProps) => {
                 }}
               />
               {getResourceIcon(resource)}
-              {resource.title}
+              <p style={textStyle}>{resource.title}</p>
             </div>
             <div className="w-1/12">
               {resource.download_url === undefined
