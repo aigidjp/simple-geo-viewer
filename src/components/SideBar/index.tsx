@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import { getVisiblyContent } from '@/components/LayerFilter/sideBar';
 import { Content } from '@/components/SideBar/Content';
 import { Layers } from '@/components/SideBar/Content/Layers';
 import { FilterLayerInput } from '@/components/SideBar/Content/FilterLayerInput';
 import { getMenu, getFilteredMenu } from '@/components/LayerFilter/menu';
 
-const Sidebar: React.FC = () => {
+type Props = {
+  setLayerTextTooltipData: Dispatch<SetStateAction<any>>;
+};
+
+const Sidebar: React.VFC<Props> = ( {setLayerTextTooltipData} ) => {
   const [InputFilterKeyword, setInputFilterKeyword] = useState('');
   const filteredMenu = getFilteredMenu(getMenu(), InputFilterKeyword);
   const visiblyContentList = getVisiblyContent(filteredMenu);
@@ -16,7 +20,7 @@ const Sidebar: React.FC = () => {
       {visiblyContentList.map((content) => (
         <Content
           title={content.title}
-          layers={<Layers layers={content.layers} />}
+          layers={<Layers layers={content.layers} setLayerTextTooltipData={setLayerTextTooltipData} />}
           key={content.title}
         />
       ))}

@@ -31,6 +31,10 @@ const App: NextPage = () => {
   const [tooltipData, setTooltipData] = useState<any>({
     tooltip: null,
   });
+  const [layerTextTooltip, setLayerTextTooltip] = useState<any>({
+    title: "",
+    show: false
+  });
 
   const value = {
     checkedLayerTitleList,
@@ -52,7 +56,7 @@ const App: NextPage = () => {
         <div className="flex content" style={{overflow:'hidden'}}>
           <div className="w-1/5 flex flex-col h-full ml-4 mr-2 mt-4 pb-10">
             <div id="sideBar" className="overflow-auto relative flex-1">
-              <Sidebar />
+              <Sidebar setLayerTextTooltipData={setLayerTextTooltip}/>
             </div>
             {tooltipData.tooltip ? (
               <div className="relative h-1/3 border-2 border-black">
@@ -68,7 +72,12 @@ const App: NextPage = () => {
                   </button>
                 </div>
               </div>
-            ) : undefined}
+            ) : undefined }
+            {layerTextTooltip ? (
+              <div className="textTooltip_container w-11/12">
+                {layerTextTooltip.show && <div className={"textTooltip_float_top"}>{layerTextTooltip.title}</div>}
+              </div>
+            ) : undefined }
           </div>
           <div className="w-4/5 m-2 pb-5 h-full">
             <Map setTooltipData={setTooltipData} />

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { Dispatch, SetStateAction, useContext, useEffect } from 'react';
 import { context } from '@/pages';
 import { Data } from '@/components/LayerFilter/menu';
 import { getResourceIcon } from '@/components/SideBar/Icon';
@@ -27,10 +27,11 @@ const getDefaultVisiblyLayerTitles = () => {
 
 type LayersProps = {
   layers: Data[];
+  setLayerTextTooltipData: Dispatch<SetStateAction<any>>;
 };
 
 export const Layers = (props: LayersProps) => {
-  const { layers } = props;
+  const { layers, setLayerTextTooltipData } = props;
 
   const { checkedLayerTitleList, setCheckedLayerTitleList, setClickedLayerViewState } =
     useContext(context);
@@ -69,6 +70,14 @@ export const Layers = (props: LayersProps) => {
     'min-width': 0,
   }
 
+  const showTooltipText = (title,bool) => {
+    console.log(title);
+    console.log(bool);
+    console.log(setLayerTextTooltipData);
+    setLayerTextTooltipData(() => { return {title: title, show: bool} });
+  }
+
+
   return (
     <>
       {layers.map((resource, index) => (
@@ -77,6 +86,8 @@ export const Layers = (props: LayersProps) => {
             className="transition-hover duration-500 ease bg-white hover:bg-gray-200 p-2 flex"
             style={resourceStyle}
             key={index}
+            onMouseEnter={() => showTooltipText(resource.title, true)}
+            onMouseLeave={() => showTooltipText(resource.title, false)}
           >
             <div className="w-11/12 pr-3 flex">
               <input
@@ -88,7 +99,7 @@ export const Layers = (props: LayersProps) => {
                 }}
               />
               {getResourceIcon(resource)}
-              <p style={textStyle}>{resource.title}</p>
+                <p style={textStyle}>{resource.title}</p>
             </div>
             <div className="w-1/12">
               {resource.download_url === undefined
