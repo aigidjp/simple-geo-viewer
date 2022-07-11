@@ -70,11 +70,8 @@ export const Layers = (props: LayersProps) => {
     'min-width': 0,
   }
 
-  const showTooltipText = (title,bool) => {
-    console.log(title);
-    console.log(bool);
-    console.log(setLayerTextTooltipData);
-    setLayerTextTooltipData(() => { return {title: title, show: bool} });
+  const showTooltipText = (title, bool ,event) => {
+    setLayerTextTooltipData(() => { return {title: title, show: bool, top: (window.innerHeight - event.clientY) * -1} });
   }
 
 
@@ -86,8 +83,8 @@ export const Layers = (props: LayersProps) => {
             className="transition-hover duration-500 ease bg-white hover:bg-gray-200 p-2 flex"
             style={resourceStyle}
             key={index}
-            onMouseEnter={() => showTooltipText(resource.title, true)}
-            onMouseLeave={() => showTooltipText(resource.title, false)}
+            onMouseEnter={(event) => showTooltipText(resource.title, true, event)}
+            onMouseLeave={(event) => showTooltipText(resource.title, false, event)}
           >
             <div className="w-11/12 pr-3 flex">
               <input

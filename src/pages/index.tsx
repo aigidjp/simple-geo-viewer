@@ -33,7 +33,8 @@ const App: NextPage = () => {
   });
   const [layerTextTooltip, setLayerTextTooltip] = useState<any>({
     title: "",
-    show: false
+    show: false,
+    top: 0
   });
 
   const value = {
@@ -75,7 +76,7 @@ const App: NextPage = () => {
             ) : undefined }
             {layerTextTooltip ? (
               <div className="textTooltip_container w-11/12">
-                {layerTextTooltip.show && <div className={"textTooltip_float_top"}>{layerTextTooltip.title}</div>}
+                {layerTextTooltip.show && <div className={"textTooltip_float_top"} style={{top: layerTextTooltip.top + "px"}}>{layerTextTooltip.title}</div>}
               </div>
             ) : undefined }
           </div>
