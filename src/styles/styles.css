@@ -118,7 +118,6 @@
   min-width: 200px;
   white-space: nowrap;
   z-index: 9999;
-  bottom: calc(100% + 5px);
   background-color: black;
   color: white;
   padding: 0.5em 1em;

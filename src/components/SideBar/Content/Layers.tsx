@@ -71,7 +71,7 @@ export const Layers = (props: LayersProps) => {
   }
 
   const showTooltipText = (title, bool ,event) => {
-    setLayerTextTooltipData(() => { return {title: title, show: bool, top: (window.innerHeight - event.clientY) * -1} });
+    setLayerTextTooltipData(() => { return {title: title, show: bool, top: (window.innerHeight - event.clientY +10) * -1} });
   }
 
 
@@ -84,7 +84,6 @@ export const Layers = (props: LayersProps) => {
             style={resourceStyle}
             key={index}
             onMouseEnter={(event) => showTooltipText(resource.title, true, event)}
-            onMouseLeave={(event) => showTooltipText(resource.title, false, event)}
           >
             <div className="w-11/12 pr-3 flex">
               <input

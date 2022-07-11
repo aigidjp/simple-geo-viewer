@@ -48,6 +48,10 @@ const App: NextPage = () => {
     setIsDefault,
   };
 
+  const showTooltipText = (title, bool) => {
+    setLayerTextTooltip(() => { return {title: "", show: false, top: 0} });
+  }
+
   return (
     <div className="h-screen">
       <context.Provider value={value}>
@@ -56,7 +60,11 @@ const App: NextPage = () => {
         </div>
         <div className="flex content" style={{overflow:'hidden'}}>
           <div className="w-1/5 flex flex-col h-full ml-4 mr-2 mt-4 pb-10">
-            <div id="sideBar" className="overflow-auto relative flex-1">
+            <div
+              id="sideBar"
+              className="overflow-auto relative flex-1"
+              onMouseLeave={() => showTooltipText("", false)}
+            >
               <Sidebar setLayerTextTooltipData={setLayerTextTooltip}/>
             </div>
             {tooltipData.tooltip ? (
