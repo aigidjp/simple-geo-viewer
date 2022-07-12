@@ -83,7 +83,8 @@ export const Layers = (props: LayersProps) => {
             className="transition-hover duration-500 ease bg-white hover:bg-gray-200 p-2 flex"
             style={resourceStyle}
             key={index}
-            onMouseEnter={(event) => showTooltipText(resource.title, true, event)}
+            onMouseOver={(event) => showTooltipText(resource.title, true, event)}
+            onMouseOut={(event) => showTooltipText("", false, event)}
           >
             <div className="w-11/12 pr-3 flex">
               <input

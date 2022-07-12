@@ -48,10 +48,6 @@ const App: NextPage = () => {
     setIsDefault,
   };
 
-  const showTooltipText = (title, bool) => {
-    setLayerTextTooltip(() => { return {title: "", show: false, top: 0} });
-  }
-
   return (
     <div className="h-screen">
       <context.Provider value={value}>
@@ -63,7 +59,6 @@ const App: NextPage = () => {
             <div
               id="sideBar"
               className="overflow-auto relative flex-1"
-              onMouseLeave={() => showTooltipText("", false)}
             >
               <Sidebar setLayerTextTooltipData={setLayerTextTooltip}/>
             </div>
