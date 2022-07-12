@@ -7,6 +7,10 @@ import { clickedLayerViewState } from '@/components/Map/types';
 import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import jsonLoad, { assetJsons } from '@/components/LayerFilter/jsonLoad';
+
 
 type TContext = {
   checkedLayerTitleList: string[];
@@ -17,11 +21,16 @@ type TContext = {
   setClickedLayerViewState: React.Dispatch<React.SetStateAction<clickedLayerViewState | null>>;
   isDefault: boolean;
   setIsDefault: React.Dispatch<React.SetStateAction<boolean>>;
+  jsonReady: boolean;
+  setJsonReady: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const context = createContext({} as TContext);
 
+export const jsons = new assetJsons();
+
 const App: NextPage = () => {
+  
   const [checkedLayerTitleList, setCheckedLayerTitleList] = useState<string[]>([]);
   const [displayedLegendLayerId, setDisplayedLegendLayerId] = useState<string>(defaultLegendId);
   const [clickedLayerViewState, setClickedLayerViewState] = useState<clickedLayerViewState | null>(
@@ -31,6 +40,31 @@ const App: NextPage = () => {
   const [tooltipData, setTooltipData] = useState<any>({
     tooltip: null,
   });
+  const [jsonReady, setJsonReady] = useState<boolean>(false);
+  const router = useRouter();
+  const query = router.query;
+  let settingsjson :any = {};
+  let menujson :any = {};
+  let configjson :any = {};
+  
+
+  useEffect(() => {  
+    if (!router.isReady) return;
+    (async () => {
+      const dirpath = query.config;
+      settingsjson = await jsonLoad(dirpath,"settings.json");
+      menujson = await jsonLoad(dirpath,"menu.json");
+      configjson = await jsonLoad(dirpath,"config.json");
+      jsons.setJsons(settingsjson,menujson,configjson);
+      setJsonReady(true);
+    })();
+  },[query,router]);
+
+  if (!jsonReady) {
+    return (<div>loading</div>);
+  };
+
+
 
   const value = {
     checkedLayerTitleList,
@@ -41,6 +75,8 @@ const App: NextPage = () => {
     setClickedLayerViewState,
     isDefault,
     setIsDefault,
+    jsonReady,
+    setJsonReady,
   };
 
   return (

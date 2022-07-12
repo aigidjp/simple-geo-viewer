@@ -1,13 +1,13 @@
 import React from 'react';
-import settings from '@/assets/settings.json';
+import { jsons } from '@/pages';
 
 const getTitle = () => {
-  return settings.title;
+  return jsons.settings.title;
 };
 
 function Header() {
   const headerStyle = {
-    backgroundColor: settings.background_color,
+    backgroundColor: jsons.settings.background_color,
   };
 
   return (

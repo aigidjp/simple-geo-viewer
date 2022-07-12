@@ -1,4 +1,4 @@
-import configJson from '@/assets/config.json';
+import { jsons } from '@/pages';
 import { getMenu, getFilteredIdList } from '@/components/LayerFilter/menu';
 import { RGBAColor } from 'deck.gl';
 
@@ -151,7 +151,7 @@ type Config = {
   layers: LayerConfig[];
 };
 
-const loadConfigJson = () => configJson as Config;
+const loadConfigJson = () => jsons.config as Config;
 
 /**
  * 表示可能なレイヤのconfigだけ収集する

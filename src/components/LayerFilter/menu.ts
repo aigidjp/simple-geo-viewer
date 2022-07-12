@@ -1,4 +1,4 @@
-import menuJson from '../../assets/menu.json';
+import { jsons } from '@/pages';
 
 type DataType = 'raster' | 'vector' | 'polygon' | 'line' | 'point' | 'building' | 'icon';
 
@@ -38,7 +38,7 @@ export type Menu = Folder[];
 /**
  * menu.jsonを返す
  */
-export const getMenu = () => menuJson as Menu;
+export const getMenu = () => jsons.menu as Menu;
 
 /**
  * 表示可能なidの配列を返す
