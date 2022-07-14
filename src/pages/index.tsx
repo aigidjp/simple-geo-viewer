@@ -22,21 +22,15 @@ type TContext = {
   setMouseTooltipData: React.Dispatch<React.SetStateAction<MouseTooltipData | null>>;
 };
 
-export const context = createContext({} as TContext);
-
-const App: NextPage = () => {
+const useContextValues = () => {
   const [checkedLayerTitleList, setCheckedLayerTitleList] = useState<string[]>([]);
   const [displayedLegendLayerId, setDisplayedLegendLayerId] = useState<string>(defaultLegendId);
   const [clickedLayerViewState, setClickedLayerViewState] = useState<clickedLayerViewState | null>(
     null
   );
   const [isDefault, setIsDefault] = useState<boolean>(true);
-  const [tooltipData, setTooltipData] = useState<any>({
-    tooltip: null,
-  });
   const [mouseTooltipData, setMouseTooltipData] = useState<MouseTooltipData | null>(null);
-
-  const value = {
+  return {
     checkedLayerTitleList,
     setCheckedLayerTitleList,
     displayedLegendLayerId,
@@ -48,10 +42,20 @@ const App: NextPage = () => {
     mouseTooltipData,
     setMouseTooltipData,
   };
+};
+
+export const context = createContext({} as TContext);
+
+const App: NextPage = () => {
+  const contextValues = useContextValues();
+
+  const [tooltipData, setTooltipData] = useState<any>({
+    tooltip: null,
+  });
 
   return (
     <div className="h-screen">
-      <context.Provider value={value}>
+      <context.Provider value={contextValues}>
         <div className="h-12">
           <Header />
         </div>
@@ -75,9 +79,9 @@ const App: NextPage = () => {
                 </div>
               </div>
             ) : undefined}
-            {mouseTooltipData !== null ? (
+            {contextValues.mouseTooltipData !== null ? (
               <div className="relative">
-                <MouseTooltip mouseTooltipData={mouseTooltipData} />
+                <MouseTooltip mouseTooltipData={contextValues.mouseTooltipData} />
               </div>
             ) : undefined}
           </div>
