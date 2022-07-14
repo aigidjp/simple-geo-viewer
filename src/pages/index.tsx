@@ -22,7 +22,7 @@ type TContext = {
   setMouseTooltipData: React.Dispatch<React.SetStateAction<MouseTooltipData | null>>;
 };
 
-const useContextValues = () => {
+const useContextValues = (): TContext => {
   const [checkedLayerTitleList, setCheckedLayerTitleList] = useState<string[]>([]);
   const [displayedLegendLayerId, setDisplayedLegendLayerId] = useState<string>(defaultLegendId);
   const [clickedLayerViewState, setClickedLayerViewState] = useState<clickedLayerViewState | null>(
