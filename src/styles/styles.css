@@ -105,22 +105,3 @@
   top: 14px;
   transform: translate3d(-50%,0,0);
 }
-
-.textTooltip_container {
-  position: relative;
-  display: inline-block;
-}
-
-.textTooltip_float_top {
-  position: absolute;
-  font-size:12px;
-  left:20px;
-  min-width: 200px;
-  white-space: nowrap;
-  z-index: 9999;
-  background-color: black;
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  height: 1.8rem;
-}

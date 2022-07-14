@@ -88,8 +88,8 @@ const App: NextPage = () => {
               </div>
             ) : undefined }
             {layerPopupObject ? (
-              <div className="textTooltip_container w-11/12">
-                {layerPopupObject.show && <div className={"textTooltip_float_top"} style={{top: layerPopupObject.top + "px"}}>{layerPopupObject.title}</div>}
+              <div className="relative inline-block w-11/12">
+                {layerPopupObject.show && <div className={"textPopup_float_top absolute text-xs left-5 whitespace-nowrap bg-black text-white rounded-md h-6 px-2 py-1 min-w-[200px] z-[9999]"} style={{top: layerPopupObject.top + "px"}}>{layerPopupObject.title}</div>}
               </div>
             ) : undefined }
           </div>
