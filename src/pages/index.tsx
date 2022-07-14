@@ -8,6 +8,12 @@ import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
 
+type LayerPopupType = {
+  title: string;
+  show: boolean;
+  top: number;
+};
+
 type TContext = {
   checkedLayerTitleList: string[];
   setCheckedLayerTitleList: React.Dispatch<React.SetStateAction<string[]>>;
@@ -17,6 +23,8 @@ type TContext = {
   setClickedLayerViewState: React.Dispatch<React.SetStateAction<clickedLayerViewState | null>>;
   isDefault: boolean;
   setIsDefault: React.Dispatch<React.SetStateAction<boolean>>;
+  layerPopupObject: LayerPopupType;
+  setLayerPopupObject: React.Dispatch<React.SetStateAction<LayerPopupType>>;
 };
 
 export const context = createContext({} as TContext);
@@ -31,7 +39,7 @@ const App: NextPage = () => {
   const [tooltipData, setTooltipData] = useState<any>({
     tooltip: null,
   });
-  const [layerTextTooltip, setLayerTextTooltip] = useState<any>({
+  const [layerPopupObject, setLayerPopupObject] = useState<LayerPopupType>({
     title: "",
     show: false,
     top: 0
@@ -46,6 +54,8 @@ const App: NextPage = () => {
     setClickedLayerViewState,
     isDefault,
     setIsDefault,
+    layerPopupObject,
+    setLayerPopupObject
   };
 
   return (
@@ -60,7 +70,7 @@ const App: NextPage = () => {
               id="sideBar"
               className="overflow-auto relative flex-1"
             >
-              <Sidebar setLayerTextTooltipData={setLayerTextTooltip}/>
+              <Sidebar/>
             </div>
             {tooltipData.tooltip ? (
               <div className="relative h-1/3 border-2 border-black">
@@ -77,9 +87,9 @@ const App: NextPage = () => {
                 </div>
               </div>
             ) : undefined }
-            {layerTextTooltip ? (
+            {layerPopupObject ? (
               <div className="textTooltip_container w-11/12">
-                {layerTextTooltip.show && <div className={"textTooltip_float_top"} style={{top: layerTextTooltip.top + "px"}}>{layerTextTooltip.title}</div>}
+                {layerPopupObject.show && <div className={"textTooltip_float_top"} style={{top: layerPopupObject.top + "px"}}>{layerPopupObject.title}</div>}
               </div>
             ) : undefined }
           </div>

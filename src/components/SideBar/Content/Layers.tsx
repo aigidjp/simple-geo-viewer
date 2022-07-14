@@ -27,13 +27,12 @@ const getDefaultVisiblyLayerTitles = () => {
 
 type LayersProps = {
   layers: Data[];
-  setLayerTextTooltipData: Dispatch<SetStateAction<any>>;
 };
 
 export const Layers = (props: LayersProps) => {
-  const { layers, setLayerTextTooltipData } = props;
+  const { layers } = props;
 
-  const { checkedLayerTitleList, setCheckedLayerTitleList, setClickedLayerViewState } =
+  const { checkedLayerTitleList, setCheckedLayerTitleList, setClickedLayerViewState, setLayerPopupObject } =
     useContext(context);
 
   //最初の一度だけ、menuのcheckedを確認し、trueならcheckedLayerTitleListにset
@@ -70,8 +69,8 @@ export const Layers = (props: LayersProps) => {
     'min-width': 0,
   }
 
-  const showTooltipText = (title, bool ,event) => {
-    setLayerTextTooltipData(() => { return {title: title, show: bool, top: (window.innerHeight - event.clientY +10) * -1} });
+  const showPopupText = (title, bool ,event) => {
+    setLayerPopupObject(() => { return {title: title, show: bool, top: (window.innerHeight - event.clientY +10) * -1} });
   }
 
 
@@ -83,8 +82,8 @@ export const Layers = (props: LayersProps) => {
             className="transition-hover duration-500 ease bg-white hover:bg-gray-200 p-2 flex"
             style={resourceStyle}
             key={index}
-            onMouseOver={(event) => showTooltipText(resource.title, true, event)}
-            onMouseOut={(event) => showTooltipText("", false, event)}
+            onMouseOver={(event) => showPopupText(resource.title, true, event)}
+            onMouseOut={(event) => showPopupText("", false, event)}
           >
             <div className="w-11/12 pr-3 flex">
               <input
