@@ -53,7 +53,13 @@ const fetchJson = async (url: string) => await (await fetch(url)).json();
 export const usePreferences = (router: NextRouter) => {
   const [preferences, setPreferences] = useState<Preferences | null>(null);
   useEffect(() => {
+    // preferencesが指定されているがqueryとして読み込みが完了していない場合はJSONの取得処理の開始を保留する
+    if (router.asPath.includes('preferences=') && typeof router.query.preferences === 'undefined')
+      return;
+
     (async () => {
+      // クエリパラメータでpreferencesが指定されていればそのURLを
+      // 指定されていなければデフォルト設定を読み込む
       let preferencesPath = router.query.preferences as string | undefined;
       if (typeof preferencesPath === 'undefined') {
         preferencesPath = '/defaultPreferences';
@@ -77,6 +83,6 @@ export const usePreferences = (router: NextRouter) => {
 
       setPreferences(() => loadedPreferences);
     })();
-  }, [router.isReady]);
+  }, [router.isReady, router.query.preferences]);
   return { preferences };
 };
