@@ -17,14 +17,14 @@ const replaceViewState = (layerId: string, viewState: ViewState) => {
 const getViewStateByLayerId = (
   layerId: string,
   clickedLayerViewState: clickedLayerViewState,
-  initialViewState: InitialView
+  initialView: InitialView
 ) => {
   const viewState = {
     longitude: clickedLayerViewState.longitude,
     latitude: clickedLayerViewState.latitude,
     zoom: clickedLayerViewState.zoom,
-    bearing: initialViewState.map.bearing,
-    pitch: initialViewState.map.pitch,
+    bearing: initialView.map.bearing,
+    pitch: initialView.map.pitch,
     transitionDuration: 2000,
     transitionEasing: easeOutQuart,
     transitionInterpolator: new FlyToInterpolator(),
