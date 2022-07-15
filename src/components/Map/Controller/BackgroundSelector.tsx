@@ -22,7 +22,9 @@ const BackgroundSelector: React.FunctionComponent<Props> = ({ map }) => {
     map.setStyle(style);
   };
 
-  const entries: [string, any][] = Object.entries(preferences.backgrounds);
+  const entries: [string, { name: string; source: RasterSource }][] = Object.entries(
+    preferences.backgrounds
+  );
   return (
     <select onChange={(e) => updateBackground(e)}>
       {entries.map(([id, data]) => (
