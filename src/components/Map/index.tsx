@@ -1,25 +1,24 @@
 import React, { Dispatch, SetStateAction, useContext, useEffect, useRef } from 'react';
 
-import maplibregl from 'maplibre-gl';
+import { Map, Style, NavigationControl } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 import { Deck } from 'deck.gl';
-import GL from '@luma.gl/constants';
 
 import { context } from '@/pages';
 import { useFlyTo } from '@/components/Map/Animation/flyTo';
 import { makeDeckGlLayers } from '@/components/Map/Layer/deckGlLayerFactory';
 import { toggleVisibly, zoomVisibly, visiblyLayers } from '@/components/Map/Layer/visibly';
 import Legend, { useGetClickedLayerId } from '@/components/Map/Legend';
-import { InitialViewState } from '@/components/Map/initialViewState';
 
 import BackgroundSelector from './Controller/BackgroundSelector';
 import { TimeSlider } from '@/components/Map/Controller/TimeSlider';
 import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
 import { Menu } from '@/components/LayerFilter/menu';
 import { TEMPORAL_LAYER_TYPES } from '@/components/Map/Layer/temporalLayerMaker';
+import { Preferences, Backgrounds } from '@/components/LayerFilter/loader';
 
-let map: maplibregl.Map;
+let map: Map;
 let deck: Deck;
 let visLayers: visiblyLayers;
 
@@ -38,9 +37,9 @@ const getViewStateFromMaplibre = (map) => {
  * MapLibre GL JSの初期スタイルを取得する
  * 初期スタイル=./src/assets/backgrounds.jsonで定義された背景が表示されている状態
  */
-const getInitialStyle = (BACKGROUNDS: any): maplibregl.Style => {
-  const defaultBackgroundData = BACKGROUNDS[Object.keys(BACKGROUNDS)[0]];
-  const style: maplibregl.Style = {
+const getInitialStyle = (backgrounds: Backgrounds): Style => {
+  const defaultBackgroundData = backgrounds[Object.keys(backgrounds)[0]];
+  const style: Style = {
     version: 8,
     sources: {
       background: defaultBackgroundData.source,
@@ -67,31 +66,35 @@ const checkZoomVisible = () => {
 const useInitializeMap = (
   maplibreContainer: React.MutableRefObject<HTMLDivElement | null>,
   deckglContainer: React.MutableRefObject<HTMLCanvasElement | null>,
-  menu: Menu,
-  initialViewState: InitialViewState,
-  backgrounds: any
+  preferences: Preferences
 ) => {
+  const { backgrounds, initialView, menu } = preferences;
   useEffect(() => {
     if (!map) {
       if (!maplibreContainer.current) return;
-
-      map = new maplibregl.Map({
+      map = new Map({
         container: maplibreContainer.current,
         style: getInitialStyle(backgrounds),
-        center: [initialViewState.longitude, initialViewState.latitude],
-        zoom: initialViewState.zoom,
-        bearing: initialViewState.bearing,
-        pitch: initialViewState.pitch,
+        center: initialView.map.center,
+        zoom: initialView.map.zoom,
+        bearing: initialView.map.bearing,
+        pitch: initialView.map.pitch,
         //deck.gl側にマップの操作を任せるためにfalseに設定
         interactive: false,
       });
     }
 
-    visLayers = new visiblyLayers(menu);
+    visLayers = new visiblyLayers(menu, initialView.map.zoom);
     // @ts-ignore
     const gl = map.painter.context.gl;
     deck = new Deck({
-      initialViewState: initialViewState,
+      initialViewState: {
+        latitude: initialView.map.center[1],
+        longitude: initialView.map.center[0],
+        bearing: initialView.map.bearing,
+        pitch: initialView.map.pitch,
+        zoom: initialView.map.zoom,
+      },
       canvas: deckglContainer.current!,
       controller: true,
       onViewStateChange: ({ viewState }) => {
@@ -109,7 +112,7 @@ const useInitializeMap = (
       layers: [],
     });
 
-    map.addControl(new maplibregl.NavigationControl());
+    map.addControl(new NavigationControl());
 
     map.on('moveend', (_e) => {
       deck.setProps({ initialViewState: getViewStateFromMaplibre(map) });
@@ -117,12 +120,12 @@ const useInitializeMap = (
   }, []);
 };
 
-const useToggleVisibly = (menu:Menu) => {
+const useToggleVisibly = (menu: Menu) => {
   const { checkedLayerTitleList } = useContext(context);
 
   if (!deck) return;
   const deckGlLayers = deck.props.layers;
-  const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList,menu);
+  const toggleVisibleLayers = toggleVisibly(deckGlLayers, checkedLayerTitleList, menu);
   const zommVisibleLayers = zoomVisibly(toggleVisibleLayers, visLayers);
   deck.setProps({ layers: zommVisibleLayers });
   visLayers.setlayerList(checkedLayerTitleList);
@@ -132,29 +135,31 @@ type Props = {
   setTooltipData: Dispatch<SetStateAction<any>>;
 };
 
-const Map: React.VFC<Props> = ({ setTooltipData }) => {
+const MapComponent: React.VFC<Props> = ({ setTooltipData }) => {
   const maplibreContainer = useRef<HTMLDivElement | null>(null);
   const deckglContainer = useRef<HTMLCanvasElement | null>(null);
-  const { menu, config, initialView, backgrounds } = useContext(context);
+  const { preferences } = useContext(context);
 
-  const visibleLayerTypes = getFilteredLayerConfig(menu,config).map((item) => {
-    return item.type;
-  });
+  const visibleLayerTypes = getFilteredLayerConfig(preferences.menu, preferences.config).map(
+    (item) => {
+      return item.type;
+    }
+  );
   const hasTimeSeries = !!visibleLayerTypes.find((item) => TEMPORAL_LAYER_TYPES.includes(item));
 
   //map・deckインスタンスを初期化
-  useInitializeMap(maplibreContainer, deckglContainer, menu, initialView, backgrounds);
+  useInitializeMap(maplibreContainer, deckglContainer, preferences);
 
   //対象のレイヤを全て作成してdeckに登録
   useEffect(() => {
     map.on('load', () => {
-      makeDeckGlLayers(map, deck, setTooltipData,menu,config);
+      makeDeckGlLayers(map, deck, setTooltipData, preferences.menu, preferences.config);
       checkZoomVisible();
     });
   }, []);
 
   //layerの可視状態を変更
-  useToggleVisibly(menu);
+  useToggleVisibly(preferences.menu);
 
   //クリックされたレイヤに画面移動
   useFlyTo(deck);
@@ -180,4 +185,4 @@ const Map: React.VFC<Props> = ({ setTooltipData }) => {
   );
 };
 
-export default Map;
+export default MapComponent;

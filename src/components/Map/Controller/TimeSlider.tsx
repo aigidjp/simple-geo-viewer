@@ -16,10 +16,10 @@ import { getFilteredLayerConfig } from '@/components/LayerFilter/config';
 import { getDataList } from '@/components/LayerFilter/menu';
 import { addRenderOption } from '@/components/Map/Layer/renderOption';
 import { makeTemporalLayers, TEMPORAL_LAYER_TYPES } from '../Layer/temporalLayerMaker';
-import maplibregl from 'maplibre-gl';
+import { Map } from 'maplibre-gl';
 
 type Props = {
-  map: maplibregl.Map;
+  map: Map;
   deck: Deck;
   setTooltipData: Dispatch<SetStateAction<any>>;
 };
@@ -38,12 +38,12 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
   const requestRef = useRef<ReturnType<typeof requestAnimationFrame>>();
 
   const { checkedLayerTitleList } = useContext(context);
-  const { menu,config } = useContext(context);
+  const { preferences } = useContext(context);
 
   // Layerレンダリング用のCallback
   const renderCallback = (layerConfig, timestamp) => {
     addRenderOption(
-      makeTemporalLayers(layerConfig, true, timestamp, checkedLayerTitleList,menu)
+      makeTemporalLayers(layerConfig, true, timestamp, checkedLayerTitleList, preferences.menu)
     ).forEach((layer) => {
       deck.setProps({
         layers: [
@@ -57,7 +57,8 @@ export const TimeSlider: VFC<Props> = memo(function TimeSlider({ map, deck, setT
   };
 
   const getLayerConfig = () => {
-    return getFilteredLayerConfig(menu,config).filter((layer) => {
+    const { menu, config } = preferences;
+    return getFilteredLayerConfig(menu, config).filter((layer) => {
       return getDataList(menu).some(
         (value) => value.id.includes(layer.id) && TEMPORAL_LAYER_TYPES.includes(layer.type)
       );

@@ -1,26 +1,20 @@
-import maplibregl from 'maplibre-gl';
+import { Map, RasterSource } from 'maplibre-gl';
 
 import React, { useContext } from 'react';
 import { context } from '@/pages';
 
 type Props = {
-  map: maplibregl.Map;
-};
-
-// JSONを型キャストして保持
-export type BackgroundData = { name: string; source: maplibregl.RasterSource };
-export function toBACKGROUNDS(backgrounds: any): any{
-  return backgrounds as { [key: string]: BackgroundData };
+  map: Map;
 };
 
 const BackgroundSelector: React.FunctionComponent<Props> = ({ map }) => {
-  const { backgrounds } = useContext(context);
+  const { preferences } = useContext(context);
   const updateBackground = (e: React.ChangeEvent<HTMLSelectElement>) => {
     if (map === undefined) return;
 
     // プルダウンで選択されたレイヤーのsourceを取得
     const selectedBackgroundId = e.target.value;
-    const { source } = backgrounds[selectedBackgroundId];
+    const { source } = preferences.backgrounds[selectedBackgroundId];
 
     // styleのsources.backgroundを上書きしstyleを更新
     const style = map.getStyle();
@@ -28,7 +22,9 @@ const BackgroundSelector: React.FunctionComponent<Props> = ({ map }) => {
     map.setStyle(style);
   };
 
-  const entries = Object.entries(backgrounds);
+  const entries: [string, { name: string; source: RasterSource }][] = Object.entries(
+    preferences.backgrounds
+  );
   return (
     <select onChange={(e) => updateBackground(e)}>
       {entries.map(([id, data]) => (
