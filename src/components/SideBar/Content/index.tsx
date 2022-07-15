@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { getMenu } from '@/components/LayerFilter/menu';
+import { context } from '@/pages';
+import React, { useEffect, useState, useContext } from 'react';
 import { DownloadIcon } from '../Icon';
 
 type LayerListProps = {
@@ -42,7 +42,8 @@ const LayerList = (props: LayersProps) => {
 };
 
 const getLayerLength = (title: string) => {
-  const targetDataset = getMenu().filter((item) => item.category === title);
+  const { menu } = useContext(context);
+  const targetDataset = menu.filter((item) => item.category === title);
   return targetDataset[0].data.length;
 };
 
@@ -59,7 +60,8 @@ const FolderIcon = (
  * @returns {string | null} - ダウンロードリンク文字列。存在しなければnull
  */
 const getDownloadLink = (categoryName: string): string | null => {
-  const menus = getMenu();
+  const { menu } = useContext(context);
+  const menus = menu;
 
   // menuをカテゴリー名で探して配列のインデックスを取得
   const categoryIdx = menus.map((menu) => menu.category).indexOf(categoryName);

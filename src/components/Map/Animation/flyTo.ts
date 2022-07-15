@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { context } from '@/pages';
 import { Deck, FlyToInterpolator } from 'deck.gl';
-import { initialViewState } from '@/components/Map/initialViewState';
+import { InitialViewState } from '@/components/Map/initialViewState';
 import { clickedLayerViewState, ViewState } from '@/components/Map/types';
 import { getStatusForUpdate } from '@/components/Map/Animation/option';
 
@@ -14,7 +14,7 @@ const replaceViewState = (layerId: string, viewState: ViewState) => {
   return { ...viewState, ...stateForUpdate };
 };
 
-const getViewStateByLayerId = (layerId: string, clickedLayerViewState: clickedLayerViewState) => {
+const getViewStateByLayerId = (layerId: string, clickedLayerViewState: clickedLayerViewState, initialViewState: InitialViewState ) => {
   const viewState = {
     longitude: clickedLayerViewState.longitude,
     latitude: clickedLayerViewState.latitude,
@@ -29,12 +29,12 @@ const getViewStateByLayerId = (layerId: string, clickedLayerViewState: clickedLa
 };
 
 export const useFlyTo = (deck?: Deck) => {
-  const { clickedLayerViewState } = useContext(context);
+  const { clickedLayerViewState, initialView } = useContext(context);
   useEffect(() => {
     if (!clickedLayerViewState || !deck) return;
 
     const layerId = clickedLayerViewState.id;
-    const viewState = getViewStateByLayerId(layerId, clickedLayerViewState);
+    const viewState = getViewStateByLayerId(layerId, clickedLayerViewState, initialView);
 
     deck.setProps({ initialViewState: viewState });
   }, [clickedLayerViewState]);

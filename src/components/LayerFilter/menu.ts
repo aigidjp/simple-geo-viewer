@@ -1,5 +1,3 @@
-import { jsons } from '@/pages';
-
 type DataType = 'raster' | 'vector' | 'polygon' | 'line' | 'point' | 'building' | 'icon';
 
 /**
@@ -35,10 +33,6 @@ type Folder = {
  */
 export type Menu = Folder[];
 
-/**
- * menu.jsonを返す
- */
-export const getMenu = () => jsons.menu as Menu;
 
 /**
  * 表示可能なidの配列を返す

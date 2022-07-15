@@ -1,4 +1,4 @@
-import { getMenu, filterIds, getDataList } from '@/components/LayerFilter/menu';
+import { Menu, filterIds, getDataList } from '@/components/LayerFilter/menu';
 import { filterLayerName } from '@/components/LayerFilter/layer';
 import { filterCheckedData } from '@/components/LayerFilter/sideBar';
 import { initialViewState } from '@/components/Map/initialViewState';
@@ -7,8 +7,8 @@ import { initialViewState } from '@/components/Map/initialViewState';
  * サイドバーのチェックボックスがonになっているリソースのidを収集する
  * @param selectedResourceNameList
  */
-const getVisiblyLayerIdList = (selectedResourceNameList: string[]) => {
-  return filterLayerName(getDataList(getMenu()), selectedResourceNameList)
+const getVisiblyLayerIdList = (selectedResourceNameList: string[],menu:Menu) => {
+  return filterLayerName(getDataList(menu), selectedResourceNameList)
     .map((resource) => resource.id)
     .flat();
 };
@@ -18,9 +18,9 @@ const getVisiblyLayerIdList = (selectedResourceNameList: string[]) => {
  * @param originalLayers
  * @param targetLayerIdList
  */
-export function toggleVisibly(originalLayers: any[], targetLayerIdList: string[]) {
+export function toggleVisibly(originalLayers: any[], targetLayerIdList: string[],menu:Menu) {
   // チェックボックスがオンになっている確認可能なidのリストを作成
-  const visibleLayerIdList = filterIds(getMenu(), getVisiblyLayerIdList(targetLayerIdList));
+  const visibleLayerIdList = filterIds(menu, getVisiblyLayerIdList(targetLayerIdList,menu));
 
   //上記リストでdeck.glの可視状態を変更したレイヤーの配列を返す
   return originalLayers.map((layer: any) => {
@@ -64,11 +64,13 @@ export function zoomVisibly(originalLayers: any[], visLayers: visiblyLayers) {
 export class visiblyLayers {
   private layerList: any[];
   private zoomLevel: number = initialViewState.zoom;
-  constructor() {
-    this.layerList = filterCheckedData().map((layer) => layer.title);
+  private _menu: Menu;
+  constructor(menu: Menu) {
+    this._menu = menu;
+    this.layerList = filterCheckedData(this._menu).map((layer) => layer.title);
   }
   setlayerList(targetLayerIdList: string[]) {
-    this.layerList = filterIds(getMenu(), getVisiblyLayerIdList(targetLayerIdList));
+    this.layerList = filterIds(this._menu, getVisiblyLayerIdList(targetLayerIdList, this._menu));
   }
   getlayerList() {
     return this.layerList;

@@ -9,7 +9,9 @@ import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import jsonLoad, { assetJsons } from '@/components/LayerFilter/jsonLoad';
+import jsonLoad from '@/components/LayerFilter/jsonLoad';
+import { initialViewState } from '@/components/Map/initialViewState';
+import { toBACKGROUNDS } from '@/components/Map/Controller/BackgroundSelector';
 
 
 type TContext = {
@@ -21,13 +23,19 @@ type TContext = {
   setClickedLayerViewState: React.Dispatch<React.SetStateAction<clickedLayerViewState | null>>;
   isDefault: boolean;
   setIsDefault: React.Dispatch<React.SetStateAction<boolean>>;
-  jsonReady: boolean;
-  setJsonReady: React.Dispatch<React.SetStateAction<boolean>>;
+  settings: any;
+  setSettings: React.Dispatch<React.SetStateAction<any>>;
+  menu: any;
+  setMenu: React.Dispatch<React.SetStateAction<any>>;
+  config: any;
+  setConfig: React.Dispatch<React.SetStateAction<any>>;
+  backgrounds: any;
+  setBackgrounds: React.Dispatch<React.SetStateAction<any>>;
+  initialView: any;
+  setInitialView: React.Dispatch<React.SetStateAction<any>>;
 };
 
 export const context = createContext({} as TContext);
-
-export const jsons = new assetJsons();
 
 const App: NextPage = () => {
   
@@ -40,13 +48,18 @@ const App: NextPage = () => {
   const [tooltipData, setTooltipData] = useState<any>({
     tooltip: null,
   });
-  const [jsonReady, setJsonReady] = useState<boolean>(false);
+  const [settings,setSettings] = useState<any>({});
+  const [menu,setMenu] = useState<any>({});
+  const [config,setConfig] = useState<any>({});
+  const [backgrounds,setBackgrounds] = useState<any>({});
+  const [initialView,setInitialView] = useState<any>({});
   const router = useRouter();
   const query = router.query;
   let settingsjson :any = {};
   let menujson :any = {};
   let configjson :any = {};
-  
+  let backgroundsjson :any = {};
+  let initialViewjson :any = {};
 
   useEffect(() => {  
     if (!router.isReady) return;
@@ -55,12 +68,19 @@ const App: NextPage = () => {
       settingsjson = await jsonLoad(dirpath,"settings.json");
       menujson = await jsonLoad(dirpath,"menu.json");
       configjson = await jsonLoad(dirpath,"config.json");
-      jsons.setJsons(settingsjson,menujson,configjson);
-      setJsonReady(true);
+      backgroundsjson = await jsonLoad(dirpath,"backgrounds.json");
+      backgroundsjson = toBACKGROUNDS(backgroundsjson);
+      initialViewjson = await jsonLoad(dirpath,"initial_view.json");
+      initialViewjson = initialViewState(initialViewjson);
+      setSettings(settingsjson);
+      setMenu(menujson);
+      setConfig(configjson);
+      setBackgrounds(backgroundsjson);
+      setInitialView(initialViewjson);
     })();
   },[query,router]);
 
-  if (!jsonReady) {
+  if ( Object.keys(initialView).length === 0) {
     return (<div>loading</div>);
   };
 
@@ -75,8 +95,16 @@ const App: NextPage = () => {
     setClickedLayerViewState,
     isDefault,
     setIsDefault,
-    jsonReady,
-    setJsonReady,
+    settings,
+    setSettings,
+    menu,
+    setMenu,
+    config,
+    setConfig,
+    backgrounds,
+    setBackgrounds,
+    initialView,
+    setInitialView
   };
 
   return (

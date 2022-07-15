@@ -1,5 +1,4 @@
-import { jsons } from '@/pages';
-import { getMenu, getFilteredIdList } from '@/components/LayerFilter/menu';
+import { Menu,getFilteredIdList } from '@/components/LayerFilter/menu';
 import { RGBAColor } from 'deck.gl';
 
 type LayerConfigType =
@@ -147,24 +146,20 @@ export type LayerConfig =
   | TripsJsonLayerConfig
   | TripsDrmLayerConfig;
 
-type Config = {
+export type Config = {
   layers: LayerConfig[];
 };
-
-const loadConfigJson = () => jsons.config as Config;
 
 /**
  * 表示可能なレイヤのconfigだけ収集する
  */
-export const getFilteredLayerConfig = () => {
-  const config = loadConfigJson();
-  return config.layers.filter((layer) => getFilteredIdList(getMenu()).includes(layer.id));
+export const getFilteredLayerConfig = (menu:Menu,config:Config) => {
+  return config.layers.filter((layer) => getFilteredIdList(menu).includes(layer.id));
 };
 
 /**
  * 指定したidのconfigを取得する
  */
-export const getLayerConfigById = (id: string) => {
-  const config = loadConfigJson();
+export const getLayerConfigById = (id: string,config:Config) => {
   return config.layers.find((layer) => layer.id === id);
 };
