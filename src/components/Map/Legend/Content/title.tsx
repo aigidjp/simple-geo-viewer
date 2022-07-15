@@ -7,8 +7,8 @@ type props = {
 };
 
 export const Title = (props: props) => {
-  const { menu } = useContext(context);
+  const { preferences } = useContext(context);
   const { id } = props;
-  const title = getDataTitleById(menu, id);
+  const title = getDataTitleById(preferences.menu, id);
   return <p className="text-center font-bold">{title}</p>;
 };

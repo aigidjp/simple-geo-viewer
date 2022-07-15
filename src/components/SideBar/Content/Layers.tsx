@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { context } from '@/pages';
-import { Data,Menu } from '@/components/LayerFilter/menu';
+import { Data, Menu } from '@/components/LayerFilter/menu';
 import { getResourceIcon } from '@/components/SideBar/Icon';
 import { getDataById } from '@/components/LayerFilter/menu';
 import { filterCheckedData } from '@/components/LayerFilter/sideBar';
@@ -32,12 +32,12 @@ type LayersProps = {
 export const Layers = (props: LayersProps) => {
   const { layers } = props;
 
-  const { checkedLayerTitleList, setCheckedLayerTitleList, setClickedLayerViewState, menu } =
+  const { checkedLayerTitleList, setCheckedLayerTitleList, setClickedLayerViewState, preferences } =
     useContext(context);
 
   //最初の一度だけ、menuのcheckedを確認し、trueならcheckedLayerTitleListにset
   useEffect(() => {
-    setCheckedLayerTitleList(getDefaultVisiblyLayerTitles(menu));
+    setCheckedLayerTitleList(getDefaultVisiblyLayerTitles(preferences.menu));
   }, []);
 
   const toggleSelectedResourceList = (resourceName: string, resourceId: string[]) => {
@@ -45,7 +45,7 @@ export const Layers = (props: LayersProps) => {
     if (!isSelected(resourceName, checkedLayerTitleList)) {
       setCheckedLayerTitleList((prevList) => [...prevList, resourceName]);
       // クリックされたリソースの位置情報を保存する
-      setResourceViewState(resourceId, setClickedLayerViewState, menu);
+      setResourceViewState(resourceId, setClickedLayerViewState, preferences.menu);
       return;
     }
 

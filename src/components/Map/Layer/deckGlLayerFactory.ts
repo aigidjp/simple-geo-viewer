@@ -1,4 +1,4 @@
-import maplibregl from 'maplibre-gl';
+import { Map } from 'maplibre-gl';
 import { makeGeoJsonLayers } from '@/components/Map/Layer/geoJsonLayerMaker';
 import { makeArcLayers } from '@/components/Map/Layer/arcLayerMaker';
 import { makeMvtLayers } from '@/components/Map/Layer/mvtLayerMaker';
@@ -13,7 +13,7 @@ import { getDataList, Menu } from '@/components/LayerFilter/menu';
 import { makeTile3DLayers } from '@/components/Map/Layer/tile3DLayerMaker';
 
 export const makeDeckGlLayers = (
-  map: maplibregl.Map,
+  map: Map,
   deck: Deck,
   setTooltipData: Dispatch<SetStateAction<any>>,
   menu: Menu,
@@ -36,7 +36,7 @@ export const makeDeckGlLayers = (
     makeTile3DLayers,
   ];
   // ここでフィルタリングのidを求める
-  const layerConfig = getFilteredLayerConfig(menu,config).filter((layer) => {
+  const layerConfig = getFilteredLayerConfig(menu, config).filter((layer) => {
     // check状態になっているものを取り出し
     return getDataList(menu).some((value) => value.checked && value.id.includes(layer.id));
   });
@@ -46,7 +46,7 @@ export const makeDeckGlLayers = (
 
   // 初期表示のレイヤーのロード完了を検知する方法がないため1sec初期表示以外のレイヤーのロードを遅らせる
   setTimeout(() => {
-    const layerConfig = getFilteredLayerConfig(menu,config).filter((layer) => {
+    const layerConfig = getFilteredLayerConfig(menu, config).filter((layer) => {
       return getDataList(menu).some((value) => !value.checked && value.id.includes(layer.id));
     });
     layerCreator.forEach((func) => {

@@ -1,34 +1,21 @@
 /**
  * @jest-environment jsdom
  */
- import React, { createContext, useState } from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Header from '.';
-import settings from '@/assets/settings.json';
-import { MockedMap } from '@/components/Map';
-import { MockedTooltip } from '@/components/Tooltip/content';
-import { MockedremoveExistingTooltip } from '@/components/Tooltip/show';
-import { context, TContext } from '@/pages';
-import { Tooltip } from '../Tooltip/content';
+import { context } from '@/pages';
 
 jest.mock('@/components/Map', () => {
   return function DummyPages(props) {
-    return (
-      <div>
-        page
-      </div>
-    );
+    return <div>page</div>;
   };
 });
 
 jest.mock('@/components/Tooltip/content', () => {
   return function DummyPages(props) {
-    return (
-      <div>
-        Tooltip
-      </div>
-    );
+    return <div>Tooltip</div>;
   };
 });
 
@@ -39,8 +26,12 @@ jest.mock('@/components/Tooltip/show', () => {
 });
 
 describe('Rendering', () => {
-  const _context = {} as TContext;
-  _context.settings = settings
+  const _context: any = {};
+  const mockSettings = {
+    title: 'デジタル裾野',
+    background_color: '#17a2b8',
+  };
+  _context.preferences = { settings: mockSettings };
   it('title in json', () => {
     const header = render(
       <context.Provider value={_context}>
@@ -49,6 +40,6 @@ describe('Rendering', () => {
     );
 
     // jsonから取得したtitleが表示されている
-    expect(header.getByText(settings.title) instanceof HTMLElement).toBeTruthy();
+    expect(header.getByText(mockSettings.title) instanceof HTMLElement).toBeTruthy();
   });
 });
