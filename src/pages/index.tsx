@@ -7,6 +7,8 @@ import { clickedLayerViewState } from '@/components/Map/types';
 import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
+import { useRouter } from 'next/router';
+import { usePreferences, Preferences } from '@/components/LayerFilter/loader';
 
 type TContext = {
   checkedLayerTitleList: string[];
@@ -17,6 +19,7 @@ type TContext = {
   setClickedLayerViewState: React.Dispatch<React.SetStateAction<clickedLayerViewState | null>>;
   isDefault: boolean;
   setIsDefault: React.Dispatch<React.SetStateAction<boolean>>;
+  preferences: Preferences;
 };
 
 export const context = createContext({} as TContext);
@@ -32,6 +35,13 @@ const App: NextPage = () => {
     tooltip: null,
   });
 
+  const router = useRouter();
+  const { preferences } = usePreferences(router);
+
+  if (preferences === null) {
+    return <div>loading</div>;
+  }
+
   const value = {
     checkedLayerTitleList,
     setCheckedLayerTitleList,
@@ -41,6 +51,7 @@ const App: NextPage = () => {
     setClickedLayerViewState,
     isDefault,
     setIsDefault,
+    preferences,
   };
 
   return (

@@ -1,8 +1,8 @@
-import maplibregl from 'maplibre-gl';
+import { Map, Marker } from 'maplibre-gl';
 import { Dispatch, SetStateAction } from 'react';
 import { getPropertiesObj } from '@/components/Tooltip/util';
 
-let pointMarker: maplibregl.Marker | null = null;
+let pointMarker: Marker | null = null;
 
 export const removeExistingTooltip = (setTooltip) => {
   if (pointMarker) pointMarker.remove();
@@ -11,9 +11,9 @@ export const removeExistingTooltip = (setTooltip) => {
   });
 };
 
-const makeMarker = (lng: number, lat: number, map: maplibregl.Map) => {
+const makeMarker = (lng: number, lat: number, map: Map) => {
   //marker追加
-  pointMarker = new maplibregl.Marker().setLngLat([lng, lat]).addTo(map);
+  pointMarker = new Marker().setLngLat([lng, lat]).addTo(map);
 };
 
 export const show = (

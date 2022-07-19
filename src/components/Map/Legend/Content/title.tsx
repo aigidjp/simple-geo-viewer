@@ -1,11 +1,14 @@
-import { getDataTitleById, getMenu } from '@/components/LayerFilter/menu';
+import { context } from '@/pages';
+import React, { useContext } from 'react';
+import { getDataTitleById } from '@/components/LayerFilter/menu';
 
 type props = {
   id: string;
 };
 
 export const Title = (props: props) => {
+  const { preferences } = useContext(context);
   const { id } = props;
-  const title = getDataTitleById(getMenu(), id);
+  const title = getDataTitleById(preferences.menu, id);
   return <p className="text-center font-bold">{title}</p>;
 };

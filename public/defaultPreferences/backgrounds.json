@@ -1,0 +1,32 @@
+{
+  "gsi_seamlessphoto": {
+    "name": "空中写真",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg"],
+      "tileSize": 256,
+      "attribution": "<a href='http://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院地図</a>",
+      "maxzoom": 18
+    }
+  },
+  "gsi_std": {
+    "name": "標準地図",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "attribution": "<a href='http://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院地図</a>",
+      "maxzoom": 18
+    }
+  },
+  "gsi_pale": {
+    "name": "淡色地図",
+    "source": {
+      "type": "raster",
+      "tiles": ["https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "attribution": "<a href='http://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院地図</a>",
+      "maxzoom": 18
+    }
+  }
+}

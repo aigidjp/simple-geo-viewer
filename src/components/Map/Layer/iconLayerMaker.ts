@@ -1,4 +1,4 @@
-import maplibregl from 'maplibre-gl';
+import { Map } from 'maplibre-gl';
 import { PickInfo } from 'deck.gl';
 import { IconLayer } from '@deck.gl/layers';
 import { show } from '@/components/Tooltip/show';
@@ -18,18 +18,18 @@ type iconLayerConfig = {
  * @param init 初期表示レイヤー生成かどうか
  * @param setTooltipData Click時に表示するsetTooltipData関数
  */
-export function makeIconLayers(map: maplibregl.Map, layerConfig, init: boolean, setTooltipData) {
+export function makeIconLayers(map: Map, layerConfig, init: boolean, setTooltipData) {
   const iconLayerCreator = new IconLayerCreator(layerConfig, map, setTooltipData);
   return iconLayerCreator.makeDeckGlLayers(init);
 }
 
 class IconLayerCreator {
-  private readonly map: maplibregl.Map;
+  private readonly map: Map;
   private readonly layerConfig: any[];
   private readonly layersType: string = 'icon';
   private readonly setTooltipData: Dispatch<SetStateAction<any>>;
 
-  constructor(layerConfig: any[], map: maplibregl.Map, setTooltipData) {
+  constructor(layerConfig: any[], map: Map, setTooltipData) {
     this.layerConfig = layerConfig;
     this.map = map;
     this.setTooltipData = setTooltipData;

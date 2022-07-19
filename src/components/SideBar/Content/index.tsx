@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { getMenu } from '@/components/LayerFilter/menu';
+import { Menu } from '@/components/LayerFilter/menu';
+import { context } from '@/pages';
+import React, { useEffect, useState, useContext } from 'react';
 import { DownloadIcon } from '../Icon';
 
 type LayerListProps = {
@@ -41,8 +42,8 @@ const LayerList = (props: LayersProps) => {
   );
 };
 
-const getLayerLength = (title: string) => {
-  const targetDataset = getMenu().filter((item) => item.category === title);
+const getLayerLength = (menu: Menu, title: string) => {
+  const targetDataset = menu.filter((item) => item.category === title);
   return targetDataset[0].data.length;
 };
 
@@ -58,14 +59,12 @@ const FolderIcon = (
  * @param categoryName
  * @returns {string | null} - ダウンロードリンク文字列。存在しなければnull
  */
-const getDownloadLink = (categoryName: string): string | null => {
-  const menus = getMenu();
-
+const getDownloadLink = (menu: Menu, categoryName: string): string | null => {
   // menuをカテゴリー名で探して配列のインデックスを取得
-  const categoryIdx = menus.map((menu) => menu.category).indexOf(categoryName);
+  const categoryIdx = menu.map((m) => m.category).indexOf(categoryName);
   if (categoryIdx === -1) return null;
 
-  const categoryData = menus[categoryIdx];
+  const categoryData = menu[categoryIdx];
   return categoryData.url || null;
 };
 
@@ -73,7 +72,7 @@ export const Content: React.FC<LayerListProps> = ({ title, layers }) => {
   const [active, setActive] = useState<boolean>(true);
   const [height, setHeight] = useState<number>(44);
 
-  const elementLength = getLayerLength(title);
+  const { preferences } = useContext(context);
 
   const toggleAccordion = () => {
     setActive(!active);
@@ -90,7 +89,7 @@ export const Content: React.FC<LayerListProps> = ({ title, layers }) => {
     fontSize: '0.75rem',
   };
 
-  const downloadLink = getDownloadLink(title);
+  const downloadLink = getDownloadLink(preferences.menu, title);
 
   return (
     <div className="pb-px">
@@ -107,7 +106,11 @@ export const Content: React.FC<LayerListProps> = ({ title, layers }) => {
           {downloadLink === null ? undefined : DownloadIcon(downloadLink)}
         </div>
       </div>
-      <LayerList height={height} elementLength={elementLength} content={layers} />
+      <LayerList
+        height={height}
+        elementLength={getLayerLength(preferences.menu, title)}
+        content={layers}
+      />
     </div>
   );
 };

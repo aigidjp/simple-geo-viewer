@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import { context } from '@/pages';
+import React, { useState, useContext } from 'react';
 import { getVisiblyContent } from '@/components/LayerFilter/sideBar';
 import { Content } from '@/components/SideBar/Content';
 import { Layers } from '@/components/SideBar/Content/Layers';
 import { FilterLayerInput } from '@/components/SideBar/Content/FilterLayerInput';
-import { getMenu, getFilteredMenu } from '@/components/LayerFilter/menu';
+import { getFilteredMenu } from '@/components/LayerFilter/menu';
 
 const Sidebar: React.FC = () => {
+  const { preferences } = useContext(context);
   const [InputFilterKeyword, setInputFilterKeyword] = useState('');
-  const filteredMenu = getFilteredMenu(getMenu(), InputFilterKeyword);
+  const filteredMenu = getFilteredMenu(preferences.menu, InputFilterKeyword);
   const visiblyContentList = getVisiblyContent(filteredMenu);
 
   return (
