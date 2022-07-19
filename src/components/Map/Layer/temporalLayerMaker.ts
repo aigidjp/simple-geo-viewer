@@ -38,7 +38,11 @@ export function makeTemporalLayers(
     checkedLayerTitleList,
     menu
   );
-  const temporalLineCreator = new TemporalLineLayerCreator(layerConfig, checkedLayerTitleList, menu);
+  const temporalLineCreator = new TemporalLineLayerCreator(
+    layerConfig,
+    checkedLayerTitleList,
+    menu
+  );
   const tripsJsonCreator = new TripsJsonLayerCreator(layerConfig, checkedLayerTitleList, menu);
   const tripsDRMLayerCreator = new TripsDRMLayerCreator(layerConfig, checkedLayerTitleList, menu);
   const layers = [
@@ -57,7 +61,7 @@ abstract class TemporalLayerCreator {
   checkedLayerTitleList: string[];
   private _menu: Menu;
 
-  constructor(layerConfig: any[], checkedLayerTitleList: string[] = [],menu: Menu) {
+  constructor(layerConfig: any[], checkedLayerTitleList: string[] = [], menu: Menu) {
     this.layerConfig = layerConfig;
     this.checkedLayerTitleList = checkedLayerTitleList;
     this._menu = menu;

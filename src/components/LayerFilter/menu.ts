@@ -33,7 +33,6 @@ type Folder = {
  */
 export type Menu = Folder[];
 
-
 /**
  * 表示可能なidの配列を返す
  */

@@ -7,6 +7,7 @@ import { clickedLayerViewState } from '@/components/Map/types';
 import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
+import MouseTooltip, { MouseTooltipData } from '@/components/MouseTooltip';
 import { useRouter } from 'next/router';
 import { usePreferences, Preferences } from '@/components/LayerFilter/loader';
 
@@ -19,30 +20,21 @@ type TContext = {
   setClickedLayerViewState: React.Dispatch<React.SetStateAction<clickedLayerViewState | null>>;
   isDefault: boolean;
   setIsDefault: React.Dispatch<React.SetStateAction<boolean>>;
+  mouseTooltipData: MouseTooltipData | null;
+  setMouseTooltipData: React.Dispatch<React.SetStateAction<MouseTooltipData | null>>;
   preferences: Preferences;
 };
 
-export const context = createContext({} as TContext);
-
-const App: NextPage = () => {
+const useContextValues = (): Omit<TContext, 'preferences'> => {
   const [checkedLayerTitleList, setCheckedLayerTitleList] = useState<string[]>([]);
   const [displayedLegendLayerId, setDisplayedLegendLayerId] = useState<string>(defaultLegendId);
   const [clickedLayerViewState, setClickedLayerViewState] = useState<clickedLayerViewState | null>(
     null
   );
   const [isDefault, setIsDefault] = useState<boolean>(true);
-  const [tooltipData, setTooltipData] = useState<any>({
-    tooltip: null,
-  });
+  const [mouseTooltipData, setMouseTooltipData] = useState<MouseTooltipData | null>(null);
 
-  const router = useRouter();
-  const { preferences } = usePreferences(router);
-
-  if (preferences === null) {
-    return <div>loading</div>;
-  }
-
-  const value = {
+  return {
     checkedLayerTitleList,
     setCheckedLayerTitleList,
     displayedLegendLayerId,
@@ -51,26 +43,41 @@ const App: NextPage = () => {
     setClickedLayerViewState,
     isDefault,
     setIsDefault,
-    preferences,
+    mouseTooltipData,
+    setMouseTooltipData,
   };
+};
+
+export const context = createContext({} as TContext);
+
+const App: NextPage = () => {
+  const [tooltipData, setTooltipData] = useState<any>({
+    tooltip: null,
+  });
+
+  const contextValues = useContextValues();
+  const { preferences } = usePreferences();
+  if (preferences === null) {
+    return <div>loading</div>;
+  }
 
   return (
     <div className="h-screen">
-      <context.Provider value={value}>
+      <context.Provider value={{ ...contextValues, preferences }}>
         <div className="h-12">
           <Header />
         </div>
-        <div className="flex content">
-          <div className="w-1/5 flex flex-col h-5/6 m-8">
+        <div className="flex content" style={{ overflow: 'hidden' }}>
+          <div className="w-1/5 flex flex-col h-full ml-4 mr-2 mt-4 pb-10">
             <div id="sideBar" className="overflow-auto relative flex-1">
               <Sidebar />
             </div>
             {tooltipData.tooltip ? (
-              <div className="relative h-1/3">
-                <div className={'relative overflow-y-scroll pl-2 pr-14 h-full'}>
+              <div className="relative h-1/3 border-2 border-black">
+                <div className={'relative overflow-auto pt-2 pl-2 pr-2 h-full'}>
                   {tooltipData.tooltip ? <Tooltip {...tooltipData.tooltip} /> : undefined}
                 </div>
-                <div className="text-right bg-white absolute top-0 right-6">
+                <div className="text-right bg-white absolute top-0 right-2">
                   <button
                     className="text-2xl"
                     onClick={() => removeExistingTooltip(setTooltipData)}
@@ -80,8 +87,13 @@ const App: NextPage = () => {
                 </div>
               </div>
             ) : undefined}
+            {contextValues.mouseTooltipData !== null ? (
+              <div className="relative">
+                <MouseTooltip mouseTooltipData={contextValues.mouseTooltipData} />
+              </div>
+            ) : undefined}
           </div>
-          <div className="w-4/5">
+          <div className="w-4/5 m-2 pb-5 h-full">
             <Map setTooltipData={setTooltipData} />
           </div>
         </div>

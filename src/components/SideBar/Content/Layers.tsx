@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { Dispatch, SetStateAction, useContext, useEffect } from 'react';
 import { context } from '@/pages';
 import { Data, Menu } from '@/components/LayerFilter/menu';
 import { getResourceIcon } from '@/components/SideBar/Icon';
@@ -32,8 +32,13 @@ type LayersProps = {
 export const Layers = (props: LayersProps) => {
   const { layers } = props;
 
-  const { checkedLayerTitleList, setCheckedLayerTitleList, setClickedLayerViewState, preferences } =
-    useContext(context);
+  const {
+    checkedLayerTitleList,
+    setCheckedLayerTitleList,
+    setClickedLayerViewState,
+    setMouseTooltipData,
+    preferences,
+  } = useContext(context);
 
   //最初の一度だけ、menuのcheckedを確認し、trueならcheckedLayerTitleListにset
   useEffect(() => {
@@ -62,6 +67,13 @@ export const Layers = (props: LayersProps) => {
     fontSize: '0.75rem',
   };
 
+  const textStyle = {
+    overflow: 'hidden',
+    'text-overflow': 'ellipsis',
+    'white-space': 'nowrap',
+    'min-width': 0,
+  };
+
   return (
     <>
       {layers.map((resource, index) => (
@@ -70,8 +82,16 @@ export const Layers = (props: LayersProps) => {
             className="transition-hover duration-500 ease bg-white hover:bg-gray-200 p-2 flex"
             style={resourceStyle}
             key={index}
+            onMouseOver={(event) =>
+              setMouseTooltipData(() => ({
+                text: resource.title,
+                top: (window.innerHeight - event.clientY + 10) * -1,
+                left: 20,
+              }))
+            }
+            onMouseOut={() => setMouseTooltipData(() => null)}
           >
-            <div className="w-11/12 flex">
+            <div className="w-11/12 pr-3 flex">
               <input
                 type="checkbox"
                 className="rounded-full mx-1 text-cyan-600 focus:outline-none"
@@ -81,7 +101,7 @@ export const Layers = (props: LayersProps) => {
                 }}
               />
               {getResourceIcon(resource)}
-              {resource.title}
+              <p style={textStyle}>{resource.title}</p>
             </div>
             <div className="w-1/12">
               {resource.download_url === undefined

@@ -1,4 +1,4 @@
-import { Menu,getFilteredIdList } from '@/components/LayerFilter/menu';
+import { Menu, getFilteredIdList } from '@/components/LayerFilter/menu';
 import { RGBAColor } from 'deck.gl';
 
 type LayerConfigType =
@@ -153,13 +153,13 @@ export type Config = {
 /**
  * 表示可能なレイヤのconfigだけ収集する
  */
-export const getFilteredLayerConfig = (menu:Menu,config:Config) => {
+export const getFilteredLayerConfig = (menu: Menu, config: Config) => {
   return config.layers.filter((layer) => getFilteredIdList(menu).includes(layer.id));
 };
 
 /**
  * 指定したidのconfigを取得する
  */
-export const getLayerConfigById = (id: string,config:Config) => {
+export const getLayerConfigById = (id: string, config: Config) => {
   return config.layers.find((layer) => layer.id === id);
 };

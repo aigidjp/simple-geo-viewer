@@ -19,7 +19,7 @@ export const getVisiblyContent = (visiblyItemList: Menu) => {
  * - 該当するものがない場合は空文字を返す
  * @param layerTitleList
  */
-export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[],menu:Menu) => {
+export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[], menu: Menu) => {
   if (layerTitleList.length !== 0) {
     // 最後にチェックされたレイヤのidを取得するため反転
     const reverseLayerTitleList = [...layerTitleList];
@@ -36,7 +36,7 @@ export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[],menu:M
 /**
  * menu.jsonの中でchecked=trueのdataのみ返す
  */
-export const filterCheckedData = (menu:Menu) =>
+export const filterCheckedData = (menu: Menu) =>
   getDataList(menu).filter((data) => {
     return data.checked === true;
   });

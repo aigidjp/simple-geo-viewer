@@ -1,4 +1,4 @@
-import { NextRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Menu } from './menu';
 import { Config } from './config';
@@ -50,7 +50,8 @@ const fetchJson = async (url: string) => await (await fetch(url)).json();
  * @param router
  * @returns
  */
-export const usePreferences = (router: NextRouter) => {
+export const usePreferences = () => {
+  const router = useRouter();
   const [preferences, setPreferences] = useState<Preferences | null>(null);
   useEffect(() => {
     // preferencesが指定されているがqueryとして読み込みが完了していない場合はJSONの取得処理の開始を保留する
@@ -83,6 +84,6 @@ export const usePreferences = (router: NextRouter) => {
 
       setPreferences(() => loadedPreferences);
     })();
-  }, [router.isReady, router.query.preferences]);
+  }, [router.query.preferences]);
   return { preferences };
 };

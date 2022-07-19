@@ -5,7 +5,7 @@ type BaseTooltipProps = { children: ReactNode };
 const BaseTooltip: VFC<BaseTooltipProps> = ({ children }) => {
   return (
     <div className="visible">
-      <div id="tooltip_content" className="bg-white overscroll-auto">
+      <div id="tooltip_content" className="bg-white overflow-auto">
         <table className="tooltip_table">{children}</table>
       </div>
     </div>
