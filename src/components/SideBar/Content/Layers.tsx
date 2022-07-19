@@ -32,8 +32,12 @@ type LayersProps = {
 export const Layers = (props: LayersProps) => {
   const { layers } = props;
 
-  const { checkedLayerTitleList, setCheckedLayerTitleList, setClickedLayerViewState, setLayerPopupObject } =
-    useContext(context);
+  const {
+    checkedLayerTitleList,
+    setCheckedLayerTitleList,
+    setClickedLayerViewState,
+    setMouseTooltipData,
+  } = useContext(context);
 
   //最初の一度だけ、menuのcheckedを確認し、trueならcheckedLayerTitleListにset
   useEffect(() => {
@@ -67,12 +71,7 @@ export const Layers = (props: LayersProps) => {
     'text-overflow': 'ellipsis',
     'white-space': 'nowrap',
     'min-width': 0,
-  }
-
-  const showPopupText = (title, bool ,event) => {
-    setLayerPopupObject(() => { return {title: title, show: bool, top: (window.innerHeight - event.clientY +10) * -1} });
-  }
-
+  };
 
   return (
     <>
@@ -82,8 +81,14 @@ export const Layers = (props: LayersProps) => {
             className="transition-hover duration-500 ease bg-white hover:bg-gray-200 p-2 flex"
             style={resourceStyle}
             key={index}
-            onMouseOver={(event) => showPopupText(resource.title, true, event)}
-            onMouseOut={(event) => showPopupText("", false, event)}
+            onMouseOver={(event) =>
+              setMouseTooltipData(() => ({
+                text: resource.title,
+                top: (window.innerHeight - event.clientY + 10) * -1,
+                left: 20,
+              }))
+            }
+            onMouseOut={() => setMouseTooltipData(() => null)}
           >
             <div className="w-11/12 pr-3 flex">
               <input
@@ -95,7 +100,7 @@ export const Layers = (props: LayersProps) => {
                 }}
               />
               {getResourceIcon(resource)}
-                <p style={textStyle}>{resource.title}</p>
+              <p style={textStyle}>{resource.title}</p>
             </div>
             <div className="w-1/12">
               {resource.download_url === undefined

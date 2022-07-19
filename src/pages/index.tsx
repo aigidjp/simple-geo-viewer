@@ -7,12 +7,7 @@ import { clickedLayerViewState } from '@/components/Map/types';
 import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
-
-type LayerPopupType = {
-  title: string;
-  show: boolean;
-  top: number;
-};
+import MouseTooltip, { MouseTooltipData } from '@/components/MouseTooltip';
 
 type TContext = {
   checkedLayerTitleList: string[];
@@ -23,29 +18,19 @@ type TContext = {
   setClickedLayerViewState: React.Dispatch<React.SetStateAction<clickedLayerViewState | null>>;
   isDefault: boolean;
   setIsDefault: React.Dispatch<React.SetStateAction<boolean>>;
-  layerPopupObject: LayerPopupType;
-  setLayerPopupObject: React.Dispatch<React.SetStateAction<LayerPopupType>>;
+  mouseTooltipData: MouseTooltipData | null;
+  setMouseTooltipData: React.Dispatch<React.SetStateAction<MouseTooltipData | null>>;
 };
 
-export const context = createContext({} as TContext);
-
-const App: NextPage = () => {
+const useContextValues = (): TContext => {
   const [checkedLayerTitleList, setCheckedLayerTitleList] = useState<string[]>([]);
   const [displayedLegendLayerId, setDisplayedLegendLayerId] = useState<string>(defaultLegendId);
   const [clickedLayerViewState, setClickedLayerViewState] = useState<clickedLayerViewState | null>(
     null
   );
   const [isDefault, setIsDefault] = useState<boolean>(true);
-  const [tooltipData, setTooltipData] = useState<any>({
-    tooltip: null,
-  });
-  const [layerPopupObject, setLayerPopupObject] = useState<LayerPopupType>({
-    title: "",
-    show: false,
-    top: 0
-  });
-
-  const value = {
+  const [mouseTooltipData, setMouseTooltipData] = useState<MouseTooltipData | null>(null);
+  return {
     checkedLayerTitleList,
     setCheckedLayerTitleList,
     displayedLegendLayerId,
@@ -54,23 +39,30 @@ const App: NextPage = () => {
     setClickedLayerViewState,
     isDefault,
     setIsDefault,
-    layerPopupObject,
-    setLayerPopupObject
+    mouseTooltipData,
+    setMouseTooltipData,
   };
+};
+
+export const context = createContext({} as TContext);
+
+const App: NextPage = () => {
+  const contextValues = useContextValues();
+
+  const [tooltipData, setTooltipData] = useState<any>({
+    tooltip: null,
+  });
 
   return (
     <div className="h-screen">
-      <context.Provider value={value}>
+      <context.Provider value={contextValues}>
         <div className="h-12">
           <Header />
         </div>
-        <div className="flex content" style={{overflow:'hidden'}}>
+        <div className="flex content" style={{ overflow: 'hidden' }}>
           <div className="w-1/5 flex flex-col h-full ml-4 mr-2 mt-4 pb-10">
-            <div
-              id="sideBar"
-              className="overflow-auto relative flex-1"
-            >
-              <Sidebar/>
+            <div id="sideBar" className="overflow-auto relative flex-1">
+              <Sidebar />
             </div>
             {tooltipData.tooltip ? (
               <div className="relative h-1/3 border-2 border-black">
@@ -86,12 +78,12 @@ const App: NextPage = () => {
                   </button>
                 </div>
               </div>
-            ) : undefined }
-            {layerPopupObject ? (
-              <div className="relative inline-block w-11/12">
-                {layerPopupObject.show && <div className={"textPopup_float_top absolute text-xs left-5 whitespace-nowrap bg-black text-white rounded-md h-6 px-2 py-1 min-w-[200px] z-[9999]"} style={{top: layerPopupObject.top + "px"}}>{layerPopupObject.title}</div>}
+            ) : undefined}
+            {contextValues.mouseTooltipData !== null ? (
+              <div className="relative">
+                <MouseTooltip mouseTooltipData={contextValues.mouseTooltipData} />
               </div>
-            ) : undefined }
+            ) : undefined}
           </div>
           <div className="w-4/5 m-2 pb-5 h-full">
             <Map setTooltipData={setTooltipData} />
