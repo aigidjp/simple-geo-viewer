@@ -1,11 +1,10 @@
 import { getIdByDataTitle } from '@/components/LayerFilter/menu';
 import { havingLegendIdList } from '@/components/Map/Legend/layerIds';
-import { getDataList, getMenu } from '@/components/LayerFilter/menu';
+import { getDataList } from '@/components/LayerFilter/menu';
 
 import { Menu } from '@/components/LayerFilter/menu';
 
 export const getVisiblyContent = (visiblyItemList: Menu) => {
-  //const visiblyItemList = getMenu();
   return visiblyItemList.map((item) => {
     return {
       title: item.category,
@@ -20,12 +19,12 @@ export const getVisiblyContent = (visiblyItemList: Menu) => {
  * - 該当するものがない場合は空文字を返す
  * @param layerTitleList
  */
-export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[]) => {
+export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[], menu: Menu) => {
   if (layerTitleList.length !== 0) {
     // 最後にチェックされたレイヤのidを取得するため反転
     const reverseLayerTitleList = [...layerTitleList];
     for (const layerTitle of reverseLayerTitleList.reverse()) {
-      const idList = getIdByDataTitle(getMenu(), layerTitle);
+      const idList = getIdByDataTitle(menu, layerTitle);
       if (havingLegendIdList.includes(idList[0])) {
         return idList[0];
       }
@@ -37,7 +36,7 @@ export const getCheckedLayerIdByDataTitleList = (layerTitleList: string[]) => {
 /**
  * menu.jsonの中でchecked=trueのdataのみ返す
  */
-export const filterCheckedData = () =>
-  getDataList(getMenu()).filter((data) => {
+export const filterCheckedData = (menu: Menu) =>
+  getDataList(menu).filter((data) => {
     return data.checked === true;
   });

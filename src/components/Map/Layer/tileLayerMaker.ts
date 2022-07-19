@@ -1,4 +1,4 @@
-import maplibregl from 'maplibre-gl';
+import { Map } from 'maplibre-gl';
 import { TileLayer } from '@deck.gl/geo-layers';
 import { BitmapLayer } from '@deck.gl/layers';
 import { Dispatch, SetStateAction } from 'react';
@@ -19,18 +19,18 @@ type tileLayerConfig = {
  * @param init 初期表示レイヤー生成かどうか
  * @param setTooltipData  Click時に表示するsetTooltipData関数
  */
-export function makeTileLayers(map: maplibregl.Map, layerConfig, init: boolean, setTooltipData) {
+export function makeTileLayers(map: Map, layerConfig, init: boolean, setTooltipData) {
   const tileCreator = new tileLayerCreator(layerConfig, map, setTooltipData);
   return tileCreator.makeDeckGlLayers(init);
 }
 
 class tileLayerCreator {
-  private readonly map: maplibregl.Map;
+  private readonly map: Map;
   private readonly layerConfig: any[];
   private readonly layersType: string = 'raster';
   private readonly setTooltipData: Dispatch<SetStateAction<any>>;
 
-  constructor(layerConfig: any[], map: maplibregl.Map, setTooltipData) {
+  constructor(layerConfig: any[], map: Map, setTooltipData) {
     this.layerConfig = layerConfig;
     this.map = map;
     this.setTooltipData = setTooltipData;

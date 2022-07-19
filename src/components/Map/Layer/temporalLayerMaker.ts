@@ -15,7 +15,7 @@ export const TEMPORAL_LAYER_TYPES: Array<TemporalLayerType | string> = [
 import { IconLayer, GeoJsonLayer } from '@deck.gl/layers';
 import { RGBAColor, TripsLayer } from 'deck.gl';
 import { MVTLayer } from '@deck.gl/geo-layers';
-import { getDataList, getMenu } from '@/components/LayerFilter/menu';
+import { getDataList, Menu } from '@/components/LayerFilter/menu';
 
 /**
  * 時系列アニメーションDeckGLレイヤーを作成する
@@ -29,16 +29,22 @@ export function makeTemporalLayers(
   layerConfig,
   init: boolean,
   timestamp: number,
-  checkedLayerTitleList: string[] = []
+  checkedLayerTitleList: string[] = [],
+  menu: Menu
 ) {
-  const bustripCreator = new BusTripLayerCreator(layerConfig, checkedLayerTitleList);
+  const bustripCreator = new BusTripLayerCreator(layerConfig, checkedLayerTitleList, menu);
   const temporalPolygonCreator = new TemporalPolygonLayerCreator(
     layerConfig,
-    checkedLayerTitleList
+    checkedLayerTitleList,
+    menu
   );
-  const temporalLineCreator = new TemporalLineLayerCreator(layerConfig, checkedLayerTitleList);
-  const tripsJsonCreator = new TripsJsonLayerCreator(layerConfig, checkedLayerTitleList);
-  const tripsDRMLayerCreator = new TripsDRMLayerCreator(layerConfig, checkedLayerTitleList);
+  const temporalLineCreator = new TemporalLineLayerCreator(
+    layerConfig,
+    checkedLayerTitleList,
+    menu
+  );
+  const tripsJsonCreator = new TripsJsonLayerCreator(layerConfig, checkedLayerTitleList, menu);
+  const tripsDRMLayerCreator = new TripsDRMLayerCreator(layerConfig, checkedLayerTitleList, menu);
   const layers = [
     ...bustripCreator.makeDeckGlLayers(init, timestamp),
     ...temporalPolygonCreator.makeDeckGlLayers(init, timestamp),
@@ -53,16 +59,18 @@ abstract class TemporalLayerCreator {
   layerType: TemporalLayerType = 'bus_trip';
   layerConfig: any[];
   checkedLayerTitleList: string[];
+  private _menu: Menu;
 
-  constructor(layerConfig: any[], checkedLayerTitleList: string[] = []) {
+  constructor(layerConfig: any[], checkedLayerTitleList: string[] = [], menu: Menu) {
     this.layerConfig = layerConfig;
     this.checkedLayerTitleList = checkedLayerTitleList;
+    this._menu = menu;
   }
   abstract makeDeckGlLayers(init, timestamp): any[];
 
   isChecked(layerConfig) {
     // レイヤーがチェックされているか判定
-    const dataList = getDataList(getMenu());
+    const dataList = getDataList(this._menu);
     let flag = false;
     for (const data of dataList) {
       if (data.id.includes(layerConfig.id)) {

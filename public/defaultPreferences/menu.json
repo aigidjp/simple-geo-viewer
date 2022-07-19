@@ -1,0 +1,1606 @@
+[
+  {
+    "category": "裾野市航空写真",
+    "data": [
+      {
+        "title": "裾野市航空写真（平成28年度）",
+        "type": "raster",
+        "lng": 138.903424,
+        "lat": 35.203515,
+        "zoom": 14,
+        "id": ["susono-arial"],
+        "checked": false,
+        "color": "#44a196",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-photo-1"
+      },
+      {
+        "title": "裾野市航空写真（令和元年度）",
+        "type": "raster",
+        "lng": 138.903424,
+        "lat": 35.203515,
+        "zoom": 12,
+        "id": ["susono-arial-2020"],
+        "checked": true,
+        "color": "#44a196",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-photo-1"
+      }
+    ]
+  },
+  {
+    "category": "建物",
+    "data": [
+      {
+        "title": "ゼンリン三次元建物形状データ",
+        "type": "vector",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 14,
+        "id": ["shizuoka-building"],
+        "checked": true,
+        "color": "#FFFFFF"
+      }
+    ]
+  },
+  {
+    "category": "都市計画",
+    "data": [
+      {
+        "title": "居住誘導区域 (平成31年3月時点）",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 12,
+        "id": ["susono-kyojyu-yudo"],
+        "checked": false,
+        "color": "#dca050",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
+      },
+      {
+        "title": "都市機能誘導区域-岩波 (平成31年3月時点）",
+        "type": "polygon",
+        "lng": 138.9185,
+        "lat": 35.2164,
+        "zoom": 14,
+        "id": ["susono-toshi-kinou-yudo-iwanami"],
+        "checked": false,
+        "color": "#a050dc",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
+      },
+      {
+        "title": "都市機能誘導区域-裾野 (平成31年3月時点）",
+        "type": "polygon",
+        "lng": 138.9078,
+        "lat": 35.1723,
+        "zoom": 14,
+        "id": ["susono-toshi-kinou-yudo-susono"],
+        "checked": false,
+        "color": "#4050dc",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/yuudoukuiiki"
+      },
+      {
+        "title": "市街化区域(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-urbanization-area"],
+        "checked": false,
+        "color": "#dcdc50",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      },
+      {
+        "title": "用途地域(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-land-use"],
+        "checked": false,
+        "color": "#dc5050",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      },
+      {
+        "title": "土地区画整理(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-land-relocation"],
+        "checked": false,
+        "color": "#50dc50",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      },
+      {
+        "title": "地区計画(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-area-plan"],
+        "checked": false,
+        "color": "#50dcdc",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      },
+      {
+        "title": "準防火地域(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-jyunbouka"],
+        "checked": false,
+        "color": "#ae5574",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      },
+      {
+        "title": "その他の都市施設(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-toshisonota"],
+        "checked": false,
+        "color": "#435574",
+        "udownload_urlrl": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      },
+      {
+        "title": "都市計画公園(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-toshikouen"],
+        "checked": false,
+        "color": "#43b57b",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      },
+      {
+        "title": "都市計画緑地(2019.3作成)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-toshiryokuchi"],
+        "checked": false,
+        "color": "#43fca9",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-toshi-2019-6"
+      }
+    ]
+  },
+  {
+    "category": "施設",
+    "data": [
+      {
+        "title": "教育・保育施設",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 14,
+        "id": ["susono-school"],
+        "checked": true,
+        "icon": "images/school_yellow.png",
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      },
+      {
+        "title": "AED",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 14,
+        "id": ["susono-aed"],
+        "checked": true,
+        "icon": "images/AED_yellow.png",
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      },
+      {
+        "title": "観光ポイント",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 14,
+        "id": ["susono-kankou"],
+        "checked": true,
+        "icon": "images/tourism_yellow.png",
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      },
+      {
+        "title": "公共施設",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-public-facilities"],
+        "checked": true,
+        "color": "#f0f060",
+        "icon": "images/publicbulding_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      },
+      {
+        "title": "wifi",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 16,
+        "id": ["susono-public-wifi"],
+        "checked": false,
+        "color": "#f0f060",
+        "icon": "images/Wifi_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      },
+      {
+        "title": "宿泊施設",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono_hotels_and_campsites"],
+        "checked": false,
+        "color": "#f0f060",
+        "icon": "images/hotel_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      },
+      {
+        "title": "医療施設",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono_medical_institution"],
+        "checked": false,
+        "color": "#f0f060",
+        "icon": "images/hospital_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      },
+      {
+        "title": "Wikipedia記事QRコードシール貼付場所",
+        "type": "icon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 16,
+        "id": ["susono_wikipedia_qrcode"],
+        "checked": false,
+        "color": "#f0f060",
+        "icon": "images/tourism_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-public"
+      }
+    ]
+  },
+  {
+    "category": "鉄道",
+    "data": [
+      {
+        "title": "路線",
+        "type": "line",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 10,
+        "id": ["susono-railway-railway"],
+        "checked": true,
+        "color": "#666b34"
+      },
+      {
+        "title": "駅",
+        "type": "line",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 13,
+        "id": ["susono-railway-station"],
+        "checked": true,
+        "color": "#669500"
+      }
+    ]
+  },
+  {
+    "category": "富士急シティバス",
+    "url": "",
+    "data": [
+      {
+        "title": "バスの動き(平日)",
+        "type": "icon",
+        "lng": 138.92,
+        "lat": 35.18,
+        "zoom": 12.5,
+        "id": ["fujikyu_trip_wd"],
+        "checked": true,
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+        "color": "#fa5032",
+        "icon": "images/bus_red.png"
+      },
+      {
+        "title": "バスの動き(土曜)",
+        "type": "icon",
+        "lng": 138.92,
+        "lat": 35.18,
+        "zoom": 12.5,
+        "id": ["fujikyu_trip_sat"],
+        "checked": false,
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+        "color": "#fa5032",
+        "icon": "images/bus_red.png"
+      },
+      {
+        "title": "バスの動き(祝日)",
+        "type": "icon",
+        "lng": 138.92,
+        "lat": 35.18,
+        "zoom": 12.5,
+        "id": ["fujikyu_trip_holiday"],
+        "checked": false,
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+        "color": "#fa5032",
+        "icon": "images/bus_red.png"
+      },
+      {
+        "title": "停留所(富士急シティバス)",
+        "type": "icon",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 16,
+        "id": ["fujikyu-busstop"],
+        "checked": true,
+        "color": "#f0f060",
+        "icon": "images/busstop_red.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus"
+      },
+      {
+        "title": "路線(富士急シティバス)",
+        "type": "line",
+        "lng": 138.92,
+        "lat": 35.18,
+        "zoom": 11,
+        "id": ["fujikyu_line"],
+        "checked": true,
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-fujikyu-citybus",
+        "color": "#fa5032"
+      }
+    ]
+  },
+  {
+    "category": "すそのーる（自主運行バス）",
+    "data": [
+      {
+        "title": "バスの動き",
+        "type": "icon",
+        "lng": 138.92,
+        "lat": 35.18,
+        "zoom": 12.5,
+        "id": ["susonoru"],
+        "checked": true,
+        "color": "#44baf5",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs",
+        "icon": "images/bus_blue.png"
+      },
+      {
+        "title": "停留所(すそのーる（自主運行バス）)",
+        "type": "icon",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 16,
+        "id": ["susono-busstop"],
+        "checked": true,
+        "color": "#f0f060",
+        "icon": "images/busstop_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
+      },
+      {
+        "title": "路線(すそのーる（自主運行バス）)",
+        "type": "line",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 11,
+        "id": ["susono-busline"],
+        "checked": true,
+        "color": "#44baf5",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-gtfs"
+      }
+    ]
+  },
+  {
+    "category": "H30裾野市道路",
+    "data": [
+      {
+        "title": "道路台帳500",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-roadh30-road-500"],
+        "checked": false,
+        "color": "#89BDDE",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+      },
+      {
+        "title": "道路台帳1000",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono-roadh30-road-1000"],
+        "checked": false,
+        "color": "#4D7198",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+      },
+      {
+        "title": "認定路線",
+        "type": "line",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 15,
+        "id": ["susono-roadh30-road"],
+        "checked": false,
+        "color": "#B7C1D2",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+      },
+      {
+        "title": "橋梁",
+        "type": "icon",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 15,
+        "id": ["susono-roadh30-road-bridge"],
+        "checked": false,
+        "color": "#f0f060",
+        "icon": "images/bridge_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bridge"
+      }
+    ]
+  },
+  {
+    "category": "裾野市防災マップ(H28.3時点）",
+    "data": [
+      {
+        "title": "浸水想定_黄瀬川(0.5m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-kisegawa-flood-01"],
+        "checked": false,
+        "color": "#f9d675"
+      },
+      {
+        "title": "浸水想定_黄瀬川(0.5m〜1m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-kisegawa-flood-02"],
+        "checked": false,
+        "color": "#ccff99"
+      },
+      {
+        "title": "浸水想定_黄瀬川(1m〜2m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-kisegawa-flood-03"],
+        "checked": false,
+        "color": "#99FFFF"
+      },
+      {
+        "title": "浸水想定_黄瀬川(2m〜5m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-kisegawa-flood-04"],
+        "checked": false,
+        "color": "#1E90FF"
+      },
+      {
+        "title": "浸水想定_大場川(0.5m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-oobagawa-flood-01"],
+        "checked": false,
+        "color": "#f9d675"
+      },
+      {
+        "title": "浸水想定_大場川(0.5m〜1m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-oobagawa-flood-02"],
+        "checked": false,
+        "color": "#ccff99"
+      },
+      {
+        "title": "浸水想定_大場川(1m〜2m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-oobagawa-flood-03"],
+        "checked": false,
+        "color": "#99FFFF"
+      },
+      {
+        "title": "浸水想定_大場川(2m〜5m未満)「出典：静岡県GIS（洪水浸水想定区域図）」",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-oobagawa-flood-04"],
+        "checked": false,
+        "color": "#1E90FF"
+      },
+      {
+        "title": "緊急輸送路(県)",
+        "type": "line",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 15,
+        "id": ["susono-bousaih28-yusouro"],
+        "checked": false,
+        "color": "#ffffff"
+      },
+      {
+        "title": "緊急輸送路(市)",
+        "type": "line",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 15,
+        "id": ["susono-bousaih28-yusouro-city"],
+        "checked": false,
+        "color": "#ffffff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+      },
+      {
+        "title": "急傾斜R",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-bosaih28-keisya_r"],
+        "checked": false,
+        "color": "#FFAE2B"
+      },
+      {
+        "title": "急傾斜Y",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-bosaih28-keisya_y"],
+        "checked": false,
+        "color": "#FF832B"
+      },
+      {
+        "title": "土石R",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-bosaih28-doseki_r"],
+        "checked": false,
+        "color": "#F4ADC7"
+      },
+      {
+        "title": "土石Y",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 15,
+        "id": ["susono-bosaih28-doseki_y"],
+        "checked": false,
+        "color": "#ff99ff"
+      },
+      {
+        "title": "一時滞在者避難者用リフレッシュセンター",
+        "type": "icon",
+        "lng": 138.8720984,
+        "lat": 35.24766,
+        "zoom": 15,
+        "id": ["susono-bosaih28-refreshcenter"],
+        "checked": false,
+        "icon": "images/publicfacility_yellow.png",
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+      },
+      {
+        "title": "救護所",
+        "type": "icon",
+        "lng": 138.9097425,
+        "lat": 35.179235,
+        "zoom": 15,
+        "id": ["susono-bosaih28-firstaid"],
+        "checked": false,
+        "color": "#f0f060",
+        "icon": "images/medicalcenter_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+      },
+      {
+        "title": "救護病院",
+        "type": "icon",
+        "lng": 138.911929616,
+        "lat": 35.178901,
+        "zoom": 15,
+        "id": ["susono-bosaih28-hospital"],
+        "checked": false,
+        "color": "#f0f060",
+        "icon": "images/medicalcenter_yellow.png",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+      },
+      {
+        "title": "警察災害派遣隊",
+        "type": "icon",
+        "lng": 138.9142461,
+        "lat": 35.199425,
+        "zoom": 15,
+        "id": ["susono-bosaih28-police-saigai"],
+        "checked": false,
+        "icon": "images/government_yellow.png",
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+      },
+      {
+        "title": "警察施設",
+        "type": "icon",
+        "lng": 138.906566,
+        "lat": 35.1670576,
+        "zoom": 15,
+        "id": ["susono-bosaih28-police"],
+        "checked": false,
+        "icon": "images/government_yellow.png",
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+      },
+      {
+        "title": "公民館・集会所",
+        "type": "icon",
+        "lng": 138.9036233,
+        "lat": 35.167438,
+        "zoom": 15,
+        "id": ["susono-bosaih28-publichall"],
+        "checked": false,
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+        "icon": "images/convention_yellow.png"
+      },
+      {
+        "title": "広域避難地",
+        "type": "polygon",
+        "lng": 138.90547,
+        "lat": 35.176985,
+        "zoom": 13.5,
+        "id": ["susono-bosaih28-wideareaevacuationsite"],
+        "checked": false,
+        "color": "#00ffff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3"
+      },
+      {
+        "title": "指定避難所",
+        "type": "icon",
+        "lng": 138.90442,
+        "lat": 35.156269,
+        "zoom": 15,
+        "id": ["susono-bosaih28-shelter"],
+        "checked": false,
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+        "icon": "images/shelter_yellow.png"
+      },
+      {
+        "title": "消防詰所",
+        "type": "icon",
+        "lng": 138.90750496,
+        "lat": 35.1700929,
+        "zoom": 15,
+        "id": ["susono-bosaih28-firestation"],
+        "checked": false,
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+        "icon": "images/firehouse_yellow.png"
+      },
+      {
+        "title": "消防施設",
+        "type": "icon",
+        "lng": 138.90750496,
+        "lat": 35.1700929,
+        "zoom": 15,
+        "id": ["susono-bosaih28-firefacility"],
+        "checked": false,
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+        "icon": "images/firehouse_yellow.png"
+      },
+      {
+        "title": "福祉施設",
+        "type": "icon",
+        "lng": 138.90750496,
+        "lat": 35.1700929,
+        "zoom": 15,
+        "id": ["susono-bosaih28-walfare"],
+        "checked": false,
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+        "icon": "images/healthcenter_yellow.png"
+      },
+      {
+        "title": "物資集積所",
+        "type": "icon",
+        "lng": 138.9142461,
+        "lat": 35.199425,
+        "zoom": 15,
+        "id": ["susono-bosaih28-supply"],
+        "checked": false,
+        "color": "#f0f060",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-bousai-h28-3",
+        "icon": "images/school_yellow.png"
+      }
+    ]
+  },
+  {
+    "category": "行政区域図（H31.4.1時点）",
+    "data": [
+      {
+        "title": "行政区域図",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 13,
+        "id": ["susono_gyoseiH30"],
+        "checked": false,
+        "color": "#b2ccca",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/susono-area-2019-4-1"
+      }
+    ]
+  },
+  {
+    "category": "静岡県土木工事",
+    "data": [
+      {
+        "title": "平成28年度[第28－D0201－01号](国)136号社会資本整備総合交付金(国道道路改築2次・広域)工事(迂回路工そ（静岡県）",
+        "type": "pointcloud",
+        "lng": 138.924109,
+        "lat": 35.056648,
+        "zoom": 16,
+        "id": ["28-D0201-01"],
+        "checked": true,
+        "color": "#44a196",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/28-d0201-01",
+        "source": []
+      },
+      {
+        "title": "平成29年度[第29-K2452-01]二級河川巴川（麻機遊水地）総合治水対策特定河川事業（防災・安全交付金）工事（加藤島エリア掘削築堤工）（静岡県）",
+        "type": "pointcloud",
+        "lng": 138.4019444,
+        "lat": 35.01027778,
+        "zoom": 16,
+        "id": ["29-K2452-01"],
+        "checked": false,
+        "color": "#44a196",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/29-k2452-01"
+      },
+      {
+        "title": "平成28年度[第28-K2450-01号]二級河川巴川 (麻機遊水地)総合治水対策特定河川事業(防災・安全交付金)工事(安東川エリア掘削工)（静岡県）",
+        "type": "pointcloud",
+        "lng": 138.4016667,
+        "lat": 35.0075,
+        "zoom": 16,
+        "id": ["28-K2450-01"],
+        "checked": false,
+        "color": "#44a196",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/28-k2450-01"
+      }
+    ]
+  },
+  {
+    "category": "地形(航空レーザー点群データ)",
+    "data": [
+      {
+        "title": "掛川城（静岡県）",
+        "type": "pointcloud",
+        "zoom": 16,
+        "lng": 138.0138937,
+        "lat": 34.7752332,
+        "id": ["1-kakegawa"],
+        "checked": false,
+        "color": "#44a196",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/kakegawacastle"
+      },
+      {
+        "title": "韮山反射炉（静岡県）",
+        "type": "pointcloud",
+        "zoom": 18.7,
+        "lng": 138.9620469,
+        "lat": 35.0396278,
+        "id": ["2-nirayama"],
+        "checked": false,
+        "color": "#44a196",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/h30nirayama"
+      }
+    ]
+  },
+  {
+    "category": "裾野市企業間取引データ",
+    "data": [
+      {
+        "title": "企業取引データ(2014)",
+        "type": "transaction",
+        "lng": 138.906795,
+        "lat": 35.207141,
+        "zoom": 12,
+        "id": ["deckgl-circle-2014", "deckgl-arc-2014"],
+        "checked": false,
+        "color": "#d0d060"
+      },
+      {
+        "title": "企業取引データ(2015)",
+        "type": "transaction",
+        "lng": 138.906795,
+        "lat": 35.207141,
+        "zoom": 12,
+        "id": ["deckgl-circle-2015", "deckgl-arc-2015"],
+        "checked": false,
+        "color": "#90c090"
+      },
+      {
+        "title": "企業取引データ(2016)",
+        "type": "transaction",
+        "lng": 138.906795,
+        "lat": 35.207141,
+        "zoom": 12,
+        "id": ["deckgl-circle-2016", "deckgl-arc-2016"],
+        "checked": false,
+        "color": "#f06040"
+      }
+    ]
+  },
+  {
+    "category": "交通・人流",
+    "data": [
+      {
+        "title": "メッシュベース疑似人流データ(東大)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 12,
+        "id": ["boundaryvolume"],
+        "checked": false,
+        "color": "#00a0f0"
+      },
+      {
+        "title": "3Dメッシュベース疑似人流データ(東大)",
+        "type": "polygon",
+        "lng": 138.9067,
+        "lat": 35.174,
+        "zoom": 12,
+        "id": ["boundaryvolume_h"],
+        "checked": false,
+        "color": "#00a0f0"
+      },
+      {
+        "title": "リンクベース疑似人流データ(東大)",
+        "type": "line",
+        "lng": 138.91,
+        "lat": 35.18,
+        "zoom": 12,
+        "id": ["linkvolume"],
+        "checked": true,
+        "color": "#ffffff"
+      },
+      {
+        "title": "平日の人の流れ（2016年・東駿河湾都市圏調査より作成）出典: 東京大学CSIS",
+        "type": "personflow",
+        "lng": 138.86407,
+        "lat": 35.11572,
+        "zoom": 12,
+        "id": ["persontrips-weekday"],
+        "checked": false,
+        "color": "#00a0f0"
+      },
+      {
+        "title": "休日の人の流れ（2016年・東駿河湾都市圏より作成）出典: 東京大学CSIS",
+        "type": "personflow",
+        "lng": 138.86407,
+        "lat": 35.11572,
+        "zoom": 12,
+        "id": ["persontrips-holiday"],
+        "checked": false,
+        "color": "#f00060"
+      }
+    ]
+  },
+  {
+    "category": "橋梁",
+    "data": [
+      {
+        "title": "橋梁（静岡県）",
+        "type": "icon",
+        "lng": 138.3837,
+        "lat": 34.9785,
+        "zoom": 10,
+        "id": ["prefectural-bridge"],
+        "checked": false,
+        "color": "#00c0ff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-bridge",
+        "icon": "images/bridge_blue.png"
+      }
+    ]
+  },
+  {
+    "category": "トンネル",
+    "data": [
+      {
+        "title": "トンネル（静岡県）",
+        "type": "icon",
+        "lng": 138.3837,
+        "lat": 34.9785,
+        "zoom": 10,
+        "id": ["prefectural-tunnel"],
+        "checked": false,
+        "color": "#00c0ff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-tunnel",
+        "icon": "images/tunnel_blue.png"
+      }
+    ]
+  },
+  {
+    "category": "横断歩道橋",
+    "data": [
+      {
+        "title": "横断歩道橋（静岡県）",
+        "type": "icon",
+        "lng": 138.3837,
+        "lat": 34.9785,
+        "zoom": 10,
+        "id": ["prefectural-footbridge"],
+        "checked": false,
+        "color": "#00c0ff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-footbridge",
+        "icon": "images/footbridge_blue.png"
+      }
+    ]
+  },
+  {
+    "category": "アンダーパス地下歩道",
+    "data": [
+      {
+        "title": "アンダーパス地下歩道（静岡県）",
+        "type": "icon",
+        "lng": 138.3837,
+        "lat": 34.9785,
+        "zoom": 10,
+        "id": ["prefectural-underpass"],
+        "checked": false,
+        "color": "#00c0ff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-underpass",
+        "icon": "images/underwalk_blue.png"
+      }
+    ]
+  },
+  {
+    "category": "道路照明灯",
+    "data": [
+      {
+        "title": "道路照明灯（静岡県）",
+        "type": "icon",
+        "lng": 138.3837,
+        "lat": 34.9785,
+        "zoom": 10,
+        "id": ["prefectural-roadlight"],
+        "checked": false,
+        "color": "#00c0ff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-light",
+        "icon": "images/streetlamp_blue.png"
+      }
+    ]
+  },
+  {
+    "category": "道路案内標識",
+    "data": [
+      {
+        "title": "道路案内標識（静岡県）",
+        "type": "icon",
+        "lng": 138.3837,
+        "lat": 34.9785,
+        "zoom": 10,
+        "id": ["prefectural-guidesign"],
+        "checked": false,
+        "color": "#00c0ff",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/shizuokafacilities-sign",
+        "icon": "images/sign_blue.png"
+      }
+    ]
+  },
+  {
+    "category": "デジタル裾野の輪_話題提供者データ",
+    "data": [
+      {
+        "title": "デジタル裾野の輪_話題提供者データ",
+        "type": "icon",
+        "lng": 138.8553997,
+        "lat": 35.1846039,
+        "zoom": 12,
+        "id": ["732c04ae-70e2-46c0-8eba-14ade5652f6f"],
+        "checked": true,
+        "color": "#FFFF00",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/dsusono-wadai",
+        "icon": "images/digitalring_yellow.png"
+      }
+    ]
+  },
+  {
+    "category": "デジタル裾野の輪_特定データ",
+    "data": [
+      {
+        "title": "デジタル裾野の輪_特定テーマ位置データ",
+        "type": "icon",
+        "lng": 138.852569,
+        "lat": 35.233324,
+        "zoom": 14,
+        "id": ["7b27e8ca-2844-4cb2-ae25-0d8a74765406"],
+        "checked": true,
+        "color": "#FFFF00",
+        "download_url": "https://www.geospatial.jp/ckan/dataset/dsusono-specificthemes",
+        "icon": "images/tourism_yellow.png"
+      }
+    ]
+  },
+  {
+    "category": "農業センサスデータ",
+    "data": [
+      {
+        "title": "有機農業に取り組んでいる経営体の取組品目別作付（栽培）経営体数と（栽培）面積",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-001"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-001"
+      },
+      {
+        "title": "農産物販売金額規模別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-002"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-002"
+      },
+      {
+        "title": "販売目的の作物の類別作付（栽培）経営体数と作付（栽培）面積",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-003"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-003"
+      },
+      {
+        "title": "単一経営経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-004"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-004"
+      },
+      {
+        "title": "組織形態別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-005"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-005"
+      },
+      {
+        "title": "青色申告を行っている経営体の取組年数別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-006"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-006"
+      },
+      {
+        "title": "後継者の確保状況別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-007"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-007"
+      },
+      {
+        "title": "経営耕地面積規模別経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-008"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-008"
+      },
+      {
+        "title": "経営主年齢階層別の経営体数",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-009"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-009"
+      },
+      {
+        "title": "６０日以上従事した世帯員、役員・構成員（経営主を含む）の状況",
+        "type": "polygon",
+        "lng": 138.876,
+        "lat": 35.22,
+        "zoom": 11,
+        "id": ["census-agriculture-susono-010"],
+        "checked": false,
+        "color": "#c0c0c0",
+        "url": "https://www.geospatial.jp/ckan/dataset/census-agriculture-susono-010"
+      }
+    ]
+  },
+  {
+    "category": "国土数値情報",
+    "open": false,
+    "data": [
+      {
+        "title": "国土数値情報（集客施設）-静岡県",
+        "type": "icon",
+        "lng": 138.341732,
+        "lat": 34.890358,
+        "zoom": 14,
+        "id": ["i059ac989-b2b6-49b1-b51f-b209a2dd62ce_p33-14_22"],
+        "checked": false,
+        "icon": "images/shop_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p33-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・バイオマス）-静岡県",
+        "type": "icon",
+        "lng": 138.219948,
+        "lat": 34.91226,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_biomasspowerstation22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・水力）-静岡県",
+        "type": "icon",
+        "lng": 138.390591,
+        "lat": 35.110209,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_generalhydroelectricpowerplant22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・原子力）-静岡県",
+        "type": "icon",
+        "lng": 138.146089,
+        "lat": 34.621557,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_nuclearpowerplant22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・太陽光）-静岡県",
+        "type": "icon",
+        "lng": 138.131473,
+        "lat": 34.856182,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_photovoltaicpowerplant22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・池情報）-静岡県",
+        "type": "icon",
+        "lng": 138.184028,
+        "lat": 35.32025,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_pondinformation22"],
+        "checked": false,
+        "icon": "images/watergate_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設）-静岡県",
+        "type": "icon",
+        "lng": 137.647908,
+        "lat": 34.719797,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_powerplantcomplex22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・揚水式）-静岡県",
+        "type": "icon",
+        "lng": 138.184028,
+        "lat": 35.32025,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_pumpedstoragehydroelectricplant22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・火力）-静岡県",
+        "type": "icon",
+        "lng": 138.663899,
+        "lat": 35.128883,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_thermalpowerplant22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（発電施設・風力）-静岡県",
+        "type": "icon",
+        "lng": 138.230394,
+        "lat": 34.69192,
+        "zoom": 14,
+        "id": ["i105fbd11-39f1-47db-b51f-6e97900be14d_windpowerplant22"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p03-22"
+      },
+      {
+        "title": "国土数値情報（都市公園）ー静岡県",
+        "type": "icon",
+        "lng": 138.304816,
+        "lat": 34.929641,
+        "zoom": 14,
+        "id": ["i10a18a17-29d6-404b-8bec-ea0520b45338_p13-11_22"],
+        "checked": false,
+        "icon": "images/park_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p13-22"
+      },
+      {
+        "title": "国土数値情報（工業用地）ー静岡県",
+        "type": "polygon",
+        "lng": 138.223147,
+        "lat": 34.918798,
+        "zoom": 14,
+        "id": ["i1a161149-2ce4-4e38-9213-59b80a69d0cc_l05-0922-gindustrialcomplex"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-l05-22"
+      },
+      {
+        "title": "国土数値情報（単独工業用地）ー静岡県",
+        "type": "polygon",
+        "lng": 138.322581,
+        "lat": 34.9339,
+        "zoom": 14,
+        "id": ["i1a161149-2ce4-4e38-9213-59b80a69d0cc_l05-0922-gisolatedindustrialsite"],
+        "checked": false,
+        "icon": "images/industrial_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-l05-22"
+      },
+      {
+        "title": "国土数値情報（文化施設）-静岡県",
+        "type": "icon",
+        "lng": 138.292693,
+        "lat": 34.914589,
+        "zoom": 14,
+        "id": ["i1d3b38e5-a631-4756-be64-dc1cdbfcfb89_p27-13_22"],
+        "checked": false,
+        "icon": "images/cultual_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p27-22"
+      },
+      {
+        "title": "国土数値情報（公共施設）-静岡県",
+        "type": "icon",
+        "lng": 138.354578,
+        "lat": 34.93283,
+        "zoom": 14,
+        "id": ["i248ffb6f-197f-47b5-8ba3-902799ae13df_p02-06_22-g_publicfacility"],
+        "checked": false,
+        "icon": "images/cultual_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p02-22"
+      },
+      {
+        "title": "国土数値情報（福祉施設）ー静岡県",
+        "type": "icon",
+        "lng": 138.332932,
+        "lat": 34.929236,
+        "zoom": 14,
+        "id": ["i28b7de2f-0af1-4d03-b2f5-1f72ba3df4c0_p14-15_22"],
+        "checked": false,
+        "icon": "images/cultual_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p14-22"
+      },
+      {
+        "title": "国土数値情報（ニュータウン）-静岡県",
+        "type": "icon",
+        "lng": 138.221985,
+        "lat": 34.906414,
+        "zoom": 14,
+        "id": ["i36636519-4958-4c84-bde9-520aeade4f1e_p26-13_22"],
+        "checked": false,
+        "icon": "images/publicfacility_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p26-22"
+      },
+      {
+        "title": "国土数値情報（警察署）ー静岡県",
+        "type": "icon",
+        "lng": 138.348141,
+        "lat": 34.939873,
+        "zoom": 14,
+        "id": ["i3a87acc6-c6bd-4e0e-8985-07d07b8149f4_p18-1222policestation"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p18-22"
+      },
+      {
+        "title": "国土数値情報（警察署管轄範囲）ー静岡県",
+        "type": "polygon",
+        "lng": 138.327498,
+        "lat": 35.020055,
+        "zoom": 14,
+        "id": ["i3a87acc6-c6bd-4e0e-8985-07d07b8149f4_p18-1222policestationjurisdiction"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p18-22"
+      },
+      {
+        "title": "国土数値情報（下水道関連施設・下水ポンプ）-静岡県",
+        "type": "icon",
+        "lng": 138.285019,
+        "lat": 34.861506,
+        "zoom": 14,
+        "id": ["i3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303_gesuiponpu22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p22-22"
+      },
+      {
+        "title": "国土数値情報（下水道関連施設・処理場施設）-静岡県",
+        "type": "icon",
+        "lng": 138.345575,
+        "lat": 34.909798,
+        "zoom": 14,
+        "id": ["i3d8344d0-c4f9-4ef2-9c9b-a1ba5a823303_gesuishori22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p22-22"
+      },
+      {
+        "title": "国土数値情報（研究機関）-静岡県",
+        "type": "icon",
+        "lng": 138.181467,
+        "lat": 34.892263,
+        "zoom": 14,
+        "id": ["i58b59bcb-260e-4b71-9edd-7c8d9845fb40_p16-12_22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p16-22"
+      },
+      {
+        "title": "国土数値情報（物流拠点）-静岡県",
+        "type": "icon",
+        "lng": 138.432446,
+        "lat": 34.954764,
+        "zoom": 14,
+        "id": ["i6efec041-92b8-4ccb-8401-6c7ad3d85450_p31-13_22_e"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p31-22"
+      },
+      {
+        "title": "国土数値情報（一般廃棄物処理施設）-静岡県",
+        "type": "icon",
+        "lng": 138.416118,
+        "lat": 34.914361,
+        "zoom": 14,
+        "id": ["i6f4e580a-a158-4124-b627-34bc791dae90_generalwastedisposalfacilities22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p15-22"
+      },
+      {
+        "title": "国土数値情報（産業廃棄物処理施設）-静岡県",
+        "type": "icon",
+        "lng": 138.344662,
+        "lat": 34.949434,
+        "zoom": 14,
+        "id": ["i6f4e580a-a158-4124-b627-34bc791dae90_industrialwastedisposalfacilities22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p15-22"
+      },
+      {
+        "title": "国土数値情報（上水道関連施設・給水区域）ー静岡県",
+        "type": "polygon",
+        "lng": 138.278131,
+        "lat": 34.903605,
+        "zoom": 14,
+        "id": ["i714a7d2f-de63-45b1-a6b3-61273d819eda_p21-1222a"],
+        "checked": false,
+        "icon": "images/waterplant_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p21-22"
+      },
+      {
+        "title": "国土数値情報（上水道関連施設・浄水場）ー静岡県",
+        "type": "icon",
+        "lng": 138.117253,
+        "lat": 34.991448,
+        "zoom": 14,
+        "id": ["i714a7d2f-de63-45b1-a6b3-61273d819eda_p21-1222b"],
+        "checked": false,
+        "icon": "images/waterplant_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p21-22"
+      },
+      {
+        "title": "国土数値情報（燃料給油所）-静岡県",
+        "type": "icon",
+        "lng": 138.323275,
+        "lat": 34.92334,
+        "zoom": 14,
+        "id": ["i80261f3b-aac6-4e7b-8ee9-87f2e495ec39_p07-15_22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p07-22"
+      },
+      {
+        "title": "国土数値情報（国・都道府県の機関）-静岡県",
+        "type": "icon",
+        "lng": 138.404523,
+        "lat": 34.937258,
+        "zoom": 14,
+        "id": ["i82de159e-2390-4449-b103-e343520d07b6_p28-13_22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p28-22"
+      },
+      {
+        "title": "国土数値情報（医療機関）-静岡県",
+        "type": "icon",
+        "lng": 138.323476,
+        "lat": 34.92704,
+        "zoom": 14,
+        "id": ["i9bb09f14-e0e5-4466-a55d-97494a3bd061_p04-20_22"],
+        "checked": false,
+        "icon": "images/medicalcenter_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p04-22"
+      },
+      {
+        "title": "国土数値情報（市町村役場等及び公的集会施設）ー静岡県",
+        "type": "icon",
+        "lng": 138.360749,
+        "lat": 34.933305,
+        "zoom": 14,
+        "id": [
+          "iaf4ea1db-c66f-480f-a233-fea2dc3b380e_p05-10_22-g_localgovernmentofficeandpublicmeetingfacility"
+        ],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p05-22"
+      },
+      {
+        "title": "国土数値情報（地場産業関連施設）-静岡県",
+        "type": "icon",
+        "lng": 138.387546,
+        "lat": 34.950263,
+        "zoom": 14,
+        "id": ["ib415de0c-8c3c-485f-b494-1e86734b1540_p24_12_22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p24-22"
+      },
+      {
+        "title": "国土数値情報（郵便局）-静岡県",
+        "type": "icon",
+        "lng": 138.337754,
+        "lat": 34.931924,
+        "zoom": 14,
+        "id": ["ic2c0f3d0-a361-415b-b6dd-774af6f85691_p30-13_22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p30-22"
+      },
+      {
+        "title": "国土数値情報（消防署）ー静岡県",
+        "type": "icon",
+        "lng": 138.362459,
+        "lat": 34.948041,
+        "zoom": 14,
+        "id": ["id627dc60-b4f4-4062-af86-39d27369b6ec_p17-1222firestation"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p17-22"
+      },
+      {
+        "title": "国土数値情報（消防署管轄範囲）ー静岡県",
+        "type": "polygon",
+        "lng": 138.327498,
+        "lat": 35.020055,
+        "zoom": 14,
+        "id": ["id627dc60-b4f4-4062-af86-39d27369b6ec_p17-1222firestationjurisdiction"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p17-22"
+      },
+      {
+        "title": "国土数値情報（道の駅）-静岡県",
+        "type": "icon",
+        "lng": 138.457164,
+        "lat": 34.970932,
+        "zoom": 14,
+        "id": ["ie158530c-4328-417f-a3e7-b7585e67926c_p35_18_22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p35-22"
+      },
+      {
+        "title": "国土数値情報（市区町村役場）-静岡県",
+        "type": "icon",
+        "lng": 138.543457,
+        "lat": 34.965592,
+        "zoom": 14,
+        "id": ["ie43bb7dc-ae6f-4511-9a8d-bdb2db878555_p34-14_22"],
+        "checked": false,
+        "icon": "images/publicbulding_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p34-22"
+      },
+      {
+        "title": "国土数値情報（学校）ー静岡県",
+        "type": "icon",
+        "lng": 138.332046,
+        "lat": 34.933126,
+        "zoom": 14,
+        "id": ["if31c39f5-996b-4d12-a94a-6df95c202e35_p29-13_22"],
+        "checked": false,
+        "icon": "images/school_red.png",
+        "url": "https://www.geospatial.jp/ckan/dataset/ksj-p29-22"
+      }
+    ]
+  },
+  {
+    "category": "DRMテスト",
+    "url": "",
+    "open": true,
+    "data": [
+      {
+        "title": "DRMリンク交通量",
+        "type": "line",
+        "lng": 139.7673068,
+        "lat": 35.6809591,
+        "zoom": 11,
+        "id": ["drm_test"],
+        "checked": false,
+        "color": "#333333"
+      }
+    ]
+  }
+]

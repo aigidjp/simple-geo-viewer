@@ -3,7 +3,7 @@ import { context } from '@/pages';
 import Content from '@/components/Map/Legend/Content';
 import { clickedLayerViewState } from '@/components/Map/types';
 import { havingLegendIdList } from '@/components/Map/Legend/layerIds';
-import { getDataTitleById, getMenu } from '@/components/LayerFilter/menu';
+import { getDataTitleById } from '@/components/LayerFilter/menu';
 import { getCheckedLayerIdByDataTitleList } from '@/components/LayerFilter/sideBar';
 import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 
@@ -24,6 +24,7 @@ export const useGetClickedLayerId = () => {
     setDisplayedLegendLayerId,
     isDefault,
     setIsDefault,
+    preferences,
   } = useContext(context);
 
   const clickedId = getClickedLayerId(clickedLayerViewState);
@@ -31,7 +32,7 @@ export const useGetClickedLayerId = () => {
   // 現在凡例が表示されている場合、そのタイトルを取得
   let displayedLegendLayerTitle = '';
   if (displayedLegendLayerId !== '') {
-    displayedLegendLayerTitle = getDataTitleById(getMenu(), displayedLegendLayerId);
+    displayedLegendLayerTitle = getDataTitleById(preferences.menu, displayedLegendLayerId);
   }
   // 初回にこの関数が呼ばれた際は何も返さない
   if (isDefault) {
@@ -51,7 +52,7 @@ export const useGetClickedLayerId = () => {
       return displayedLegendLayerId;
     }
     // 現在凡例が表示されておらず、かつ凡例を持つレイヤがチェックされていたら、その凡例を表示
-    const id = getCheckedLayerIdByDataTitleList(checkedLayerTitleList);
+    const id = getCheckedLayerIdByDataTitleList(checkedLayerTitleList, preferences.menu);
     setDisplayedLegendLayerId(id);
     return id;
 
@@ -70,7 +71,7 @@ export const useGetClickedLayerId = () => {
     // すでに表示されている凡例のレイヤのチェックが外された場合
   } else if (!clickedId && !checkedLayerTitleList.includes(displayedLegendLayerTitle)) {
     // 凡例を持つレイヤがチェックされていたら、その凡例を表示
-    const id = getCheckedLayerIdByDataTitleList(checkedLayerTitleList);
+    const id = getCheckedLayerIdByDataTitleList(checkedLayerTitleList, preferences.menu);
     setDisplayedLegendLayerId(id);
     return id;
   }

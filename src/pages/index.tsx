@@ -8,6 +8,8 @@ import { defaultLegendId } from '@/components/Map/Legend/layerIds';
 import { Tooltip } from '@/components/Tooltip/content';
 import { removeExistingTooltip } from '@/components/Tooltip/show';
 import MouseTooltip, { MouseTooltipData } from '@/components/MouseTooltip';
+import { useRouter } from 'next/router';
+import { usePreferences, Preferences } from '@/components/LayerFilter/loader';
 
 type TContext = {
   checkedLayerTitleList: string[];
@@ -20,9 +22,10 @@ type TContext = {
   setIsDefault: React.Dispatch<React.SetStateAction<boolean>>;
   mouseTooltipData: MouseTooltipData | null;
   setMouseTooltipData: React.Dispatch<React.SetStateAction<MouseTooltipData | null>>;
+  preferences: Preferences;
 };
 
-const useContextValues = (): TContext => {
+const useContextValues = (): Omit<TContext, 'preferences'> => {
   const [checkedLayerTitleList, setCheckedLayerTitleList] = useState<string[]>([]);
   const [displayedLegendLayerId, setDisplayedLegendLayerId] = useState<string>(defaultLegendId);
   const [clickedLayerViewState, setClickedLayerViewState] = useState<clickedLayerViewState | null>(
@@ -30,6 +33,7 @@ const useContextValues = (): TContext => {
   );
   const [isDefault, setIsDefault] = useState<boolean>(true);
   const [mouseTooltipData, setMouseTooltipData] = useState<MouseTooltipData | null>(null);
+
   return {
     checkedLayerTitleList,
     setCheckedLayerTitleList,
@@ -47,15 +51,19 @@ const useContextValues = (): TContext => {
 export const context = createContext({} as TContext);
 
 const App: NextPage = () => {
-  const contextValues = useContextValues();
-
   const [tooltipData, setTooltipData] = useState<any>({
     tooltip: null,
   });
 
+  const contextValues = useContextValues();
+  const { preferences } = usePreferences();
+  if (preferences === null) {
+    return <div>loading</div>;
+  }
+
   return (
     <div className="h-screen">
-      <context.Provider value={contextValues}>
+      <context.Provider value={{ ...contextValues, preferences }}>
         <div className="h-12">
           <Header />
         </div>

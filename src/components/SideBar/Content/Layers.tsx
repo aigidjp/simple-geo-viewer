@@ -1,8 +1,8 @@
 import React, { Dispatch, SetStateAction, useContext, useEffect } from 'react';
 import { context } from '@/pages';
-import { Data } from '@/components/LayerFilter/menu';
+import { Data, Menu } from '@/components/LayerFilter/menu';
 import { getResourceIcon } from '@/components/SideBar/Icon';
-import { getDataById, getMenu } from '@/components/LayerFilter/menu';
+import { getDataById } from '@/components/LayerFilter/menu';
 import { filterCheckedData } from '@/components/LayerFilter/sideBar';
 import { DownloadIcon } from '@/components/SideBar/Icon';
 
@@ -10,8 +10,8 @@ const isSelected = (resourceName: string, selectedResourceNameList: string[]): b
   return selectedResourceNameList.includes(resourceName);
 };
 
-const setResourceViewState = (resourceId: string[], setClickedLayerViewState: any) => {
-  const targetResource = getDataById(getMenu(), resourceId);
+const setResourceViewState = (resourceId: string[], setClickedLayerViewState: any, menu: Menu) => {
+  const targetResource = getDataById(menu, resourceId);
 
   setClickedLayerViewState({
     longitude: targetResource.lng,
@@ -21,8 +21,8 @@ const setResourceViewState = (resourceId: string[], setClickedLayerViewState: an
   });
 };
 
-const getDefaultVisiblyLayerTitles = () => {
-  return filterCheckedData().map((layer) => layer.title);
+const getDefaultVisiblyLayerTitles = (menu: Menu) => {
+  return filterCheckedData(menu).map((layer) => layer.title);
 };
 
 type LayersProps = {
@@ -37,11 +37,12 @@ export const Layers = (props: LayersProps) => {
     setCheckedLayerTitleList,
     setClickedLayerViewState,
     setMouseTooltipData,
+    preferences,
   } = useContext(context);
 
   //最初の一度だけ、menuのcheckedを確認し、trueならcheckedLayerTitleListにset
   useEffect(() => {
-    setCheckedLayerTitleList(getDefaultVisiblyLayerTitles());
+    setCheckedLayerTitleList(getDefaultVisiblyLayerTitles(preferences.menu));
   }, []);
 
   const toggleSelectedResourceList = (resourceName: string, resourceId: string[]) => {
@@ -49,7 +50,7 @@ export const Layers = (props: LayersProps) => {
     if (!isSelected(resourceName, checkedLayerTitleList)) {
       setCheckedLayerTitleList((prevList) => [...prevList, resourceName]);
       // クリックされたリソースの位置情報を保存する
-      setResourceViewState(resourceId, setClickedLayerViewState);
+      setResourceViewState(resourceId, setClickedLayerViewState, preferences.menu);
       return;
     }
 
