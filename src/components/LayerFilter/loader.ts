@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { Menu } from './menu';
 import { Config } from './config';
 import { RasterSource } from 'maplibre-gl';
-import { route } from 'next/dist/server/router';
 
 /**
  * settings.json
@@ -11,6 +10,7 @@ import { route } from 'next/dist/server/router';
 export type Settings = {
   title: string;
   background_color: string;
+  tooltip_background_color: string;
 };
 /**
  * backgrounds.json
@@ -64,7 +64,7 @@ export const usePreferences = () => {
       // 指定されていなければデフォルト設定を読み込む
       let preferencesPath = router.query.preferences as string | undefined;
       if (typeof preferencesPath === 'undefined') {
-        preferencesPath = `${router.asPath}defaultPreferences`;
+        preferencesPath = '/defaultPreferences';
       }
 
       const results = await Promise.all([
