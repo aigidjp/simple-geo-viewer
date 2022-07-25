@@ -19,6 +19,7 @@
   "dependencies": {
     "@loaders.gl/core": "^3.0.9",
     "@loaders.gl/gltf": "^3.0.9",
+    "@turf/centroid": "^6.5.0",
     "amazon-cognito-identity-js": "^5.0.6",
     "aws-sdk": "^2.970.0",
     "axios": "^0.21.1",
