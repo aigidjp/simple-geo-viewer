@@ -61,6 +61,10 @@ const App: NextPage = () => {
     return <div>loading</div>;
   }
 
+  const toolChipStyle = {
+    backgroundColor: preferences.settings.tooltip_background_color,
+  };
+
   return (
     <div className="h-screen">
       <context.Provider value={{ ...contextValues, preferences }}>
@@ -73,7 +77,7 @@ const App: NextPage = () => {
               <Sidebar />
             </div>
             {tooltipData.tooltip ? (
-              <div className="relative h-1/3 border-2 border-black">
+              <div className="relative h-1/3 border-2 border-black" style={toolChipStyle}>
                 <div className={'relative overflow-auto pt-2 pl-2 pr-2 h-full'}>
                   {tooltipData.tooltip ? <Tooltip {...tooltipData.tooltip} /> : undefined}
                 </div>
@@ -81,6 +85,7 @@ const App: NextPage = () => {
                   <button
                     className="text-2xl"
                     onClick={() => removeExistingTooltip(setTooltipData)}
+                    style={toolChipStyle}
                   >
                     x
                   </button>

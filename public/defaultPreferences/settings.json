@@ -1,4 +1,5 @@
 {
   "title": "デジタル裾野",
-  "background_color": "#17a2b8"
+  "background_color": "#17a2b8",
+  "tooltip_background_color": "#ffffb0"
 }

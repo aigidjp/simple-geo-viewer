@@ -1,11 +1,16 @@
-import React, { ReactNode, VFC } from 'react';
+import React, { ReactNode, VFC, useContext } from 'react';
+import { context } from '@/pages';
 
 type BaseTooltipProps = { children: ReactNode };
 
 const BaseTooltip: VFC<BaseTooltipProps> = ({ children }) => {
+  const { preferences } = useContext(context);
+  const toolChipStyle = {
+    backgroundColor: preferences.settings.tooltip_background_color,
+  };
   return (
     <div className="visible">
-      <div id="tooltip_content" className="bg-white overflow-auto">
+      <div id="tooltip_content" className="bg-white overflow-auto" style={toolChipStyle}>
         <table className="tooltip_table">{children}</table>
       </div>
     </div>
