@@ -83,15 +83,27 @@ yarn build
 
 ## 詳細設定
 
-- ほとんどの設定は`src/assets`の中のJSONを変更するだけで良いですが、直接ソースコードを修正し、複雑な設定を行うこともできます。
+- ほとんどの設定は`public/defaultPreferences`の中のJSONを変更するだけで良いですが、直接ソースコードを修正し、複雑な設定を行うこともできます。
+
+### 複数の詳細設定の切り替え
+- **初回のみ**`public/`以下の設定を格納した任意のフォルダを作成します。
+(例:`public/assets`)
+- URLクエリパラメーターの`config=`に作成したフォルダ名を指定します。
+(例:`https://example.com/?config=assets`)
 
 ### ヘッダーの調整
 
-- `src/assets/settings.json`を変更し、タイトルとヘッダーの色を変更することができます。
+- `public/defaultPreferences/settings.json`を変更し、タイトルとヘッダー、ポップアップの色を変更することができます。
+
+#### 設定項目
+
+- "title": タイトル,
+- "background_color": ヘッダーの背景色,
+- "tooltip_background_color": ポップアップの背景色
 
 ###　初期表示位置
 
-- `src/assets/initial_view.json`を変更し、地図上の初期表示位置などを変更することができます。
+- `public/defaultPreferences/initial_view.json`を変更し、地図上の初期表示位置などを変更することができます。
 
 #### 設定項目
 
@@ -102,7 +114,7 @@ yarn build
 
 ### 背景地図
 
-- `src/assets/backgrounds.json`を修正することで背景地図を変更・追加することができます。ここで1番目に定義された背景地図が初期状態で表示される背景となります。
+- `public/defaultPreferences/backgrounds.json`を修正することで背景地図を変更・追加することができます。ここで1番目に定義された背景地図が初期状態で表示される背景となります。
 
 #### 設定項目
 
@@ -112,8 +124,8 @@ yarn build
 ### 表示レイヤー設定
 
 - 表示レイヤーの設定は以下の2ファイルに分かれています。
-  - `src/assets/menu.json`: サイドバーに表示する内容を記述します。
-  - `src/assets/config.json`: menu.jsonから参照される実際のレイヤーを記述します。
+  - `public/defaultPreferences/menu.json`: サイドバーに表示する内容を記述します。
+  - `public/defaultPreferences/config.json`: menu.jsonから参照される実際のレイヤーを記述します。
 
 #### 設定項目
 
@@ -129,6 +141,7 @@ yarn build
 - data.id: クリック時に表示・非表示を切り替えるレイヤーを指定します。
 - data.checked: 初期表示時に可視状態にするレイヤーはtrueを設定します。
 - data.color: アイコンの表示色を設定します。
+- download_url(optional): ダウンロードリンクとしてURLを指定できます。指定されている場合、クリックすると指定したURLへジャンプすることができるボタンがレイヤー一覧に追加されます。
 
 ###### 設定可能なタイプ
 
@@ -145,12 +158,13 @@ yarn build
 - id: 任意のidを指定します
 - type: 表示するレイヤーのタイプを記述します。記述したタイプと、実データのフォーマットが一致している必要があります。（対応typeは別途記載）
 - source: 実データを`public`ディレクトリ以下に格納したローカルファイルか、ホスティング先のURLを指定します。
-- download_url(optional): ダウンロードリンクとしてURLを指定できます。指定されている場合、クリックすると指定したURLへジャンプすることができるボタンがレイヤー一覧に追加されます。
+
 - others: その他、各タイプ毎にDeck.glのレンダーオプションに準拠したオプションを設定可能です。
 
 ###### 設定可能なタイプ
 
 - geojson: [https://deck.gl/docs/api-reference/layers/geojson-layer](https://deck.gl/docs/api-reference/layers/geojson-layer)
+- geojsonicon: GeoJSONポイントのマーカーに任意のアイコンを設定して表示できます。
 - raster: [https://deck.gl/docs/api-reference/geo-layers/tile-layer](https://deck.gl/docs/api-reference/geo-layers/tile-layer)
 - mvt: [https://deck.gl/docs/api-reference/geo-layers/mvt-layer](https://deck.gl/docs/api-reference/geo-layers/mvt-layer)
 - 3dtiles: [https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer](https://deck.gl/docs/api-reference/geo-layers/tile-3d-layer)
@@ -190,15 +204,13 @@ yarn build
       "type": "geojsonicon",
       "source": "./data/sample.geojson",
       "download_url": "https://www.google.co.jp/",
-      "getPointRadius": 50,
       "icon": {
                 "url": "./data/sample/icon.svg",
                 "width": 64,
                 "height": 64,
                 "anchorY": 64,
-                "color": "yellow"
       },
-      "iconSizeScale": 60,
+      "iconSizeScale": 60
     }
   ]
 }
@@ -436,7 +448,7 @@ export const rasterLegendObjList = [
 - `src/components/Map/Layer/renderOption.ts`を編集します。
 - `addRenderOption`関数のforブロックの内部でレイヤーのidを指定した条件式を作成します。
 - 条件には分岐の中では任意の関数名を指定し、それに対応する関数を`src/components/Map/Layer/renderOption.ts`の内部に作成します。
-- 作成した関数内部ではレイヤーの表示オプションを設定し、`src/assets/config.json`に記載の項目を上書きできます。
+- 作成した関数内部ではレイヤーの表示オプションを設定し、`public/defaultPreferences/config.json`に記載の項目を上書きできます。
 - `getColorParam`関数を利用し、`d.properties['N03_004']`のように色変更に利用する属性値を渡すことで、凡例に応じた配色で地物が表示されます。
 
 ## GitHub Actions
